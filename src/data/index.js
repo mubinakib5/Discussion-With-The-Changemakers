@@ -1,12 +1,9 @@
 // Import all images
 import Aisha from "../assets/Aisha.jpg";
 import Award from "../assets/Award.jpeg";
-import sustainability from "../assets/Changemakers.webp";
 import logoBlack from "../assets/DC Black.png";
 import logoWhite from "../assets/DC White.png";
-import communityAction from "../assets/Empowering.jpeg";
 import heroImage from "../assets/Hero.png";
-import mentorship from "../assets/Mentorship.jpeg";
 import Michael from "../assets/Michael.jpg";
 import Networking from "../assets/Networking.jpeg";
 import Panel from "../assets/Panel.jpeg";
@@ -14,7 +11,8 @@ import Presentation from "../assets/Presentation.jpeg";
 import Sarah from "../assets/Sarah.jpg";
 import Team from "../assets/Team.jpeg";
 import Workshop from "../assets/Workshop.jpeg";
-
+import news1 from "../assets/news1.png";
+import news2 from "../assets/news2.png";
 // Navigation
 export const navLinks = [
   { href: "#about", label: "About" },
@@ -243,34 +241,26 @@ export const galleryImages = [
 // Blog Section
 export const blogArticles = [
   {
-    title: "The Power of Community-Led Change",
-    date: "March 15, 2024",
-    author: "Sarah Johnson",
+    title: "বর্ণাঢ্য আয়োজনে সমাপ্ত 'ডিস্কাশন উইথ দ্যা চেঞ্জ মেকারস'",
+    date: "September 29, 2023",
+    author: "প্রিয় চট্টগ্রাম",
     excerpt:
-      "Exploring how local initiatives can create lasting impact in communities.",
-    image: communityAction,
-    readTime: "5 min read",
-    category: "Leadership",
+      "চট্টগ্রামের সবচেয়ে বড় সামাজিক প্রতিযোগিতা মূলক অনুষ্ঠান 'ডিস্কাশন উইথ দ্যা চেঞ্জমেকার্স' সম্পন্ন হয়েছে।",
+    image: news1,
+    readTime: "3 mins read",
+    category: "News",
+    link: "https://newsnow24.com/prio-chattogram/INDKJYBtfI",
   },
   {
-    title: "Innovation in Social Development",
-    date: "March 12, 2024",
-    author: "Michael Chen",
+    title: "Discussion with change-makers held in Ctg",
+    date: "September 30, 2023",
+    author: "dailyobserver",
     excerpt:
-      "New approaches to addressing community challenges through technology.",
-    image: mentorship,
-    readTime: "4 min read",
-    category: "Mentorship",
-  },
-  {
-    title: "Youth Leadership in Action",
-    date: "March 10, 2024",
-    author: "Aisha Patel",
-    excerpt:
-      "Stories of young changemakers making a difference in their communities.",
-    image: sustainability,
-    readTime: "6 min read",
-    category: "Sustainability",
+      "A social competitive event 'Discussion with the Change-makers' organized to identify and solve the problems of Chattogram city was held at Hotel Agrabad on Thursday.",
+    image: news2,
+    readTime: "2 mins read",
+    category: "News",
+    link: "https://www.observerbd.com/news/439443",
   },
 ];
 

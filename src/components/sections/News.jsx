@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
+import { blogArticles } from "../../data";
+import Card from "../common/Card";
 import SectionTitle from "../common/SectionTitle";
 
-const Blog = () => {
+const News = () => {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -31,7 +33,7 @@ const Blog = () => {
     <section id="blog" className="py-20 bg-neutral-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle
-          title="Latest Stories"
+          title="Featured News"
           subtitle="Insights and experiences from our community"
         />
 
@@ -40,9 +42,8 @@ const Blog = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-10%" }}
-          className="grid grid-cols-1 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8"
         >
-          {/* Blog articles temporarily hidden
           {blogArticles.map((article, index) => (
             <Card
               key={index}
@@ -95,7 +96,14 @@ const Blog = () => {
                   whileHover={{ x: 5 }}
                 >
                   <span className="text-sm sm:text-base font-medium mr-2">
-                    Read More
+                    <a
+                      href={article.link}
+                      alt="Read More"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Read More
+                    </a>
                   </span>
                   <svg
                     className="w-4 h-4 sm:w-5 sm:h-5"
@@ -113,55 +121,11 @@ const Blog = () => {
                 </motion.div>
               </motion.div>
             </Card>
-          ))} */}
-
-          <motion.div
-            variants={itemVariants}
-            className="text-center py-16 max-w-2xl mx-auto"
-          >
-            <h3 className="text-2xl md:text-3xl font-bold text-brand-primary mb-6">
-              Write to Us
-            </h3>
-            <p className="text-lg text-neutral-gray mb-8">
-              Share your stories, insights, and experiences with our community.
-              <a
-                href="mailto:discussionwiththechangemakers@gmail.com"
-                className="text-brand-primary hover:text-brand-light ml-2 underline"
-              >
-                Mail us
-              </a>
-            </p>
-            <div className="bg-neutral-white/5 p-6 rounded-lg text-left shadow-lg">
-              <h4 className="font-semibold mb-4 text-neutral-black">
-                Email Format:
-              </h4>
-              <ul className="space-y-3 text-neutral-gray">
-                <li>
-                  <span className="font-medium">Title:</span> Your story title
-                  (max 100 characters)
-                </li>
-                <li>
-                  <span className="font-medium">Description:</span> Your main
-                  content (500-1000 words)
-                </li>
-                <li>
-                  <span className="font-medium">Author:</span> Your name and
-                  brief bio
-                </li>
-                <li>
-                  <span className="font-medium">Tags:</span> 2-3 relevant
-                  categories (e.g., Leadership, Innovation, Community)
-                </li>
-                <li>
-                  <span className="font-medium">Image:</span> A relevant image
-                </li>
-              </ul>
-            </div>
-          </motion.div>
+          ))}
         </motion.div>
       </div>
     </section>
   );
 };
 
-export default Blog;
+export default News;

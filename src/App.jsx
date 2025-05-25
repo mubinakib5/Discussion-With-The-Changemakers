@@ -2,11 +2,11 @@ import { useEffect } from "react";
 import BackToTop from "./components/common/BackToTop";
 import Navbar from "./components/layout/Navbar";
 import About from "./components/sections/About";
-import Blog from "./components/sections/Blog";
 import Contact from "./components/sections/Contact";
 import FAQ from "./components/sections/FAQ";
 import Gallery from "./components/sections/Gallery";
 import Hero from "./components/sections/Hero";
+import News from "./components/sections/News";
 import Participate from "./components/sections/Participate";
 import Sponsors from "./components/sections/Sponsors";
 import Team from "./components/sections/Team";
@@ -34,7 +34,7 @@ function App() {
         <Sponsors />
         <Team />
         <Gallery />
-        <Blog />
+        <News />
         <FAQ />
         <Contact />
       </main>

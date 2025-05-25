@@ -11,8 +11,8 @@ import Presentation from "../assets/Presentation.jpeg";
 import Sarah from "../assets/Sarah.jpg";
 import Team from "../assets/Team.jpeg";
 import Workshop from "../assets/Workshop.jpeg";
-import news1 from "../assets/news1.png";
-import news2 from "../assets/news2.png";
+import News1 from "../assets/news1.png";
+import News2 from "../assets/news2.png";
 // Navigation
 export const navLinks = [
   { href: "#about", label: "About" },
@@ -246,7 +246,7 @@ export const blogArticles = [
     author: "প্রিয় চট্টগ্রাম",
     excerpt:
       "চট্টগ্রামের সবচেয়ে বড় সামাজিক প্রতিযোগিতা মূলক অনুষ্ঠান 'ডিস্কাশন উইথ দ্যা চেঞ্জমেকার্স' সম্পন্ন হয়েছে।",
-    image: news1,
+    image: News1,
     readTime: "3 mins read",
     category: "News",
     link: "https://newsnow24.com/prio-chattogram/INDKJYBtfI",
@@ -257,7 +257,7 @@ export const blogArticles = [
     author: "dailyobserver",
     excerpt:
       "A social competitive event 'Discussion with the Change-makers' organized to identify and solve the problems of Chattogram city was held at Hotel Agrabad on Thursday.",
-    image: news2,
+    image: News2,
     readTime: "2 mins read",
     category: "News",
     link: "https://www.observerbd.com/news/439443",

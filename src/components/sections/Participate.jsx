@@ -1,25 +1,6 @@
+import { participateData } from "../../data";
+
 const Participate = () => {
-  const criteria = [
-    "Age between 18-30 years",
-    "Based in Bangladesh",
-    "Passionate about community development",
-    "Committed to attending all sessions",
-  ];
-
-  const benefits = [
-    "Network with industry leaders",
-    "Mentorship opportunities",
-    "Implementation support",
-    "Certificates and recognition",
-  ];
-
-  const steps = [
-    "Fill out the online registration form",
-    "Submit your motivation statement",
-    "Complete a brief video introduction",
-    "Attend the orientation session",
-  ];
-
   return (
     <section id="participate" className="py-20 bg-neutral-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -37,7 +18,7 @@ const Participate = () => {
               Eligibility Criteria
             </h3>
             <ul className="space-y-4">
-              {criteria.map((item, index) => (
+              {participateData.criteria.map((item, index) => (
                 <li key={index} className="flex items-start space-x-3">
                   <svg
                     className="w-6 h-6 text-neutral-white flex-shrink-0"
@@ -64,7 +45,7 @@ const Participate = () => {
               What You Get
             </h3>
             <ul className="space-y-4">
-              {benefits.map((item, index) => (
+              {participateData.benefits.map((item, index) => (
                 <li key={index} className="flex items-start space-x-3">
                   <svg
                     className="w-6 h-6 text-neutral-white flex-shrink-0"
@@ -91,7 +72,7 @@ const Participate = () => {
               Registration Steps
             </h3>
             <ul className="space-y-4">
-              {steps.map((item, index) => (
+              {participateData.steps.map((item, index) => (
                 <li key={index} className="flex items-start space-x-3">
                   <div className="w-6 h-6 bg-neutral-white rounded-full flex items-center justify-center flex-shrink-0">
                     <span className="text-brand-primary text-sm font-medium">

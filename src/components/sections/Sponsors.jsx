@@ -1,45 +1,8 @@
 import { useState } from "react";
+import { sponsorTiers } from "../../data";
 
 const Sponsors = () => {
   const [selectedTier, setSelectedTier] = useState("all");
-
-  const sponsorTiers = {
-    platinum: {
-      name: "Platinum",
-      benefits: [
-        "Premium logo placement",
-        "Speaking opportunity",
-        "VIP networking access",
-        "Media coverage",
-        "Dedicated booth space",
-      ],
-      style:
-        "bg-gradient-to-br from-[#E5E4E2] via-[#DAD9D7] to-[#C0C0C0] border-[#E5E4E2]",
-      textStyle: "text-neutral-black",
-      iconStyle: "text-neutral-black",
-    },
-    gold: {
-      name: "Gold",
-      benefits: [
-        "Logo on materials",
-        "Event passes",
-        "Networking session",
-        "Brand visibility",
-      ],
-      style:
-        "bg-gradient-to-br from-[#FFD700] via-[#FFC000] to-[#FFB000] border-[#FFD700]",
-      textStyle: "text-neutral-black",
-      iconStyle: "text-neutral-black",
-    },
-    silver: {
-      name: "Silver",
-      benefits: ["Logo inclusion", "Event passes", "Brand mention"],
-      style:
-        "bg-gradient-to-br from-[#C0C0C0] via-[#A8A8A8] to-[#808080] border-[#C0C0C0]",
-      textStyle: "text-neutral-white",
-      iconStyle: "text-neutral-white",
-    },
-  };
 
   const handleTierChange = (tier) => {
     setSelectedTier(tier);

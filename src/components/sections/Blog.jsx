@@ -42,58 +42,64 @@ const Blog = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-10%" }}
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8"
         >
           {blogArticles.map((article, index) => (
             <Card
               key={index}
               variants={itemVariants}
-              className="group cursor-pointer"
+              className="group cursor-pointer touch-manipulation"
             >
               <motion.div
-                className="h-56 overflow-hidden relative"
+                className="relative h-48 sm:h-56 overflow-hidden"
                 whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.98 }}
                 transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
               >
                 <img
                   src={article.image}
                   alt={article.title}
-                  className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                  className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110"
+                  loading="lazy"
                 />
-                <div className="absolute top-4 left-4 bg-brand-primary px-3 py-1 rounded-full">
-                  <span className="text-sm text-neutral-white">
+                <div className="absolute top-4 left-4 bg-brand-primary px-3 py-1.5 rounded-full">
+                  <span className="text-sm font-medium text-neutral-white">
                     {article.category}
                   </span>
                 </div>
               </motion.div>
 
               <motion.div
-                className="p-6 flex flex-col min-h-[280px]"
+                className="p-4 sm:p-6 flex flex-col min-h-[200px] sm:min-h-[240px]"
                 whileHover={{ y: -5 }}
                 transition={{ duration: 0.2 }}
               >
                 <motion.h3
-                  className="text-xl font-bold text-neutral-white mb-3 group-hover:text-brand-light transition-colors"
+                  className="text-lg sm:text-xl font-bold text-neutral-white mb-2 sm:mb-3 line-clamp-2 group-hover:text-brand-light transition-colors"
                   whileHover={{ x: 5 }}
                   transition={{ duration: 0.2 }}
                 >
                   {article.title}
                 </motion.h3>
-                <p className="text-neutral-white/80 mb-4">{article.excerpt}</p>
-                <div className="flex items-center justify-between text-sm text-neutral-white/60 mb-4">
-                  <span>{article.author}</span>
-                  <div className="flex items-center space-x-4">
+                <p className="text-sm sm:text-base text-neutral-white/80 mb-4 line-clamp-3">
+                  {article.excerpt}
+                </p>
+                <div className="flex items-center justify-between text-sm text-neutral-white/60 mb-4 mt-auto">
+                  <span className="line-clamp-1">{article.author}</span>
+                  <div className="flex items-center space-x-4 flex-shrink-0">
                     <span>{article.date}</span>
-                    <span>{article.readTime}</span>
+                    <span className="hidden sm:inline">{article.readTime}</span>
                   </div>
                 </div>
                 <motion.div
-                  className="mt-auto flex items-center text-neutral-white group-hover:translate-x-2 transition-transform"
+                  className="flex items-center text-neutral-white group-hover:translate-x-2 transition-transform"
                   whileHover={{ x: 5 }}
                 >
-                  <span className="mr-2 font-medium">Read More</span>
+                  <span className="text-sm sm:text-base font-medium mr-2">
+                    Read More
+                  </span>
                   <svg
-                    className="w-4 h-4"
+                    className="w-4 h-4 sm:w-5 sm:h-5"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import logoBlack from "../../assets/DC Black.png";
 import logoWhite from "../../assets/DC White.png";
+import { navLinks } from "../../data";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -11,10 +12,8 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
-      // Check if we're in the hero section (assuming hero height is 100vh)
       setIsHeroSection(window.scrollY < window.innerHeight);
 
-      // Calculate which section is currently in view
       const sections = document.querySelectorAll("section[id]");
       sections.forEach((section) => {
         const sectionTop = section.offsetTop - 100;
@@ -27,19 +26,22 @@ const Navbar = () => {
         }
       });
     };
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navLinks = [
-    { href: "#about", label: "About" },
-    { href: "#why", label: "Why" },
-    { href: "#timeline", label: "Timeline" },
-    { href: "#participate", label: "Participate" },
-    { href: "#sponsors", label: "Sponsors" },
-    { href: "#team", label: "Team" },
-    { href: "#contact", label: "Contact", isButton: true },
-  ];
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [isMobileMenuOpen]);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -81,7 +83,6 @@ const Navbar = () => {
                     }`}
                   >
                     {link.label}
-                    {/* Active indicator */}
                     <div
                       className={`absolute bottom-0.5 left-4 right-4 h-0.5 transform origin-left transition-transform duration-300 ${
                         isScrolled ? "bg-brand-primary" : "bg-white"
@@ -118,107 +119,97 @@ const Navbar = () => {
               ))}
           </div>
 
-          {/* Mobile menu button */}
+          {/* Mobile menu button - Increased touch target */}
           <button
-            className={`md:hidden p-3 rounded-full ${
-              isScrolled ? "bg-neutral-100" : "bg-[#2A2A2A]"
+            className={`md:hidden p-4 -mr-4 touch-manipulation ${
+              isScrolled ? "text-neutral-600" : "text-white"
             }`}
             onClick={toggleMobileMenu}
             aria-label="Toggle mobile menu"
+            aria-expanded={isMobileMenuOpen}
           >
-            <svg
-              className={`h-5 w-5 ${
-                isScrolled ? "text-neutral-600" : "text-white"
-              }`}
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d={
+            <div className="w-6 h-6 relative">
+              <span
+                className={`absolute left-0 top-1/2 w-6 h-0.5 transform transition-all duration-300 ${
+                  isScrolled ? "bg-neutral-600" : "bg-white"
+                } ${
                   isMobileMenuOpen
-                    ? "M6 18L18 6M6 6l12 12"
-                    : "M4 6h16M4 12h16M4 18h16"
-                }
+                    ? "rotate-45 translate-y-0"
+                    : "-translate-y-2"
+                }`}
               />
-            </svg>
+              <span
+                className={`absolute left-0 top-1/2 w-6 h-0.5 ${
+                  isScrolled ? "bg-neutral-600" : "bg-white"
+                } transition-opacity duration-200 ${
+                  isMobileMenuOpen ? "opacity-0" : "opacity-100"
+                }`}
+              />
+              <span
+                className={`absolute left-0 top-1/2 w-6 h-0.5 transform transition-all duration-300 ${
+                  isScrolled ? "bg-neutral-600" : "bg-white"
+                } ${
+                  isMobileMenuOpen
+                    ? "-rotate-45 translate-y-0"
+                    : "translate-y-2"
+                }`}
+              />
+            </div>
           </button>
         </div>
 
-        {/* Mobile menu */}
+        {/* Mobile menu - Full screen with better transitions */}
         <div
-          className={`md:hidden fixed left-0 right-0 bottom-0 top-[72px] ${
-            isScrolled ? "bg-white" : "bg-white/10 backdrop-blur-lg"
-          } transition-all duration-300 ease-in-out ${
-            isMobileMenuOpen
-              ? "opacity-100 translate-y-0"
-              : "opacity-0 translate-y-full pointer-events-none"
-          }`}
+          className={`md:hidden fixed inset-0 top-[72px] bg-white/95 backdrop-blur-lg transform transition-transform duration-300 ease-in-out ${
+            isMobileMenuOpen ? "translate-y-0" : "translate-y-full"
+          } ${!isMobileMenuOpen && "pointer-events-none"}`}
         >
-          <div
-            className={`absolute inset-x-4 bottom-8 ${
-              isScrolled ? "bg-neutral-100" : "bg-[#2A2A2A]"
-            } rounded-2xl p-4`}
-          >
-            <div className="space-y-2">
-              {navLinks
-                .filter((link) => !link.isButton)
-                .map((link) => (
-                  <a
-                    key={link.href}
-                    href={link.href}
-                    className={`block px-4 py-2 rounded-xl text-[15px] transition-colors relative ${
-                      isScrolled
-                        ? "text-neutral-600 hover:text-neutral-900 hover:bg-neutral-200"
-                        : "text-white/90 hover:text-white hover:bg-white/10"
-                    } ${
-                      activeSection === link.href.substring(1)
-                        ? isScrolled
-                          ? "bg-neutral-200"
-                          : "bg-white/10"
-                        : ""
-                    }`}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    <span className="relative">
+          <div className="h-full overflow-y-auto overscroll-contain pb-safe">
+            <div className="max-w-lg mx-auto px-4 py-8 flex flex-col h-full">
+              <div className="flex-1 space-y-2">
+                {navLinks
+                  .filter((link) => !link.isButton)
+                  .map((link) => (
+                    <a
+                      key={link.href}
+                      href={link.href}
+                      className={`block px-4 py-3 rounded-xl text-lg font-medium transition-all duration-200 ${
+                        activeSection === link.href.substring(1)
+                          ? "bg-brand-primary text-white transform scale-[1.02]"
+                          : "text-neutral-600 hover:bg-neutral-100"
+                      }`}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      <span className="relative">
+                        {link.label}
+                        {activeSection === link.href.substring(1) && (
+                          <span className="absolute -left-2 top-1/2 -translate-y-1/2 w-1 h-1 rounded-full bg-white" />
+                        )}
+                      </span>
+                    </a>
+                  ))}
+              </div>
+              {/* Contact button at bottom */}
+              <div className="mt-8">
+                {navLinks
+                  .filter((link) => link.isButton)
+                  .map((link) => (
+                    <a
+                      key={link.href}
+                      href={link.href}
+                      className={`block w-full py-4 px-6 text-center text-lg font-medium rounded-xl transition-all duration-200 ${
+                        activeSection === link.href.substring(1)
+                          ? "bg-brand-light text-white transform scale-[1.02]"
+                          : "bg-brand-primary text-white hover:bg-brand-light"
+                      }`}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
                       {link.label}
-                      {activeSection === link.href.substring(1) && (
-                        <span
-                          className={`absolute -left-2 top-1/2 -translate-y-1/2 w-1 h-1 rounded-full ${
-                            isScrolled ? "bg-brand-primary" : "bg-white"
-                          }`}
-                        />
-                      )}
-                    </span>
-                  </a>
-                ))}
+                      <span className="ml-1">↗</span>
+                    </a>
+                  ))}
+              </div>
             </div>
-            {navLinks
-              .filter((link) => link.isButton)
-              .map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  className={`block px-4 py-2 mt-4 rounded-xl text-[15px] ${
-                    isScrolled
-                      ? "bg-brand-primary hover:bg-brand-light text-white"
-                      : isHeroSection
-                      ? "bg-white text-brand-primary hover:bg-white/90"
-                      : "bg-brand-primary hover:bg-brand-light text-white"
-                  } text-center transition-colors ${
-                    activeSection === link.href.substring(1)
-                      ? "ring-2 ring-offset-2 ring-brand-primary"
-                      : ""
-                  }`}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {link.label}
-                  <span className="ml-1">↗</span>
-                </a>
-              ))}
           </div>
         </div>
       </div>

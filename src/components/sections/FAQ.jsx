@@ -1,31 +1,9 @@
 import { AnimatePresence, LayoutGroup, motion } from "framer-motion";
 import { useState } from "react";
+import { faqData } from "../../data";
 
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(null);
-
-  const faqs = [
-    {
-      question: "What is DWC?",
-      answer:
-        "DWC (Discussion With The Changemakers) is a platform that brings together innovators, leaders, and community members to address pressing social challenges through collaborative dialogue and action.",
-    },
-    {
-      question: "Who can participate?",
-      answer:
-        "Anyone passionate about creating positive change in their community can participate. We welcome students, professionals, entrepreneurs, and community leaders.",
-    },
-    {
-      question: "How long is the event?",
-      answer:
-        "The event spans multiple days, featuring workshops, discussions, and collaborative sessions. Each phase is designed to maximize learning and impact.",
-    },
-    {
-      question: "What should I prepare?",
-      answer:
-        "Come with an open mind and willingness to collaborate. Any specific materials or preparations needed will be communicated to registered participants.",
-    },
-  ];
 
   const toggleQuestion = (index) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -67,15 +45,15 @@ const FAQ = () => {
             duration: 0.6,
             ease: [0.22, 1, 0.36, 1],
           }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-neutral-black mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-neutral-black mb-3 sm:mb-4">
             Frequently Asked Questions
           </h2>
-          <p className="text-neutral-gray mb-8">
+          <p className="text-sm sm:text-base text-neutral-gray mb-6 sm:mb-8">
             Everything you need to know about the event
           </p>
-          <div className="w-20 h-1 bg-brand-primary mx-auto"></div>
+          <div className="w-16 sm:w-20 h-1 bg-brand-primary mx-auto"></div>
         </motion.div>
 
         <motion.div
@@ -83,26 +61,29 @@ const FAQ = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-10%" }}
-          className="space-y-4"
+          className="space-y-3 sm:space-y-4"
         >
           <LayoutGroup>
-            {faqs.map((faq, index) => (
+            {faqData.map((faq, index) => (
               <motion.div
                 key={index}
                 variants={itemVariants}
                 layout
-                className={`bg-brand-primary rounded-lg overflow-hidden transition-shadow duration-300 ${
-                  openIndex === index ? "shadow-lg" : ""
+                className={`bg-brand-primary rounded-lg sm:rounded-xl overflow-hidden transition-all duration-300 ${
+                  openIndex === index
+                    ? "shadow-lg ring-1 ring-white/10"
+                    : "hover:bg-brand-light"
                 }`}
               >
                 <motion.button
-                  className="w-full px-6 py-4 text-left flex items-center justify-between focus:outline-none group"
+                  className="w-full px-4 sm:px-6 py-4 sm:py-5 text-left flex items-center justify-between focus:outline-none focus-visible:ring-2 focus-visible:ring-white/20 touch-manipulation"
                   onClick={() => toggleQuestion(index)}
-                  whileHover={{ backgroundColor: "rgba(255, 255, 255, 0.1)" }}
+                  whileHover={{ backgroundColor: "rgba(255, 255, 255, 0.05)" }}
                   transition={{ duration: 0.2 }}
                   layout="position"
+                  aria-expanded={openIndex === index}
                 >
-                  <span className="text-lg font-medium text-neutral-white group-hover:translate-x-0.5 transition-transform duration-200">
+                  <span className="text-base sm:text-lg font-medium text-neutral-white flex-1 pr-4">
                     {faq.question}
                   </span>
                   <motion.div
@@ -114,7 +95,7 @@ const FAQ = () => {
                       duration: 0.3,
                       ease: [0.32, 0.72, 0, 1],
                     }}
-                    className="w-6 h-6 text-neutral-white"
+                    className="w-5 h-5 sm:w-6 sm:h-6 text-neutral-white flex-shrink-0"
                   >
                     <svg
                       className="w-full h-full"
@@ -167,7 +148,7 @@ const FAQ = () => {
                           },
                         },
                       }}
-                      className="overflow-hidden"
+                      className="overflow-hidden bg-white/5"
                     >
                       <motion.div
                         initial={{ y: -10, opacity: 0 }}
@@ -188,9 +169,9 @@ const FAQ = () => {
                             ease: [0.32, 0.72, 0, 1],
                           },
                         }}
-                        className="px-6 pb-4"
+                        className="px-4 sm:px-6 pb-4 sm:pb-5"
                       >
-                        <p className="text-neutral-white/80 leading-relaxed">
+                        <p className="text-sm sm:text-base text-neutral-white/80 leading-relaxed">
                           {faq.answer}
                         </p>
                       </motion.div>
@@ -202,8 +183,8 @@ const FAQ = () => {
           </LayoutGroup>
         </motion.div>
 
-        <div className="text-center mt-12">
-          <p className="text-gray-500">
+        <div className="text-center mt-8 sm:mt-12">
+          <p className="text-sm sm:text-base text-gray-500">
             Still have questions?{" "}
             <a
               href="#contact"

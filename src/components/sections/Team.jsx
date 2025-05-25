@@ -1,42 +1,7 @@
 import { motion } from "framer-motion";
-import Aisha from "../../assets/Aisha.jpg";
-import Michael from "../../assets/Michael.jpg";
-import Sarah from "../../assets/Sarah.jpg";
+import { teamMembers } from "../../data";
 
 const Team = () => {
-  const teamMembers = [
-    {
-      name: "Sarah Johnson",
-      role: "Executive Director",
-      bio: "Leading innovation in community development with 10+ years experience",
-      image: Sarah,
-      social: {
-        linkedin: "#",
-        twitter: "#",
-      },
-    },
-    {
-      name: "Michael Chen",
-      role: "Program Director",
-      bio: "Expert in youth empowerment and educational program design",
-      image: Michael,
-      social: {
-        linkedin: "#",
-        twitter: "#",
-      },
-    },
-    {
-      name: "Aisha Patel",
-      role: "Community Lead",
-      bio: "Passionate about creating inclusive spaces for dialogue and growth",
-      image: Aisha,
-      social: {
-        linkedin: "#",
-        twitter: "#",
-      },
-    },
-  ];
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {

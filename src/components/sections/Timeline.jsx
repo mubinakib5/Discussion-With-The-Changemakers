@@ -1,29 +1,7 @@
 import { motion } from "framer-motion";
+import { timelineEvents } from "../../data";
 
 const Timeline = () => {
-  const timelineEvents = [
-    {
-      date: "March 2024",
-      title: "Registration Opens",
-      description: "Submit your application to join the movement",
-    },
-    {
-      date: "April 2024",
-      title: "Round 1: Problem Discovery",
-      description: "Engage in workshops and identify key challenges",
-    },
-    {
-      date: "May 2024",
-      title: "Round 2: Solution Development",
-      description: "Work with mentors to develop actionable solutions",
-    },
-    {
-      date: "June 2024",
-      title: "Grand Finale",
-      description: "Present your solutions and implementation plans",
-    },
-  ];
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {

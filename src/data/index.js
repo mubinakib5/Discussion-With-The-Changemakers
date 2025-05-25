@@ -66,7 +66,7 @@ export const whyData = {
   stats: [
     { value: "500+", label: "Participants" },
     { value: "50+", label: "Speakers" },
-    { value: "20+", label: "Countries" },
+    { value: "20+", label: "Institutions" },
   ],
   challenges: [
     {

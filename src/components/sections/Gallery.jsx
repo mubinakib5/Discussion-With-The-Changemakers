@@ -1,47 +1,9 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
-import Award from "../../assets/Award.jpeg";
-import Networking from "../../assets/Networking.jpeg";
-import Panel from "../../assets/Panel.jpeg";
-import Presentation from "../../assets/Presentation.jpeg";
-import Team from "../../assets/Team.jpeg";
-import Workshop from "../../assets/Workshop.jpeg";
+import { galleryImages } from "../../data";
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);
-
-  const images = [
-    {
-      src: Workshop,
-      alt: "Workshop Session",
-      caption: "Interactive workshop on community leadership",
-    },
-    {
-      src: Panel,
-      alt: "Panel Discussion",
-      caption: "Industry experts sharing insights",
-    },
-    {
-      src: Team,
-      alt: "Team Building",
-      caption: "Participants engaging in team activities",
-    },
-    {
-      src: Networking,
-      alt: "Networking",
-      caption: "Building connections during networking session",
-    },
-    {
-      src: Presentation,
-      alt: "Presentation",
-      caption: "Youth leaders presenting their initiatives",
-    },
-    {
-      src: Award,
-      alt: "Award Ceremony",
-      caption: "Recognizing outstanding contributions",
-    },
-  ];
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -97,7 +59,7 @@ const Gallery = () => {
           viewport={{ once: true, margin: "-10%" }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
-          {images.map((image, index) => (
+          {galleryImages.map((image, index) => (
             <motion.div
               key={index}
               variants={itemVariants}

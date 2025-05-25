@@ -1,30 +1,7 @@
 import { motion } from "framer-motion";
+import { whyData } from "../../data";
 
 const Why = () => {
-  const stats = [
-    { value: "500+", label: "Participants" },
-    { value: "50+", label: "Speakers" },
-    { value: "20+", label: "Countries" },
-  ];
-
-  const challenges = [
-    {
-      problem:
-        "Limited access to resources and opportunities in underserved communities",
-      solution:
-        "Creating platforms for equal access and distribution of resources",
-    },
-    {
-      problem: "Gap between education and industry requirements",
-      solution:
-        "Building bridges through mentorship and skill development programs",
-    },
-    {
-      problem: "Environmental sustainability challenges",
-      solution: "Implementing innovative green technologies and practices",
-    },
-  ];
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -79,7 +56,7 @@ const Why = () => {
           viewport={{ once: true, margin: "-10%" }}
           className="grid md:grid-cols-3 gap-8 mb-16"
         >
-          {stats.map((stat, index) => (
+          {whyData.stats.map((stat, index) => (
             <motion.div
               key={index}
               variants={itemVariants}
@@ -100,7 +77,7 @@ const Why = () => {
           viewport={{ once: true, margin: "-10%" }}
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
-          {challenges.map((item, index) => (
+          {whyData.challenges.map((item, index) => (
             <motion.div
               key={index}
               variants={itemVariants}

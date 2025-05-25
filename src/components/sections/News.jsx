@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { blogArticles } from "../../data";
+import { newsArticles } from "../../data";
 import Card from "../common/Card";
 import SectionTitle from "../common/SectionTitle";
 
@@ -44,7 +44,7 @@ const News = () => {
           viewport={{ once: true, margin: "-10%" }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8"
         >
-          {blogArticles.map((article, index) => (
+          {newsArticles.map((article, index) => (
             <Card
               key={index}
               variants={itemVariants}

@@ -238,7 +238,7 @@ export const galleryImages = [
   },
 ];
 
-// Blog Section
+// News Section
 export const newsArticles = [
   {
     title: "বর্ণাঢ্য আয়োজনে সমাপ্ত 'ডিস্কাশন উইথ দ্যা চেঞ্জ মেকারস'",

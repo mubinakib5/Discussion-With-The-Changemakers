@@ -119,18 +119,18 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👥 Team
 
-- Project Lead: [Name]
-- UI/UX Design: [Name]
-- Frontend Development: [Name]
-- Content Strategy: [Name]
+- Project Lead: Abdullah Al Mubin
+- UI/UX Design: Abdullah Al Mubin
+- Frontend Development: Abdullah Al Mubin
+- Content Strategy: Abdullah Al Mubin
 
 ## 📞 Contact
 
 For questions and support, please contact:
 
-- Email: [your-email@example.com]
-- Website: [your-website.com]
-- Twitter: [@your-handle]
+- Email: mubinalakib786@gmail.com
+- Website: mubin.xyz
+- Twitter: MubinAkib
 
 ## 🙏 Acknowledgments
 
@@ -139,4 +139,4 @@ For questions and support, please contact:
 
 ---
 
-Made with ❤️ by the DWC Team
+Made with ❤️ by the Abdullah Al Mubin

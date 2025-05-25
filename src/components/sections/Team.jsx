@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { teamMembers } from "../../data";
 
 const Team = () => {
   const containerVariants = {
@@ -56,6 +55,7 @@ const Team = () => {
           viewport={{ once: true, margin: "-10%" }}
           className="grid md:grid-cols-3 gap-8"
         >
+          {/* Team cards temporarily hidden
           {teamMembers.map((member, index) => (
             <motion.div
               key={index}
@@ -127,7 +127,17 @@ const Team = () => {
                 </motion.div>
               </motion.div>
             </motion.div>
-          ))}
+          ))} */}
+
+          <motion.div
+            variants={itemVariants}
+            className="col-span-3 text-center py-16"
+          >
+            <h3 className="text-2xl md:text-3xl font-bold text-brand-primary mb-4">
+              Our Campus Ambassador Program Will Launch Soon
+            </h3>
+            <p className="text-xl text-neutral-gray">Stay Tuned</p>
+          </motion.div>
         </motion.div>
       </div>
     </section>

@@ -5,7 +5,7 @@ import sustainability from "../assets/Changemakers.webp";
 import logoBlack from "../assets/DC Black.png";
 import logoWhite from "../assets/DC White.png";
 import communityAction from "../assets/Empowering.jpeg";
-import heroImage from "../assets/Hero.jpg";
+import heroImage from "../assets/Hero.png";
 import mentorship from "../assets/Mentorship.jpeg";
 import Michael from "../assets/Michael.jpg";
 import Networking from "../assets/Networking.jpeg";

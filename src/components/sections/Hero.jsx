@@ -1,6 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import heroImage from "../../assets/Hero.jpg";
+import dcWhiteLogo from "../../assets/DC White.png";
+import heroImage from "../../assets/Hero.png";
 
 const Hero = () => {
   const [timeLeft, setTimeLeft] = useState({
@@ -49,15 +50,12 @@ const Hero = () => {
     if (isInView && !hasAnimated) {
       setHasAnimated(true);
     }
-  }, [isInView]);
+  }, [isInView, hasAnimated]);
 
   const TimeBlock = useCallback(
     ({ value, label, delay }) => {
-      const animationRef = useRef(null);
-
       return (
         <motion.div
-          ref={animationRef}
           initial={false}
           animate={hasAnimated ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{
@@ -99,7 +97,11 @@ const Hero = () => {
           }}
           className="text-4xl md:text-6xl font-bold text-neutral-white mb-6"
         >
-          Discussion With The Changemakers
+          <img
+            src={dcWhiteLogo}
+            alt="Discussion with the Changemakers"
+            className="h-[120px] md:h-[144px] w-auto mx-auto"
+          />
         </motion.h1>
 
         <motion.p

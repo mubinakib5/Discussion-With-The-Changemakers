@@ -6,13 +6,13 @@ import logoWhite from "../assets/DC White.png";
 import heroImage from "../assets/Hero.png";
 import Michael from "../assets/Michael.jpg";
 import Networking from "../assets/Networking.jpeg";
+import News1 from "../assets/News1.png";
+import News2 from "../assets/News2.png";
 import Panel from "../assets/Panel.jpeg";
 import Presentation from "../assets/Presentation.jpeg";
 import Sarah from "../assets/Sarah.jpg";
 import Team from "../assets/Team.jpeg";
 import Workshop from "../assets/Workshop.jpeg";
-import News1 from "../assets/news1.png";
-import News2 from "../assets/news2.png";
 // Navigation
 export const navLinks = [
   { href: "#about", label: "About" },

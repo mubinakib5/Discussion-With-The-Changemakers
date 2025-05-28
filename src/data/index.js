@@ -1,3 +1,10 @@
+// Social Links
+export const socialLinks = {
+  facebook: "https://www.facebook.com/discussionwiththechangemakers",
+  linkedin: "#",
+  twitter: "#",
+};
+
 // Import all images
 import Aisha from "../assets/Aisha.jpg";
 import Award from "../assets/Award.jpeg";
@@ -36,7 +43,9 @@ export const heroData = {
 // About Section
 export const aboutData = {
   vision:
-    "To create a global platform where innovative minds converge to address pressing community challenges through collaborative problem-solving and actionable solutions.",
+    "Discussion with the Changemakers (DWC) envisions a future where youth are empowered to drive transformative change by bridging innovative ideas with actionable solutions through collaboration, dialogue, and partnership with city leaders and communities.",
+  about:
+    "Discussion with the Changemakers Chapter 02 empowers Chattogram's youth to collaborate with city leaders, building on last year's initiative as a bridge for innovative solutions, in partnership with Third Smile, The Decor, and Decor's Digital.",
   expectations: [
     "Interactive workshops and panel discussions",
     "Networking opportunities with industry leaders",
@@ -88,23 +97,23 @@ export const whyData = {
 // Timeline Section
 export const timelineEvents = [
   {
-    date: "March 2024",
+    date: "June 20, 2025",
     title: "Registration Opens",
     description: "Submit your application to join the movement",
   },
   {
-    date: "April 2024",
+    date: "July 2025",
     title: "Round 1: Problem Discovery",
     description: "Engage in workshops and identify key challenges",
   },
   {
-    date: "May 2024",
+    date: "July 2025",
     title: "Round 2: Solution Development",
     description: "Work with mentors to develop actionable solutions",
   },
   {
-    date: "June 2024",
-    title: "Grand Finale",
+    date: "July 31, 2025",
+    title: "DWC Grand Summit",
     description: "Present your solutions and implementation plans",
   },
 ];
@@ -113,7 +122,7 @@ export const timelineEvents = [
 export const participateData = {
   criteria: [
     "Age between 18-30 years",
-    "Based in Chattogram",
+    "Based in Bangladesh",
     "Passionate about community development",
     "Committed to attending all sessions",
   ],
@@ -199,6 +208,7 @@ export const teamMembers = [
     bio: "Leading innovation in community development with 10+ years experience",
     image: Sarah,
     social: {
+      facebook: socialLinks.facebook,
       linkedin: "#",
       twitter: "#",
     },
@@ -209,6 +219,7 @@ export const teamMembers = [
     bio: "Expert in youth empowerment and educational program design",
     image: Michael,
     social: {
+      facebook: socialLinks.facebook,
       linkedin: "#",
       twitter: "#",
     },
@@ -219,6 +230,7 @@ export const teamMembers = [
     bio: "Passionate about creating inclusive spaces for dialogue and growth",
     image: Aisha,
     social: {
+      facebook: socialLinks.facebook,
       linkedin: "#",
       twitter: "#",
     },

@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { aboutData } from "../../data";
 
 const About = () => {
   const containerVariants = {
@@ -58,30 +59,19 @@ const About = () => {
           >
             <motion.div variants={itemVariants}>
               <h3 className="text-2xl font-bold text-neutral-black mb-4">
-                Our Vision
+                About This Event
               </h3>
-              <p className="text-neutral-gray">
-                Discussion with the Changemakers Chapter 02; the event aims to
-                empower Chattogram's youth and deepen dialogue between young
-                people and city leaders. It builds on last year's program, which
-                was launched as "a bridge between the youth and city rulers" in
-                collaboration with the City Corporation. Organized in
-                partnership with Third Smile (Organizing Partner), The Decor
-                (Event Partner), and Decor's Digital (Digital Partner), we are
-                committed to shaping a better future.
+              <p className="text-neutral-gray text-justify">
+                {aboutData.about}
               </p>
             </motion.div>
-
             <motion.div variants={itemVariants}>
               <h3 className="text-2xl font-bold text-neutral-black mb-4">
-                What to Expect
+                Vision
               </h3>
-              <ul className="text-neutral-gray space-y-3">
-                <li>• Interactive workshops and panel discussions</li>
-                <li>• Networking opportunities with industry leaders</li>
-                <li>• Hands-on problem-solving sessions</li>
-                <li>• Community project showcases</li>
-              </ul>
+              <p className="text-neutral-gray text-justify">
+                {aboutData.vision}
+              </p>
             </motion.div>
           </motion.div>
 
@@ -102,21 +92,7 @@ const About = () => {
               variants={itemVariants}
               className="flex flex-col justify-between flex-grow space-y-8"
             >
-              {[
-                {
-                  title: "Round 1: Ideation",
-                  description:
-                    "Brainstorming sessions and problem identification",
-                },
-                {
-                  title: "Round 2: Development",
-                  description: "Solution development and mentorship",
-                },
-                {
-                  title: "Grand Finale",
-                  description: "Presentation and implementation planning",
-                },
-              ].map((round, index) => (
+              {aboutData.eventFormat.map((round, index) => (
                 <motion.div
                   key={index}
                   variants={itemVariants}

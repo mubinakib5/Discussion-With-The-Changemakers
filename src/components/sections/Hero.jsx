@@ -2,6 +2,7 @@ import { motion, useInView } from "framer-motion";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import dcWhiteLogo from "../../assets/DC White.png";
 import heroImage from "../../assets/Hero.png";
+import { socialLinks } from "../../data";
 import Modal from "../common/Modal";
 
 const Hero = () => {
@@ -156,7 +157,7 @@ const Hero = () => {
           </p>
           <div className="flex justify-center space-x-6">
             <a
-              href="https://facebook.com"
+              href={socialLinks.facebook}
               target="_blank"
               rel="noopener noreferrer"
               className="text-brand-primary hover:text-brand-light transition-colors"

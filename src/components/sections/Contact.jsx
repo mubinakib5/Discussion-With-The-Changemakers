@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { socialLinks } from "../../data";
 
 const Contact = () => {
   const [formState, setFormState] = useState({
@@ -106,7 +107,9 @@ const Contact = () => {
                   <motion.a
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
-                    href="#"
+                    href={socialLinks.facebook}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-neutral-white/80 hover:text-white transition-colors"
                   >
                     <span className="sr-only">Facebook</span>

@@ -5,13 +5,15 @@ export default {
     extend: {
       colors: {
         brand: {
-          primary: "#005f5a", // 10% Brand color
+          primary: "#005f5a", // Primary brand color
+          secondary: "#00857E", // Secondary brand color
+          accent: "#006D67", // Accent brand color
           light: "#007771", // Lighter shade for hover states
         },
         neutral: {
-          white: "#FFFFFF", // 60% White
-          black: "#000000", // 30% Black
-          gray: "#3d3d3d", // Additional gray for text
+          white: "#FFFFFF", // White
+          black: "#000000", // Black
+          gray: "#3d3d3d", // Gray for text
         },
       },
       fontFamily: {

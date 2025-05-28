@@ -13,10 +13,10 @@ const Sponsors = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-neutral-black mb-4">
-            Sponsorship Opportunities
+            Sponsorship Milages
           </h2>
           <p className="text-neutral-gray mb-8">
-            Join us in empowering the next generation of changemakers
+            Partner with us to make a lasting impact
           </p>
           <div className="w-20 h-1 bg-brand-primary mx-auto"></div>
         </div>
@@ -25,10 +25,10 @@ const Sponsors = () => {
         <div className="flex justify-center space-x-4 mb-12">
           <button
             onClick={() => handleTierChange("all")}
-            className={`px-6 py-2 rounded-full ${
+            className={`px-6 py-2 rounded-full transition-all duration-300 ${
               selectedTier === "all"
                 ? "bg-brand-primary text-neutral-white"
-                : "bg-neutral-white text-neutral-gray border border-brand-primary"
+                : "bg-neutral-white text-neutral-gray border border-brand-primary hover:bg-brand-primary/10"
             }`}
           >
             All Tiers
@@ -37,10 +37,10 @@ const Sponsors = () => {
             <button
               key={tier}
               onClick={() => handleTierChange(tier)}
-              className={`px-6 py-2 rounded-full ${
+              className={`px-6 py-2 rounded-full transition-all duration-300 ${
                 selectedTier === tier
                   ? "bg-brand-primary text-neutral-white"
-                  : "bg-neutral-white text-neutral-gray border border-brand-primary"
+                  : "bg-neutral-white text-neutral-gray border border-brand-primary hover:bg-brand-primary/10"
               }`}
             >
               {sponsorTiers[tier].name}
@@ -68,7 +68,7 @@ const Sponsors = () => {
                     {benefits.map((benefit, index) => (
                       <li key={index} className="flex items-start space-x-3">
                         <svg
-                          className={`w-6 h-6 ${iconStyle} flex-shrink-0`}
+                          className={`w-6 h-6 ${iconStyle} flex-shrink-0 mt-1`}
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke="currentColor"
@@ -80,18 +80,19 @@ const Sponsors = () => {
                             d="M5 13l4 4L19 7"
                           />
                         </svg>
-                        <span className={`${textStyle} opacity-80`}>
+                        <span className={`${textStyle} opacity-90 text-sm`}>
                           {benefit}
                         </span>
                       </li>
                     ))}
                   </ul>
                 </div>
-                <button
-                  className={`w-full bg-neutral-white/20 backdrop-blur-sm hover:bg-neutral-white/30 ${textStyle} font-bold py-3 px-6 rounded-lg transition-colors border-2 border-current mt-auto`}
+                <a
+                  href="#contact"
+                  className={`w-full bg-neutral-white/20 backdrop-blur-sm hover:bg-neutral-white/30 ${textStyle} font-bold py-3 px-6 rounded-lg transition-colors border-2 border-current mt-auto text-center`}
                 >
-                  Download Brochure
-                </button>
+                  Contact Us
+                </a>
               </div>
             ))}
         </div>

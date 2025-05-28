@@ -66,23 +66,23 @@ export const whyData = {
     { value: "50+", label: "Speakers" },
     { value: "20+", label: "Institutions" },
   ],
-  challenges: [
-    {
-      problem:
-        "Limited access to resources and opportunities in underserved communities",
-      solution:
-        "Creating platforms for equal access and distribution of resources",
-    },
-    {
-      problem: "Gap between education and industry requirements",
-      solution:
-        "Building bridges through mentorship and skill development programs",
-    },
-    {
-      problem: "Environmental sustainability challenges",
-      solution: "Implementing innovative green technologies and practices",
-    },
-  ],
+  // challenges: [
+  //   {
+  //     problem:
+  //       "Limited access to resources and opportunities in underserved communities",
+  //     solution:
+  //       "Creating platforms for equal access and distribution of resources",
+  //   },
+  //   {
+  //     problem: "Gap between education and industry requirements",
+  //     solution:
+  //       "Building bridges through mentorship and skill development programs",
+  //   },
+  //   {
+  //     problem: "Environmental sustainability challenges",
+  //     solution: "Implementing innovative green technologies and practices",
+  //   },
+  // ],
 };
 
 // Timeline Section
@@ -133,38 +133,59 @@ export const participateData = {
 
 // Sponsors Section
 export const sponsorTiers = {
-  platinum: {
-    name: "Platinum",
+  title: {
+    name: "Title",
     benefits: [
-      "Premium logo placement",
-      "Speaking opportunity",
-      "VIP networking access",
-      "Media coverage",
-      "Dedicated booth space",
+      'Large, Standalone Company Logo in opening credits. eg. "UCB Bank" Presents Discussion with the Changemakers S02',
+      "Credit on Backdrop, Teaser, Celebrity Endorsement and Bites",
+      "Standalone Logo above the title",
+      "All Communications",
+      "Press Release",
+      "Product Placement Opportunity",
+      "3 Appearances in Movie",
+      "15-20 Secs Screen Time Exposures",
+      "Invitation to the event",
+      "Event Activation Opportunity",
+      "Sponsorship Amount: 10 Lacs",
     ],
-    style:
-      "bg-gradient-to-br from-[#E5E4E2] via-[#DAD9D7] to-[#C0C0C0] border-[#E5E4E2]",
-    textStyle: "text-neutral-black",
-    iconStyle: "text-neutral-black",
+    style: "bg-brand-primary text-neutral-white border-brand-primary",
+    textStyle: "text-neutral-white",
+    iconStyle: "text-neutral-white",
   },
   gold: {
     name: "Gold",
     benefits: [
-      "Logo on materials",
-      "Event passes",
-      "Networking session",
-      "Brand visibility",
+      'Logo on sponsor\'s title screen in opening credits as "Powered By"',
+      "Only Logo below the title",
+      "Logo below the movie name",
+      "Selected Communications",
+      "Press Release",
+      "Product Placement Opportunity",
+      "2 Appearances",
+      "5-10 Secs Screen Time Exposures",
+      "Invitation to the event",
+      "Event Activation Opportunity",
+      "Sponsorship Amount: 5 Lacs",
     ],
-    style:
-      "bg-gradient-to-br from-[#FFD700] via-[#FFC000] to-[#FFB000] border-[#FFD700]",
-    textStyle: "text-neutral-black",
-    iconStyle: "text-neutral-black",
+    style: "bg-brand-primary text-neutral-white border-brand-primary",
+    textStyle: "text-neutral-white",
+    iconStyle: "text-neutral-white",
   },
-  silver: {
-    name: "Silver",
-    benefits: ["Logo inclusion", "Event passes", "Brand mention"],
-    style:
-      "bg-gradient-to-br from-[#C0C0C0] via-[#A8A8A8] to-[#808080] border-[#C0C0C0]",
+  partner: {
+    name: "Co-Sponsor/Partner",
+    benefits: [
+      'Logo on partner\'s title screen in opening credits as "Partner"',
+      "Only Logo in the bottom",
+      "Logo bottom of the poster & banners",
+      "Selected Communications",
+      "Product Placement Opportunity",
+      "1 Appearance",
+      "3-5 Secs Screen Time Exposures",
+      "Invitation to the event",
+      "Event Activation Opportunity",
+      "Sponsorship Amount: 2 Lacs",
+    ],
+    style: "bg-brand-primary text-neutral-white border-brand-primary",
     textStyle: "text-neutral-white",
     iconStyle: "text-neutral-white",
   },

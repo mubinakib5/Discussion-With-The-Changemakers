@@ -61,9 +61,14 @@ const About = () => {
                 Our Vision
               </h3>
               <p className="text-neutral-gray">
-                To create a global platform where innovative minds converge to
-                address pressing community challenges through collaborative
-                problem-solving and actionable solutions.
+                Discussion with the Changemakers Chapter 02; the event aims to
+                empower Chattogram's youth and deepen dialogue between young
+                people and city leaders. It builds on last year's program, which
+                was launched as "a bridge between the youth and city rulers" in
+                collaboration with the City Corporation. Organized in
+                partnership with Third Smile (Organizing Partner), The Decor
+                (Event Partner), and Decor's Digital (Digital Partner), we are
+                committed to shaping a better future.
               </p>
             </motion.div>
 
@@ -85,7 +90,7 @@ const About = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-10%" }}
-            className="bg-brand-primary p-8 rounded-lg shadow-xl"
+            className="bg-brand-primary p-8 rounded-lg shadow-xl flex flex-col h-full"
           >
             <motion.h4
               variants={itemVariants}
@@ -93,7 +98,10 @@ const About = () => {
             >
               Event Format
             </motion.h4>
-            <motion.div variants={itemVariants} className="space-y-4">
+            <motion.div
+              variants={itemVariants}
+              className="flex flex-col justify-between flex-grow space-y-8"
+            >
               {[
                 {
                   title: "Round 1: Ideation",

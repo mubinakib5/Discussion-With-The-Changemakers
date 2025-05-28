@@ -6,18 +6,22 @@ export const socialLinks = {
 };
 
 // Import all images
-import Aisha from "../assets/Aisha.jpg";
+import Adittya from "../assets/Adittya.jpeg";
 import Award from "../assets/Award.jpeg";
+import Ayman from "../assets/Ayman.jpeg";
 import logoBlack from "../assets/DC Black.png";
 import logoWhite from "../assets/DC White.png";
 import heroImage from "../assets/Hero.png";
-import Michael from "../assets/Michael.jpg";
+import Ibnath from "../assets/Ibnath.jpeg";
+import Isma from "../assets/Isma.jpeg";
+import Mahmudur from "../assets/Mahmudur.jpeg";
+import Mubin from "../assets/Mubin.jpg";
 import Networking from "../assets/Networking.jpeg";
 import News1 from "../assets/News1.png";
 import News2 from "../assets/News2.png";
 import Panel from "../assets/Panel.jpeg";
 import Presentation from "../assets/Presentation.jpeg";
-import Sarah from "../assets/Sarah.jpg";
+import Raihan from "../assets/Raihan.jpeg";
 import Team from "../assets/Team.jpeg";
 import Workshop from "../assets/Workshop.jpeg";
 // Navigation
@@ -200,36 +204,66 @@ export const sponsorTiers = {
 // Team Section
 export const teamMembers = [
   {
-    name: "Sarah Johnson",
-    role: "Executive Director",
-    bio: "Leading innovation in community development with 10+ years experience",
-    image: Sarah,
+    name: "Ayman Siddique",
+    role: "Changesetter",
+    // bio: "Leading innovation in community development with 10+ years experience",
+    image: Ayman,
     social: {
-      facebook: socialLinks.facebook,
-      linkedin: "#",
-      twitter: "#",
+      linkedin: "https://www.linkedin.com/in/ayman-siddiquee/",
     },
   },
   {
-    name: "Michael Chen",
-    role: "Program Director",
-    bio: "Expert in youth empowerment and educational program design",
-    image: Michael,
+    name: "Fahmida Afroz Isma",
+    role: "Deputy Changesetter",
+    // bio: "Leading innovation in community development with 10+ years experience",
+    image: Isma,
     social: {
-      facebook: socialLinks.facebook,
-      linkedin: "#",
-      twitter: "#",
+      linkedin: "https://www.linkedin.com/in/isma-fahmida-5648b4275/",
     },
   },
   {
-    name: "Aisha Patel",
-    role: "Community Lead",
-    bio: "Passionate about creating inclusive spaces for dialogue and growth",
-    image: Aisha,
+    name: "Adittya Basak",
+    role: "Creative Changesetter",
+    // bio: "Leading innovation in community development with 10+ years experience",
+    image: Adittya,
     social: {
-      facebook: socialLinks.facebook,
-      linkedin: "#",
-      twitter: "#",
+      linkedin: "https://www.linkedin.com/in/adittyabasak/",
+    },
+  },
+  {
+    name: "Obaidul Islam Raihan",
+    role: "Communication Changesetter",
+    // bio: "Leading innovation in community development with 10+ years experience",
+    image: Raihan,
+    social: {
+      linkedin: "https://www.linkedin.com/in/obaidulislam1/",
+    },
+  },
+  {
+    name: "Tahrim Ibnath",
+    role: "Executive Changesetter",
+    // bio: "Leading innovation in community development with 10+ years experience",
+    image: Ibnath,
+    social: {
+      linkedin: "https://www.linkedin.com/in/tahrim-ibnath-b23ab8347/",
+    },
+  },
+  {
+    name: "Abdullah Al Mubin",
+    role: "Digital Changesetter",
+    // bio: "Leading innovation in community development with 10+ years experience",
+    image: Mubin,
+    social: {
+      linkedin: "https://www.linkedin.com/in/abdullah-al-mubin-akib/",
+    },
+  },
+  {
+    name: "Mohammad Mahmudur Rahman",
+    role: "Visual Changesetter",
+    // bio: "Leading innovation in community development with 10+ years experience",
+    image: Mahmudur,
+    social: {
+      linkedin: "https://www.linkedin.com/in/mahmud-rahman-965187214/",
     },
   },
 ];

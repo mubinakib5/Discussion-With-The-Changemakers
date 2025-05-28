@@ -58,9 +58,9 @@ const About = () => {
             className="space-y-6"
           >
             <motion.div variants={itemVariants}>
-              <h3 className="text-2xl font-bold text-neutral-black mb-4">
+              {/* <h3 className="text-2xl font-bold text-neutral-black mb-4">
                 About This Event
-              </h3>
+              </h3> */}
               <p className="text-neutral-gray text-justify">
                 {aboutData.about}
               </p>

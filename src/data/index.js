@@ -149,7 +149,7 @@ export const sponsorTiers = {
   title: {
     name: "Title",
     benefits: [
-      'Large, Standalone Company Logo in opening credits. eg. "UCB Bank" Presents Discussion with the Changemakers S02',
+      'Large, Standalone Company Logo in opening credits. eg. "XYZ" Presents Discussion with the Changemakers S02',
       "Credit on Backdrop, Teaser, Celebrity Endorsement and Bites",
       "Standalone Logo above the title",
       "All Communications",

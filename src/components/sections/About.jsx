@@ -76,6 +76,18 @@ const About = () => {
                 {aboutData.vision}
               </p>
             </motion.div>
+            <motion.div variants={itemVariants}>
+              <h3 className="text-2xl font-bold text-neutral-black mb-4">
+                What To Expect
+              </h3>
+              <ul className="text-neutral-gray text-justify">
+                {aboutData.expectations.map((expectation, index) => (
+                  <li key={index} className="list-disc list-inside">
+                    {expectation}
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
           </motion.div>
 
           <motion.div

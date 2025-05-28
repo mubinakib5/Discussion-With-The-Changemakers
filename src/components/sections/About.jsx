@@ -44,7 +44,10 @@ const About = () => {
             About The Event
           </h2>
           <p className="text-neutral-gray mb-8">
-            A platform for change-makers to connect and create impact
+            Discussion with the Changemakers Chapter 02 empowers Chattogram's
+            youth to collaborate with city leaders, building on last year's
+            initiative as a bridge for innovative solutions, in partnership with
+            Third Smile, The Decor, and Decor's Digital.
           </p>
           <div className="w-20 h-1 bg-brand-primary mx-auto"></div>
         </motion.div>
@@ -57,14 +60,14 @@ const About = () => {
             viewport={{ once: true, margin: "-10%" }}
             className="space-y-6"
           >
-            <motion.div variants={itemVariants}>
-              {/* <h3 className="text-2xl font-bold text-neutral-black mb-4">
+            {/* <motion.div variants={itemVariants}>
+              <h3 className="text-2xl font-bold text-neutral-black mb-4">
                 About This Event
-              </h3> */}
+              </h3>
               <p className="text-neutral-gray text-justify">
                 {aboutData.about}
               </p>
-            </motion.div>
+            </motion.div> */}
             <motion.div variants={itemVariants}>
               <h3 className="text-2xl font-bold text-neutral-black mb-4">
                 Vision

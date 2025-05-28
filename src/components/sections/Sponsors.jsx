@@ -58,7 +58,9 @@ const Sponsors = () => {
                 className={`${style} p-8 rounded-lg shadow-xl border-2 hover:scale-105 transition-all duration-300 flex flex-col h-full`}
               >
                 <div className="flex-grow">
-                  <h3 className={`text-2xl font-bold ${textStyle} mb-2`}>
+                  <h3
+                    className={`text-2xl font-bold ${textStyle} mb-2 text-center`}
+                  >
                     {name}
                   </h3>
                   <div

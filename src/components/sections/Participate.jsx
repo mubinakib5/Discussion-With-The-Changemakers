@@ -123,7 +123,7 @@ const Participate = () => {
               </svg>
             </a>
             <a
-              href="https://instagram.com"
+              href={socialLinks.instagram}
               target="_blank"
               rel="noopener noreferrer"
               className="text-brand-primary hover:text-brand-light transition-colors"
@@ -133,7 +133,7 @@ const Participate = () => {
               </svg>
             </a>
             <a
-              href="https://linkedin.com"
+              href={socialLinks.linkedin}
               target="_blank"
               rel="noopener noreferrer"
               className="text-brand-primary hover:text-brand-light transition-colors"

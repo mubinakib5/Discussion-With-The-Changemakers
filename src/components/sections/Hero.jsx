@@ -1,5 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import chapterImage from "../../assets/Chapter.png";
 import dcWhiteLogo from "../../assets/DC White.png";
 import heroImage from "../../assets/Hero.png";
 import { socialLinks } from "../../data";
@@ -91,58 +92,118 @@ const Hero = () => {
       >
         <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/80 to-brand-light/70" />
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 0.6,
-              ease: [0.22, 1, 0.36, 1],
-            }}
-            className="text-4xl md:text-6xl font-bold text-neutral-white mb-6"
-          >
-            <img
-              src={dcWhiteLogo}
-              alt="Discussion with the Changemakers"
-              className="h-[120px] md:h-[144px] w-auto mx-auto"
-            />
-          </motion.h1>
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+            {/* Left Side */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+              className="flex flex-col items-start space-y-6"
+            >
+              <img
+                src={dcWhiteLogo}
+                alt="Discussion with the Changemakers"
+                className="h-[100px] md:h-[112px] w-auto"
+              />
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.6,
+                  delay: 0.2,
+                  ease: [0.22, 1, 0.36, 1],
+                }}
+                className="text-xl md:text-2xl text-neutral-white/90 max-w-xl"
+              >
+                A platform for change-makers to connect and create impact
+              </motion.p>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 0.6,
-              delay: 0.2,
-              ease: [0.22, 1, 0.36, 1],
-            }}
-            className="text-xl md:text-2xl text-neutral-white/90 mb-12 max-w-3xl mx-auto"
-          >
-            A platform for change-makers to connect and create impact
-          </motion.p>
+              <motion.button
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.6,
+                  delay: 0.7,
+                  ease: [0.22, 1, 0.36, 1],
+                }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => setIsModalOpen(true)}
+                className="bg-neutral-white hover:bg-brand-light text-brand-primary hover:text-neutral-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300"
+              >
+                Register Now
+              </motion.button>
+            </motion.div>
 
-          <div className="flex justify-center space-x-4 md:space-x-8 mb-12">
-            <TimeBlock value={timeLeft.days} label="Days" delay={0.3} />
-            <TimeBlock value={timeLeft.hours} label="Hours" delay={0.4} />
-            <TimeBlock value={timeLeft.minutes} label="Minutes" delay={0.5} />
-            <TimeBlock value={timeLeft.seconds} label="Seconds" delay={0.6} />
+            {/* Right Side */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+              className="flex flex-col items-end h-full"
+            >
+              <div className="relative w-full flex justify-end h-[120px] md:h-[140px]">
+                <motion.div
+                  animate={{
+                    opacity: [0, 1, 1, 0],
+                    scale: [0.9, 1, 1, 0.9],
+                    x: [-20, 0, 0, 20],
+                  }}
+                  transition={{
+                    duration: 4,
+                    times: [0, 0.1, 0.9, 1],
+                    repeat: Infinity,
+                    repeatDelay: 4,
+                    ease: "easeInOut",
+                  }}
+                  className="absolute inset-0 flex justify-end items-start"
+                >
+                  <img
+                    src={chapterImage}
+                    alt="Chapter"
+                    className="h-[100px] md:h-[112px] w-auto object-contain"
+                  />
+                </motion.div>
+
+                <motion.div
+                  className="absolute inset-0 flex justify-end items-start"
+                  animate={{
+                    opacity: [0, 1, 1, 0],
+                    scale: [0.9, 1, 1, 0.9],
+                    x: [20, 0, 0, -20],
+                  }}
+                  transition={{
+                    duration: 4,
+                    times: [0, 0.1, 0.9, 1],
+                    repeat: Infinity,
+                    repeatDelay: 4,
+                    delay: 4,
+                    ease: "easeInOut",
+                  }}
+                >
+                  <div className="flex space-x-4 md:space-x-6">
+                    <TimeBlock value={timeLeft.days} label="Days" delay={0.3} />
+                    <TimeBlock
+                      value={timeLeft.hours}
+                      label="Hours"
+                      delay={0.4}
+                    />
+                    <TimeBlock
+                      value={timeLeft.minutes}
+                      label="Minutes"
+                      delay={0.5}
+                    />
+                    <TimeBlock
+                      value={timeLeft.seconds}
+                      label="Seconds"
+                      delay={0.6}
+                    />
+                  </div>
+                </motion.div>
+              </div>
+            </motion.div>
           </div>
-
-          <motion.button
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 0.6,
-              delay: 0.7,
-              ease: [0.22, 1, 0.36, 1],
-            }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            onClick={() => setIsModalOpen(true)}
-            className="bg-neutral-white hover:bg-brand-light text-brand-primary hover:text-neutral-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300"
-          >
-            Register Now
-          </motion.button>
         </div>
       </section>
 
@@ -167,7 +228,7 @@ const Hero = () => {
               </svg>
             </a>
             <a
-              href="https://instagram.com"
+              href={socialLinks.instagram}
               target="_blank"
               rel="noopener noreferrer"
               className="text-brand-primary hover:text-brand-light transition-colors"
@@ -177,7 +238,7 @@ const Hero = () => {
               </svg>
             </a>
             <a
-              href="https://linkedin.com"
+              href={socialLinks.linkedin}
               target="_blank"
               rel="noopener noreferrer"
               className="text-brand-primary hover:text-brand-light transition-colors"

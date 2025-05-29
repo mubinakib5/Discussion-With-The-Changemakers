@@ -1,8 +1,8 @@
 // Social Links
 export const socialLinks = {
   facebook: "https://www.facebook.com/discussionwiththechangemakers",
-  linkedin: "#",
-  twitter: "#",
+  linkedin: "https://www.linkedin.com/showcase/discussionwiththechangemakers/",
+  instagram: "https://www.instagram.com/discussionwiththechangemakers/",
 };
 
 // Import all images

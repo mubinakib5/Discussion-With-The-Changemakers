@@ -101,11 +101,13 @@ const Hero = () => {
               transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
               className="flex flex-col items-start space-y-6"
             >
-              <img
-                src={dcWhiteLogo}
-                alt="Discussion with the Changemakers"
-                className="h-[100px] md:h-[112px] w-auto"
-              />
+              <div className="w-full lg:w-auto">
+                <img
+                  src={dcWhiteLogo}
+                  alt="Discussion with the Changemakers"
+                  className="h-[80px] sm:h-[100px] md:h-[112px] w-auto object-contain"
+                />
+              </div>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -114,7 +116,7 @@ const Hero = () => {
                   delay: 0.2,
                   ease: [0.22, 1, 0.36, 1],
                 }}
-                className="text-xl md:text-2xl text-neutral-white/90 max-w-xl"
+                className="text-lg sm:text-xl md:text-2xl text-neutral-white/90 max-w-xl"
               >
                 A platform for change-makers to connect and create impact
               </motion.p>
@@ -130,7 +132,7 @@ const Hero = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => setIsModalOpen(true)}
-                className="bg-neutral-white hover:bg-brand-light text-brand-primary hover:text-neutral-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300"
+                className="bg-neutral-white hover:bg-brand-light text-brand-primary hover:text-neutral-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg text-base sm:text-lg transition-all duration-300"
               >
                 Register Now
               </motion.button>
@@ -141,9 +143,9 @@ const Hero = () => {
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-              className="flex flex-col items-end h-full"
+              className="flex flex-col items-start lg:items-end h-full"
             >
-              <div className="relative w-full flex justify-end h-[120px] md:h-[140px]">
+              <div className="relative w-full flex justify-start lg:justify-end h-[100px] sm:h-[120px] md:h-[140px] overflow-hidden">
                 <motion.div
                   animate={{
                     opacity: [0, 1, 1, 0],
@@ -157,17 +159,17 @@ const Hero = () => {
                     repeatDelay: 4,
                     ease: "easeInOut",
                   }}
-                  className="absolute inset-0 flex justify-end items-start"
+                  className="absolute inset-0 flex justify-start lg:justify-end items-start"
                 >
                   <img
                     src={chapterImage}
                     alt="Chapter"
-                    className="h-[100px] md:h-[112px] w-auto object-contain"
+                    className="h-[80px] sm:h-[100px] md:h-[112px] w-auto object-contain"
                   />
                 </motion.div>
 
                 <motion.div
-                  className="absolute inset-0 flex justify-end items-start"
+                  className="absolute inset-0 flex justify-start lg:justify-end items-start"
                   animate={{
                     opacity: [0, 1, 1, 0],
                     scale: [0.9, 1, 1, 0.9],
@@ -182,7 +184,7 @@ const Hero = () => {
                     ease: "easeInOut",
                   }}
                 >
-                  <div className="flex space-x-4 md:space-x-6">
+                  <div className="flex space-x-2 sm:space-x-4 md:space-x-6 scale-[0.85] sm:scale-100 origin-left lg:origin-right">
                     <TimeBlock value={timeLeft.days} label="Days" delay={0.3} />
                     <TimeBlock
                       value={timeLeft.hours}

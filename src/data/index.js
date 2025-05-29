@@ -66,7 +66,7 @@ export const aboutData = {
       description: "Solution development and mentorship",
     },
     {
-      title: "Grand Finale",
+      title: "DWC Grand Summit",
       description: "Presentation and implementation planning",
     },
   ],
@@ -107,12 +107,12 @@ export const timelineEvents = [
   },
   {
     date: "July 2025",
-    title: "Round 1: Problem Discovery",
+    title: "Round 1: Ideation",
     description: "Engage in workshops and identify key challenges",
   },
   {
     date: "July 2025",
-    title: "Round 2: Solution Development",
+    title: "Round 2: Development",
     description: "Work with mentors to develop actionable solutions",
   },
   {

@@ -17,6 +17,8 @@ const Hero = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true });
+  const bannerRef = useRef(null);
+  const isBannerVisible = useInView(bannerRef, { margin: "-100px" });
 
   // Set your event date here
   const eventDate = useMemo(() => new Date("2025-07-31T00:00:00"), []);
@@ -255,8 +257,8 @@ const Hero = () => {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1.5, duration: 0.6 }}
-        className="fixed bottom-0 left-0 right-0 bg-brand-primary/90 backdrop-blur-sm overflow-hidden py-4 z-50"
+        transition={{ duration: 0.6 }}
+        className="absolute bottom-0 left-0 right-0 bg-brand-primary/90 backdrop-blur-sm overflow-hidden py-4"
       >
         <a
           href="https://forms.gle/fCY6JUTeyYYzcrQm7"
@@ -271,16 +273,16 @@ const Hero = () => {
               x: {
                 repeat: Infinity,
                 repeatType: "loop",
-                duration: 20,
+                duration: 15,
                 ease: "linear",
               },
             }}
             className="flex whitespace-nowrap hover:text-brand-light transition-colors"
           >
-            <span className="text-4xl font-bold text-neutral-white uppercase mx-4">
+            <span className="text-3xl font-bold text-neutral-white uppercase mx-4">
               Our Campus Ambassador Program Has Been Launched. Apply Now
             </span>
-            <span className="text-4xl font-bold text-neutral-white uppercase mx-4">
+            <span className="text-3xl font-bold text-neutral-white uppercase mx-4">
               Our Campus Ambassador Program Has Been Launched. Apply Now
             </span>
           </motion.div>

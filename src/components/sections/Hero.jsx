@@ -252,6 +252,40 @@ const Hero = () => {
           </div>
         </div>
       </Modal>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.5, duration: 0.6 }}
+        className="fixed bottom-0 left-0 right-0 bg-brand-primary/90 backdrop-blur-sm overflow-hidden py-4 z-50"
+      >
+        <a
+          href="https://forms.gle/fCY6JUTeyYYzcrQm7"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <motion.div
+            animate={{
+              x: ["0%", "-50%"],
+            }}
+            transition={{
+              x: {
+                repeat: Infinity,
+                repeatType: "loop",
+                duration: 20,
+                ease: "linear",
+              },
+            }}
+            className="flex whitespace-nowrap hover:text-brand-light transition-colors"
+          >
+            <span className="text-4xl font-bold text-neutral-white uppercase mx-4">
+              Our Campus Ambassador Program Has Been Launched. Apply Now
+            </span>
+            <span className="text-4xl font-bold text-neutral-white uppercase mx-4">
+              Our Campus Ambassador Program Has Been Launched. Apply Now
+            </span>
+          </motion.div>
+        </a>
+      </motion.div>
     </>
   );
 };

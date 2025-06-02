@@ -50,7 +50,7 @@ const DetailedOverview = () => {
           },
           publisher: {
             name: "Decor's Digital",
-            logo: "/logo192.png"
+            logo: "/images/dwc-icon-192.svg"
           },
           description: "A comprehensive overview of Discussion with the Changemakers Chapter 02, including event specifics, marketing strategies, and sustainability plans.",
           url: window.location.href

@@ -51,7 +51,7 @@ const WhyParticipate = () => {
           },
           publisher: {
             name: "Decor's Digital",
-            logo: "/logo192.png"
+            logo: "/images/dwc-icon-192.svg"
           },
           description: "Discover why youth and students should participate in Discussion with the Changemakers, including opportunities for skill development, networking, and creating real-world impact.",
           url: window.location.href

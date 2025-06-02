@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { aboutData } from "../../data";
 
 const About = () => {
@@ -43,12 +44,18 @@ const About = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-neutral-black mb-4">
             About The Event
           </h2>
-          <p className="text-neutral-gray mb-8">
+          <p className="text-neutral-gray mb-4">
             Discussion with the Changemakers Chapter 02 empowers Chattogram's
             youth to collaborate with city leaders, building on last year's
             initiative as a bridge for innovative solutions, in partnership with
             Third Smile, The Decor, and Decor's Digital.
           </p>
+          <Link 
+            to="/detailed-overview" 
+            className="inline-block px-6 py-2 mb-8 bg-brand-primary text-neutral-white font-medium rounded-md hover:bg-brand-light transition-colors duration-300"
+          >
+            Learn More
+          </Link>
           <div className="w-20 h-1 bg-brand-primary mx-auto"></div>
         </motion.div>
 

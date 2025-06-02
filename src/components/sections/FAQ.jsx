@@ -64,121 +64,163 @@ const FAQ = () => {
           className="space-y-3 sm:space-y-4"
         >
           <LayoutGroup>
-            {faqData.map((faq, index) => (
-              <motion.div
-                key={index}
-                variants={itemVariants}
-                layout
-                className={`bg-brand-primary rounded-lg sm:rounded-xl overflow-hidden transition-all duration-300 ${
-                  openIndex === index
-                    ? "shadow-lg ring-1 ring-white/10"
-                    : "hover:bg-brand-light"
-                }`}
-              >
-                <motion.button
-                  className="w-full px-4 sm:px-6 py-4 sm:py-5 text-left flex items-center justify-between focus:outline-none focus-visible:ring-2 focus-visible:ring-white/20 touch-manipulation"
-                  onClick={() => toggleQuestion(index)}
-                  whileHover={{ backgroundColor: "rgba(255, 255, 255, 0.05)" }}
-                  transition={{ duration: 0.2 }}
-                  layout="position"
-                  aria-expanded={openIndex === index}
-                >
-                  <span className="text-base sm:text-lg font-medium text-neutral-white flex-1 pr-4">
-                    {faq.question}
-                  </span>
-                  <motion.div
-                    animate={{
-                      rotate: openIndex === index ? 180 : 0,
-                      scale: openIndex === index ? 1.1 : 1,
-                    }}
-                    transition={{
-                      duration: 0.3,
-                      ease: [0.32, 0.72, 0, 1],
-                    }}
-                    className="w-5 h-5 sm:w-6 sm:h-6 text-neutral-white flex-shrink-0"
-                  >
-                    <svg
-                      className="w-full h-full"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M19 9l-7 7-7-7"
-                      />
-                    </svg>
-                  </motion.div>
-                </motion.button>
-                <AnimatePresence mode="sync">
-                  {openIndex === index && (
+            {faqData.map((section, sectionIdx) => (
+              <div key={sectionIdx} className="space-y-6">
+                <h2 className="text-xl text-center sm:text-2xl font-semibold text-brand-primary mb-4">
+                  {section.section}
+                </h2>
+
+                {section.items.map((faq, index) => {
+                  const itemKey = `${sectionIdx}-${index}`;
+
+                  return (
                     <motion.div
+                      key={itemKey}
+                      variants={itemVariants}
                       layout
-                      initial="collapsed"
-                      animate="open"
-                      exit="collapsed"
-                      variants={{
-                        open: {
-                          height: "auto",
-                          opacity: 1,
-                          transition: {
-                            height: {
-                              duration: 0.35,
-                              ease: [0.32, 0.72, 0, 1],
-                            },
-                            opacity: {
-                              duration: 0.2,
-                              delay: 0.1,
-                            },
-                          },
-                        },
-                        collapsed: {
-                          height: 0,
-                          opacity: 0,
-                          transition: {
-                            height: {
-                              duration: 0.35,
-                              ease: [0.32, 0.72, 0, 1],
-                            },
-                            opacity: {
-                              duration: 0.2,
-                            },
-                          },
-                        },
-                      }}
-                      className="overflow-hidden bg-white/5"
+                      className={`bg-brand-primary rounded-lg sm:rounded-xl overflow-hidden transition-all duration-300 ${
+                        openIndex === itemKey
+                          ? "shadow-lg ring-1 ring-white/10"
+                          : "hover:bg-brand-light"
+                      }`}
                     >
-                      <motion.div
-                        initial={{ y: -10, opacity: 0 }}
-                        animate={{
-                          y: 0,
-                          opacity: 1,
-                          transition: {
-                            duration: 0.35,
-                            ease: [0.32, 0.72, 0, 1],
-                            delay: 0.05,
-                          },
+                      <motion.button
+                        className="w-full px-4 sm:px-6 py-4 sm:py-5 text-left flex items-center justify-between focus:outline-none focus-visible:ring-2 focus-visible:ring-white/20 touch-manipulation"
+                        onClick={() => toggleQuestion(itemKey)}
+                        whileHover={{
+                          backgroundColor: "rgba(255, 255, 255, 0.05)",
                         }}
-                        exit={{
-                          y: -10,
-                          opacity: 0,
-                          transition: {
-                            duration: 0.2,
-                            ease: [0.32, 0.72, 0, 1],
-                          },
-                        }}
-                        className="px-4 sm:px-6 pb-4 sm:pb-5"
+                        transition={{ duration: 0.2 }}
+                        layout="position"
+                        aria-expanded={openIndex === itemKey}
                       >
-                        <p className="text-sm sm:text-base text-neutral-white/80 leading-relaxed">
-                          {faq.answer}
-                        </p>
-                      </motion.div>
+                        <span className="text-base sm:text-lg font-medium text-neutral-white flex-1 pr-4">
+                          {faq.question}
+                        </span>
+                        <motion.div
+                          animate={{
+                            rotate: openIndex === itemKey ? 180 : 0,
+                            scale: openIndex === itemKey ? 1.1 : 1,
+                          }}
+                          transition={{
+                            duration: 0.3,
+                            ease: [0.32, 0.72, 0, 1],
+                          }}
+                          className="w-5 h-5 sm:w-6 sm:h-6 text-neutral-white flex-shrink-0"
+                        >
+                          <svg
+                            className="w-full h-full"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M19 9l-7 7-7-7"
+                            />
+                          </svg>
+                        </motion.div>
+                      </motion.button>
+
+                      <AnimatePresence mode="sync">
+                        {openIndex === itemKey && (
+                          <motion.div
+                            layout
+                            initial="collapsed"
+                            animate="open"
+                            exit="collapsed"
+                            variants={{
+                              open: {
+                                height: "auto",
+                                opacity: 1,
+                                transition: {
+                                  height: {
+                                    duration: 0.35,
+                                    ease: [0.32, 0.72, 0, 1],
+                                  },
+                                  opacity: {
+                                    duration: 0.2,
+                                    delay: 0.1,
+                                  },
+                                },
+                              },
+                              collapsed: {
+                                height: 0,
+                                opacity: 0,
+                                transition: {
+                                  height: {
+                                    duration: 0.35,
+                                    ease: [0.32, 0.72, 0, 1],
+                                  },
+                                  opacity: {
+                                    duration: 0.2,
+                                  },
+                                },
+                              },
+                            }}
+                            className="overflow-hidden bg-white/5"
+                          >
+                            <motion.div
+                              initial={{ y: -10, opacity: 0 }}
+                              animate={{
+                                y: 0,
+                                opacity: 1,
+                                transition: {
+                                  duration: 0.35,
+                                  ease: [0.32, 0.72, 0, 1],
+                                  delay: 0.05,
+                                },
+                              }}
+                              exit={{
+                                y: -10,
+                                opacity: 0,
+                                transition: {
+                                  duration: 0.2,
+                                  ease: [0.32, 0.72, 0, 1],
+                                },
+                              }}
+                              className="px-4 sm:px-6 pb-4 sm:pb-5"
+                            >
+                              <div className="text-sm sm:text-base text-neutral-white/80 leading-relaxed space-y-2">
+                                {faq.answer.split("\n").map((line, idx) => {
+                                  const trimmed = line.trim();
+                                  if (trimmed.startsWith("•")) {
+                                    return (
+                                      <ul
+                                        key={idx}
+                                        className="list-disc list-inside"
+                                      >
+                                        <li>{trimmed.slice(1).trim()}</li>
+                                      </ul>
+                                    );
+                                  } else if (/^\d+\./.test(trimmed)) {
+                                    return (
+                                      <ol
+                                        key={idx}
+                                        className="list-decimal list-inside"
+                                      >
+                                        <li>
+                                          {trimmed.replace(/^\d+\.\s*/, "")}
+                                        </li>
+                                      </ol>
+                                    );
+                                  } else if (trimmed !== "") {
+                                    return <p key={idx}>{trimmed}</p>;
+                                  } else {
+                                    return <br key={idx} />;
+                                  }
+                                })}
+                              </div>
+                            </motion.div>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
                     </motion.div>
-                  )}
-                </AnimatePresence>
-              </motion.div>
+                  );
+                })}
+              </div>
             ))}
           </LayoutGroup>
         </motion.div>

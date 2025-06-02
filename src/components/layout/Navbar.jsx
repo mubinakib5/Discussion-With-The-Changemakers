@@ -1,13 +1,20 @@
 import { useEffect, useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import logoBlack from "../../assets/DC Black.png";
 import logoWhite from "../../assets/DC White.png";
 import { navLinks } from "../../data";
 
 const Navbar = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isHeroSection, setIsHeroSection] = useState(true);
   const [activeSection, setActiveSection] = useState("");
+  
+  const isHomePage = location.pathname === "/";
+  // Force scrolled navbar style on non-homepage routes
+  const forceScrolledStyle = !isHomePage;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -47,17 +54,50 @@ const Navbar = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  const handleNavigation = (e, href) => {
+    e.preventDefault();
+    const sectionId = href.substring(1);
+    
+    if (!isHomePage) {
+      // If we're not on the homepage, navigate to homepage first
+      navigate('/');
+      // Set a small timeout to allow the page to load before scrolling
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      // If we're already on the homepage, just scroll to the section
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+    
+    // Close mobile menu if it's open
+    if (isMobileMenuOpen) {
+      setIsMobileMenuOpen(false);
+    }
+  };
+
   return (
     <nav
       className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled ? "py-4 bg-white shadow-lg" : "py-6"
+        isScrolled || forceScrolledStyle ? "py-4 bg-white shadow-lg" : "py-6"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          <a href="#" className="flex items-center">
+          <a href="/" className="flex items-center" onClick={(e) => {
+            if (!isHomePage) {
+              e.preventDefault();
+              navigate('/');
+            }
+          }}>
             <img
-              src={isScrolled || !isHeroSection ? logoBlack : logoWhite}
+              src={isScrolled || !isHeroSection || forceScrolledStyle ? logoBlack : logoWhite}
               alt="Logo"
               className="h-8 w-auto"
             />
@@ -67,7 +107,7 @@ const Navbar = () => {
           <div className="hidden md:flex items-center">
             <div
               className={`rounded-full p-1.5 flex items-center mr-2 ${
-                isScrolled ? "bg-neutral-100" : "bg-[#2A2A2A]"
+                isScrolled || forceScrolledStyle ? "bg-neutral-100" : "bg-[#2A2A2A]"
               }`}
             >
               {navLinks
@@ -76,8 +116,9 @@ const Navbar = () => {
                   <a
                     key={link.href}
                     href={link.href}
+                    onClick={(e) => handleNavigation(e, link.href)}
                     className={`relative px-4 py-2 text-[15px] rounded-full transition-colors group ${
-                      isScrolled
+                      isScrolled || forceScrolledStyle
                         ? "text-neutral-600 hover:text-neutral-900"
                         : "text-white/90 hover:text-white"
                     }`}
@@ -85,7 +126,7 @@ const Navbar = () => {
                     {link.label}
                     <div
                       className={`absolute bottom-0.5 left-4 right-4 h-0.5 transform origin-left transition-transform duration-300 ${
-                        isScrolled ? "bg-brand-primary" : "bg-white"
+                        isScrolled || forceScrolledStyle ? "bg-brand-primary" : "bg-white"
                       } ${
                         activeSection === link.href.substring(1)
                           ? "scale-x-100"
@@ -101,15 +142,16 @@ const Navbar = () => {
                 <a
                   key={link.href}
                   href={link.href}
+                  onClick={(e) => handleNavigation(e, link.href)}
                   className={`ml-2 px-6 py-2 ${
-                    isScrolled
+                    isScrolled || forceScrolledStyle
                       ? "bg-brand-primary hover:bg-brand-light text-white"
                       : isHeroSection
                       ? "bg-white text-brand-primary hover:bg-white/90"
                       : "bg-brand-primary hover:bg-brand-light text-white"
                   } rounded-full transition-colors flex items-center text-[15px] ${
                     activeSection === link.href.substring(1)
-                      ? "ring-2 ring-offset-2 ring-brand-primary"
+                      ? "ring-2 ring-offset-2 ring-brand-primary/30"
                       : ""
                   }`}
                 >
@@ -178,7 +220,7 @@ const Navbar = () => {
                           ? "bg-brand-primary text-white transform scale-[1.02]"
                           : "text-neutral-600 hover:bg-neutral-100"
                       }`}
-                      onClick={() => setIsMobileMenuOpen(false)}
+                      onClick={(e) => handleNavigation(e, link.href)}
                     >
                       <span className="relative">
                         {link.label}
@@ -202,7 +244,7 @@ const Navbar = () => {
                           ? "bg-brand-light text-white transform scale-[1.02]"
                           : "bg-brand-primary text-white hover:bg-brand-light"
                       }`}
-                      onClick={() => setIsMobileMenuOpen(false)}
+                      onClick={(e) => handleNavigation(e, link.href)}
                     >
                       {link.label}
                       <span className="ml-1">↗</span>

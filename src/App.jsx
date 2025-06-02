@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
+import { Analytics } from "@vercel/analytics/react";
 import BackToTop from "./components/common/BackToTop";
 import Navbar from "./components/layout/Navbar";
 import About from "./components/sections/About";
@@ -37,6 +38,7 @@ function App() {
         </Routes>
       </main>
       <BackToTop />
+      <Analytics />
     </div>
   );
 }

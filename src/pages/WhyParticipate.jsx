@@ -2,6 +2,8 @@
 import { motion } from "framer-motion";
 import Contact from "../components/sections/Contact";
 import { Link } from "react-router-dom";
+import SEO from "../components/common/SEO";
+import StructuredData from "../components/common/StructuredData";
 
 const WhyParticipate = () => {
   const containerVariants = {
@@ -31,6 +33,30 @@ const WhyParticipate = () => {
 
   return (
     <div className="pt-24">
+      <SEO 
+        title="Why Participate"
+        description="Discover why youth and students should participate in Discussion with the Changemakers, including opportunities for skill development, networking, and creating real-world impact."
+        keywords="youth participation, student opportunities, DWC benefits, skill development, networking, urban solutions, Chattogram youth, changemakers"
+        ogType="article"
+      />
+      <StructuredData 
+        type="article"
+        data={{
+          headline: "Why Youth and Students Should Participate in DWC",
+          image: "/images/dwc-youth.jpg",
+          datePublished: "2025-06-02",
+          dateModified: "2025-06-02",
+          author: {
+            name: "Decor's Digital"
+          },
+          publisher: {
+            name: "Decor's Digital",
+            logo: "/logo192.png"
+          },
+          description: "Discover why youth and students should participate in Discussion with the Changemakers, including opportunities for skill development, networking, and creating real-world impact.",
+          url: window.location.href
+        }}
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

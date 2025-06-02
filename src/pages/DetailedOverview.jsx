@@ -1,6 +1,8 @@
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import Contact from "../components/sections/Contact";
+import SEO from "../components/common/SEO";
+import StructuredData from "../components/common/StructuredData";
 
 const DetailedOverview = () => {
   const containerVariants = {
@@ -30,6 +32,30 @@ const DetailedOverview = () => {
 
   return (
     <>
+      <SEO 
+        title="Detailed Overview"
+        description="A comprehensive overview of Discussion with the Changemakers Chapter 02, including event specifics, marketing strategies, and sustainability plans."
+        keywords="DWC Chapter 02, event details, marketing strategy, sustainability, youth empowerment, Chattogram, urban development"
+        ogType="article"
+      />
+      <StructuredData 
+        type="article"
+        data={{
+          headline: "Detailed Overview of Discussion with the Changemakers Chapter 02",
+          image: "/images/dwc-event.jpg",
+          datePublished: "2025-06-02",
+          dateModified: "2025-06-02",
+          author: {
+            name: "Decor's Digital"
+          },
+          publisher: {
+            name: "Decor's Digital",
+            logo: "/logo192.png"
+          },
+          description: "A comprehensive overview of Discussion with the Changemakers Chapter 02, including event specifics, marketing strategies, and sustainability plans.",
+          url: window.location.href
+        }}
+      />
       <section className="py-20 bg-neutral-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <motion.div

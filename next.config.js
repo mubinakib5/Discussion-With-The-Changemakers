@@ -11,6 +11,7 @@ const nextConfig = {
     serverComponentsExternalPackages: [],
     esmExternals: 'loose',
   },
+
   // Ensure CSS modules work properly
   webpack: (config) => {
     return config;

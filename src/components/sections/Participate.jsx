@@ -102,6 +102,25 @@ const Participate = () => {
               </ul>
             </div>
 
+            {/* Team Formation */}
+            <div className="bg-brand-primary p-8 rounded-lg">
+              <h3 className="text-xl font-bold text-neutral-white mb-6">
+                Team Formation
+              </h3>
+              <ul className="space-y-4">
+                {participateData.teams.map((item, index) => (
+                  <li key={index} className="flex items-start space-x-3">
+                    <div className="w-6 h-6 bg-neutral-white rounded-full flex items-center justify-center flex-shrink-0">
+                      <span className="text-brand-primary text-sm font-medium">
+                        {index + 1}
+                      </span>
+                    </div>
+                    <span className="text-neutral-white/80">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
             {/* Registration Steps */}
             <div className="bg-brand-primary p-8 rounded-lg">
               <h3 className="text-xl font-bold text-neutral-white mb-6">

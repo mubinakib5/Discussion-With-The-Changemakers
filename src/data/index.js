@@ -74,30 +74,30 @@ export const aboutData = {
 };
 
 // Why Section
-export const whyData = {
-  stats: [
-    { value: "500+", label: "Participants" },
-    { value: "50+", label: "Speakers" },
-    { value: "20+", label: "Institutions" },
-  ],
-  // challenges: [
-  //   {
-  //     problem:
-  //       "Limited access to resources and opportunities in underserved communities",
-  //     solution:
-  //       "Creating platforms for equal access and distribution of resources",
-  //   },
-  //   {
-  //     problem: "Gap between education and industry requirements",
-  //     solution:
-  //       "Building bridges through mentorship and skill development programs",
-  //   },
-  //   {
-  //     problem: "Environmental sustainability challenges",
-  //     solution: "Implementing innovative green technologies and practices",
-  //   },
-  // ],
-};
+// export const whyData = {
+//   stats: [
+//     { value: "500+", label: "Participants" },
+//     { value: "50+", label: "Speakers" },
+//     { value: "20+", label: "Institutions" },
+//   ],
+//   // challenges: [
+//   //   {
+//   //     problem:
+//   //       "Limited access to resources and opportunities in underserved communities",
+//   //     solution:
+//   //       "Creating platforms for equal access and distribution of resources",
+//   //   },
+//   //   {
+//   //     problem: "Gap between education and industry requirements",
+//   //     solution:
+//   //       "Building bridges through mentorship and skill development programs",
+//   //   },
+//   //   {
+//   //     problem: "Environmental sustainability challenges",
+//   //     solution: "Implementing innovative green technologies and practices",
+//   //   },
+//   // ],
+// };
 
 // Timeline Section
 export const timelineEvents = [
@@ -136,6 +136,11 @@ export const participateData = {
     "Mentorship opportunities",
     "Implementation support",
     "Certificates and recognition",
+  ],
+  teams: [
+    "A team must consist of minimum 3 and maximum 5 members",
+    "It must be consisted of university student",
+    "A team should come up with an innovative plan",
   ],
   steps: [
     "Fill out the online registration form",

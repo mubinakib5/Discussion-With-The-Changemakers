@@ -2,8 +2,8 @@
 
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { opportunityBenefits } from "../../data/index.js";
 import { participateData, socialLinks } from "../../data";
+import { opportunityBenefits } from "../../data/index.js";
 import Modal from "../common/Modal";
 
 const Participate = () => {
@@ -132,7 +132,7 @@ const Participate = () => {
             className="text-center mt-20 mb-12"
           >
             <h3 className="text-2xl md:text-3xl font-bold text-neutral-black mb-4">
-              Key Benefits of Participation
+              Why One Should Participate?
             </h3>
             <div className="w-16 h-1 bg-brand-primary mx-auto"></div>
           </motion.div>
@@ -142,19 +142,19 @@ const Participate = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-10%" }}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+            className="flex justify-center"
           >
             {opportunityBenefits.map((benefit, index) => (
               <motion.div
                 key={index}
                 variants={itemVariants}
                 whileHover={{ scale: 1.03 }}
-                className="bg-brand-primary text-white rounded-lg p-6 flex flex-col items-center text-center shadow-sm hover:shadow-md transition-all duration-300"
+                className="bg-brand-primary text-white rounded-lg p-8 flex flex-col items-center text-center shadow-lg hover:shadow-xl transition-all duration-300 max-w-lg mx-auto"
               >
-                <div className="w-12 h-12 text-white mb-4">{benefit.icon}</div>
-                <h3 className="text-lg font-semibold mb-2">{benefit.title}</h3>
+                <div className="w-16 h-16 text-white mb-6">{benefit.icon}</div>
+                <h3 className="text-2xl font-bold mb-3">{benefit.title}</h3>
                 {benefit.description && (
-                  <p className="text-white/80 text-sm">{benefit.description}</p>
+                  <p className="text-white/90 text-lg">{benefit.description}</p>
                 )}
               </motion.div>
             ))}

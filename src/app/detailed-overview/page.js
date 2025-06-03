@@ -38,21 +38,6 @@ export default function DetailedOverview() {
                     Introduction
                   </h2>
                   <p className="text-justify">
-                    Discussion with the Changemakers (DWC) Chapter 02 is a
-                    pivotal event in the initiative's mission to empower the
-                    youth of Chattogram and foster meaningful dialogue with city
-                    leaders to address urban challenges. Scheduled for July
-                    1-17, 2025, with the main event on July 17, 2025, at Hotel
-                    Agrabad in Chattogram, this chapter builds on the foundation
-                    of Chapter 01, which was launched as "a bridge between the
-                    youth and city rulers" in collaboration with the City
-                    Corporation. This detailed overview elaborates on the
-                    specifics of Chapter 02, addresses how DWC's past
-                    promotional efforts were limited, outlines the
-                    transformative changes for a "changeable look," and explores
-                    how the initiative aims to sustain itself in the future.{" "}
-                    <br />
-                    <br />
                     Discussion with the Changemakers (DWC) is a platform that
                     creates a bridge between YOUTH and National AUTHORITIES for
                     change. Here, we are building a bridge between the

@@ -52,14 +52,36 @@ const About = () => {
             initiative as a bridge for innovative solutions, in partnership with
             Third Smile, The Decor, and Decor's Digital.
           </p>
-          <Link 
-            href="/detailed-overview" 
+          <Link
+            href="/detailed-overview"
             className="inline-block px-6 py-2 mb-8 bg-brand-primary text-neutral-white font-medium rounded-md hover:bg-brand-light transition-colors duration-300"
           >
             Learn More
           </Link>
           <div className="w-20 h-1 bg-brand-primary mx-auto"></div>
         </motion.div>
+
+        {/* Why DWC Stats Section */}
+        {/* <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-10%" }}
+          className="grid md:grid-cols-3 gap-8 mb-16"
+        >
+          {whyData.stats.map((stat, index) => (
+            <motion.div
+              key={index}
+              variants={itemVariants}
+              className="text-center p-6 bg-brand-primary rounded-lg transform hover:scale-105 transition-transform duration-300"
+            >
+              <div className="text-4xl font-bold text-neutral-white mb-2">
+                {stat.value}
+              </div>
+              <div className="text-neutral-white/80">{stat.label}</div>
+            </motion.div>
+          ))}
+        </motion.div> */}
 
         <div className="grid md:grid-cols-2 gap-12">
           <motion.div

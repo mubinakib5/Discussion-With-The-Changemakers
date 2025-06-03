@@ -27,11 +27,11 @@ const Workshop = "/images/Workshop.jpeg";
 // Navigation
 export const navLinks = [
   { href: "#about", label: "About" },
-  { href: "#why", label: "Why" },
   { href: "#timeline", label: "Timeline" },
   { href: "#participate", label: "Participate" },
   { href: "#sponsors", label: "Sponsors" },
   { href: "#team", label: "Team" },
+  { href: "#participants", label: "Participants" },
   { href: "#contact", label: "Contact", isButton: true },
 ];
 
@@ -356,7 +356,7 @@ export const faqData = [
       {
         question: "What is the structure and program of DWC events?",
         answer:
-          "DWC events are structured in multiple stages:\n\n1. Problem Identification: Teams identify key issues affecting their city or community.\n2. Roadmap Development: Participants create detailed plans to address these issues.\n3. Plan Execution: Solutions are tested through fieldwork, surveys, and trial runs to ensure effectiveness.\n\nThe program includes group rounds, elimination stages, and a final showcase where teams present their solutions to a panel of judges, including city officials.",
+          "DWC events are structured in multiple stages:\n\n• Problem Identification: Teams identify key issues affecting their city or community.\n• Roadmap Development: Participants create detailed plans to address these issues.\n• Plan Execution: Solutions are tested through fieldwork, surveys, and trial runs to ensure effectiveness.\n\nThe program includes group rounds, elimination stages, and a final showcase where teams present their solutions to a panel of judges, including city officials.",
       },
       {
         question: "Who is the target audience for DWC?",

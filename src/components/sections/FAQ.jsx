@@ -80,23 +80,23 @@ const FAQ = () => {
                       key={itemKey}
                       variants={itemVariants}
                       layout
-                      className={`bg-brand-primary rounded-lg sm:rounded-xl overflow-hidden transition-all duration-300 ${
+                      className={`bg-neutral-white border-2 border-brand-primary rounded-lg sm:rounded-xl overflow-hidden transition-all duration-300 ${
                         openIndex === itemKey
-                          ? "shadow-lg ring-1 ring-white/10"
-                          : "hover:bg-brand-light"
+                          ? "shadow-lg"
+                          : "hover:border-brand-light"
                       }`}
                     >
                       <motion.button
-                        className="w-full px-4 sm:px-6 py-4 sm:py-5 text-left flex items-center justify-between focus:outline-none focus-visible:ring-2 focus-visible:ring-white/20 touch-manipulation"
+                        className="w-full px-4 sm:px-6 py-4 sm:py-5 text-left flex items-center justify-between focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary/20 touch-manipulation"
                         onClick={() => toggleQuestion(itemKey)}
                         whileHover={{
-                          backgroundColor: "rgba(255, 255, 255, 0.05)",
+                          backgroundColor: "rgba(0, 0, 0, 0.02)",
                         }}
                         transition={{ duration: 0.2 }}
                         layout="position"
                         aria-expanded={openIndex === itemKey}
                       >
-                        <span className="text-base sm:text-lg font-medium text-neutral-white flex-1 pr-4">
+                        <span className="text-base sm:text-lg font-medium text-neutral-black flex-1 pr-4">
                           {faq.question}
                         </span>
                         <motion.div
@@ -108,7 +108,7 @@ const FAQ = () => {
                             duration: 0.3,
                             ease: [0.32, 0.72, 0, 1],
                           }}
-                          className="w-5 h-5 sm:w-6 sm:h-6 text-neutral-white flex-shrink-0"
+                          className="w-5 h-5 sm:w-6 sm:h-6 text-brand-primary flex-shrink-0"
                         >
                           <svg
                             className="w-full h-full"
@@ -162,7 +162,7 @@ const FAQ = () => {
                                 },
                               },
                             }}
-                            className="overflow-hidden bg-white/5"
+                            className="overflow-hidden bg-neutral-white"
                           >
                             <motion.div
                               initial={{ y: -10, opacity: 0 }}
@@ -185,7 +185,7 @@ const FAQ = () => {
                               }}
                               className="px-4 sm:px-6 pb-4 sm:pb-5"
                             >
-                              <div className="text-sm sm:text-base text-neutral-white/80 leading-relaxed space-y-2">
+                              <div className="text-sm sm:text-base text-neutral-gray leading-relaxed space-y-2">
                                 {faq.answer.split("\n").map((line, idx) => {
                                   const trimmed = line.trim();
                                   if (trimmed.startsWith("•")) {

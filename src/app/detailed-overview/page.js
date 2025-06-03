@@ -98,9 +98,61 @@ export default function DetailedOverview() {
                   </p>
                 </div>
 
-                {/* Additional sections continue with the same pattern */}
-                {/* For brevity, I've included just the first two sections */}
-                {/* The complete content would include all sections from the original file */}
+                <div className="mb-12">
+                  <h2 className="text-3xl font-bold text-brand-primary mb-4 text-justify">
+                    Why Youth/Students Should Participate
+                  </h2>
+                  <p className="text-justify">
+                    "Discussion with the Changemakers" (DWC) is a youth-driven platform that empowers young people to address real-world urban challenges through innovation, dialogue, and collaboration with city leaders. Specifically designed to harness the potential of Chattogram's youth, DWC Chapter 02 offers a transformative opportunity for students to grow, lead, and make a lasting impact.
+                  </p>
+                  <p className="mt-4 text-justify">
+                    DWC provides a unique platform for youth to tackle significant urban challenges in Chattogram, such as infrastructure, sustainability, or public services. Participants work in teams to identify city problems, conduct fieldwork, and develop actionable solutions, with the potential for 3-5 of these solutions to be selected by city authorities for implementation.
+                  </p>
+                  
+                  <h3 className="text-2xl font-bold text-brand-primary mt-8 mb-4">
+                    Key Benefits of Participating in DWC
+                  </h3>
+                  <div className="overflow-x-auto mt-4">
+                    <table className="min-w-full bg-white border border-gray-300 rounded-lg">
+                      <thead>
+                        <tr className="bg-brand-primary text-white">
+                          <th className="py-3 px-4 text-left">Benefit</th>
+                          <th className="py-3 px-4 text-left">Description</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr className="border-t border-gray-300">
+                          <td className="py-3 px-4 font-medium">Real-World Impact</td>
+                          <td className="py-3 px-4">Develop solutions that may be implemented by city authorities.</td>
+                        </tr>
+                        <tr className="border-t border-gray-300 bg-gray-50">
+                          <td className="py-3 px-4 font-medium">Skill Development</td>
+                          <td className="py-3 px-4">Gain expertise in research, project management, and public speaking.</td>
+                        </tr>
+                        <tr className="border-t border-gray-300">
+                          <td className="py-3 px-4 font-medium">Networking</td>
+                          <td className="py-3 px-4">Connect with city leaders and peers from 30+ universities.</td>
+                        </tr>
+                        <tr className="border-t border-gray-300 bg-gray-50">
+                          <td className="py-3 px-4 font-medium">Recognition</td>
+                          <td className="py-3 px-4">Compete for prize money and gain media exposure.</td>
+                        </tr>
+                        <tr className="border-t border-gray-300">
+                          <td className="py-3 px-4 font-medium">Empowerment</td>
+                          <td className="py-3 px-4">Be inspired to lead change and shape your city's future.</td>
+                        </tr>
+                        <tr className="border-t border-gray-300 bg-gray-50">
+                          <td className="py-3 px-4 font-medium">Professional Experience</td>
+                          <td className="py-3 px-4">Participate in a high-profile event with a professional setting.</td>
+                        </tr>
+                        <tr className="border-t border-gray-300">
+                          <td className="py-3 px-4 font-medium">Community Contribution</td>
+                          <td className="py-3 px-4">Contribute to sustainable urban development in Chattogram.</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
               </div>
             </div>
           </section>

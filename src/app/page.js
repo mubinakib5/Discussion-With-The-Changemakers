@@ -1,11 +1,11 @@
 import { Suspense } from 'react';
 import Hero from '../components/sections/Hero';
 import About from '../components/sections/About';
-import Why from '../components/sections/Why';
 import Timeline from '../components/sections/Timeline';
 import Participate from '../components/sections/Participate';
 import Sponsors from '../components/sections/Sponsors';
 import Team from '../components/sections/Team';
+import PrizesAndFacilities from '../components/sections/PrizesAndFacilities';
 import Gallery from '../components/sections/Gallery';
 import News from '../components/sections/News';
 import FAQ from '../components/sections/FAQ';
@@ -24,11 +24,11 @@ export default function HomePage() {
         <Suspense fallback={<div>Loading...</div>}>
           <Hero />
           <About />
-          <Why />
           <Timeline />
           <Participate />
           <Sponsors />
           <Team />
+          <PrizesAndFacilities />
           <Gallery />
           <News />
           <FAQ />

@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import Hero from "../components/sections/Hero";
 import About from "../components/sections/About";
 import Why from "../components/sections/Why";
@@ -13,6 +14,13 @@ import SEO from "../components/common/SEO";
 import StructuredData from "../components/common/StructuredData";
 
 const HomePage = () => {
+  const [currentUrl, setCurrentUrl] = useState("https://discussionwiththechangemakers.com");
+  
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setCurrentUrl(window.location.href);
+    }
+  }, []);
   return (
     <>
       <SEO 

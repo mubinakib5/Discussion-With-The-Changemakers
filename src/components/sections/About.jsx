@@ -1,5 +1,7 @@
+"use client";
+
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { aboutData } from "../../data";
 
 const About = () => {
@@ -51,7 +53,7 @@ const About = () => {
             Third Smile, The Decor, and Decor's Digital.
           </p>
           <Link 
-            to="/detailed-overview" 
+            href="/detailed-overview" 
             className="inline-block px-6 py-2 mb-8 bg-brand-primary text-neutral-white font-medium rounded-md hover:bg-brand-light transition-colors duration-300"
           >
             Learn More

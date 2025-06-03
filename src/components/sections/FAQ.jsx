@@ -1,3 +1,5 @@
+"use client";
+
 import { AnimatePresence, LayoutGroup, motion } from "framer-motion";
 import { useState } from "react";
 import { faqData } from "../../data";

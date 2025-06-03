@@ -1,5 +1,7 @@
+"use client";
+
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { whyData } from "../../data";
 
 const Why = () => {
@@ -48,7 +50,7 @@ const Why = () => {
             Addressing key challenges in community development
           </p>
           <Link 
-            to="/why-participate" 
+            href="/why-participate" 
             className="inline-block px-6 py-2 mb-8 bg-brand-primary text-neutral-white font-medium rounded-md hover:bg-brand-light transition-colors duration-300"
           >
             Learn More

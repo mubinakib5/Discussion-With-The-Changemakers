@@ -1,11 +1,19 @@
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
 import Contact from "../components/sections/Contact";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import SEO from "../components/common/SEO";
 import StructuredData from "../components/common/StructuredData";
 
 const WhyParticipate = () => {
+  const [currentUrl, setCurrentUrl] = useState("https://discussionwiththechangemakers.com/why-participate");
+  
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setCurrentUrl(window.location.href);
+    }
+  }, []);
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -54,7 +62,7 @@ const WhyParticipate = () => {
             logo: "/images/dwc-icon-192.svg"
           },
           description: "Discover why youth and students should participate in Discussion with the Changemakers, including opportunities for skill development, networking, and creating real-world impact.",
-          url: window.location.href
+          url: currentUrl
         }}
       />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">

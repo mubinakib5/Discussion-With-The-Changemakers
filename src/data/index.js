@@ -5,25 +5,25 @@ export const socialLinks = {
   instagram: "https://www.instagram.com/discussionwiththechangemakers/",
 };
 
-// Import all images
-import Adittya from "../assets/Adittya.jpeg";
-import Award from "../assets/Award.jpeg";
-import Ayman from "../assets/Ayman.jpeg";
-import logoBlack from "../assets/DC Black.png";
-import logoWhite from "../assets/DC White.png";
-import heroImage from "../assets/Hero.png";
-import Ibnath from "../assets/Ibnath.jpeg";
-import Isma from "../assets/Isma.jpeg";
-import Mahmudur from "../assets/Mahmudur.jpeg";
-import Mubin from "../assets/Mubin.jpg";
-import Networking from "../assets/Networking.jpeg";
-import News1 from "../assets/News1.png";
-import News2 from "../assets/News2.png";
-import Panel from "../assets/Panel.jpeg";
-import Presentation from "../assets/Presentation.jpeg";
-import Raihan from "../assets/Raihan.jpeg";
-import Team from "../assets/Team.jpeg";
-import Workshop from "../assets/Workshop.jpeg";
+// Define image paths from public folder
+const Adittya = "/images/Adittya.jpeg";
+const Award = "/images/Award.jpeg";
+const Ayman = "/images/Ayman.jpeg";
+const logoBlack = "/images/DC Black.png";
+const logoWhite = "/images/DC White.png";
+const heroImage = "/images/Hero.png";
+const Ibnath = "/images/Ibnath.jpeg";
+const Isma = "/images/Isma.jpeg";
+const Mahmudur = "/images/Mahmudur.jpeg";
+const Mubin = "/images/Mubin.jpg";
+const Networking = "/images/Networking.jpeg";
+const News1 = "/images/News1.png";
+const News2 = "/images/News2.png";
+const Panel = "/images/Panel.jpeg";
+const Presentation = "/images/Presentation.jpeg";
+const Raihan = "/images/Raihan.jpeg";
+const Team = "/images/Team.jpeg";
+const Workshop = "/images/Workshop.jpeg";
 // Navigation
 export const navLinks = [
   { href: "#about", label: "About" },

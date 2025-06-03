@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet-async';
+import Script from 'next/script';
 import PropTypes from 'prop-types';
 
 const StructuredData = ({ type, data }) => {
@@ -74,11 +74,9 @@ const StructuredData = ({ type, data }) => {
   }
 
   return (
-    <Helmet>
-      <script type="application/ld+json">
-        {JSON.stringify(structuredData)}
-      </script>
-    </Helmet>
+    <Script id={`structured-data-${type}`} type="application/ld+json">
+      {JSON.stringify(structuredData)}
+    </Script>
   );
 };
 

@@ -1,18 +1,23 @@
+"use client";
+
 import { useEffect, useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
-import logoBlack from "../../assets/DC Black.png";
-import logoWhite from "../../assets/DC White.png";
+import { usePathname, useRouter } from "next/navigation";
+import Link from "next/link";
 import { navLinks } from "../../data";
 
+// In Next.js, we need to use the public folder for images
+const logoBlack = "/images/DC Black.png";
+const logoWhite = "/images/DC White.png";
+
 const Navbar = () => {
-  const location = useLocation();
-  const navigate = useNavigate();
+  const pathname = usePathname();
+  const router = useRouter();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isHeroSection, setIsHeroSection] = useState(true);
   const [activeSection, setActiveSection] = useState("");
-  
-  const isHomePage = location.pathname === "/";
+
+  const isHomePage = pathname === "/";
   // Force scrolled navbar style on non-homepage routes
   const forceScrolledStyle = !isHomePage;
 
@@ -56,26 +61,32 @@ const Navbar = () => {
 
   const handleNavigation = (e, href) => {
     e.preventDefault();
-    const sectionId = href.substring(1);
     
-    if (!isHomePage) {
-      // If we're not on the homepage, navigate to homepage first
-      navigate('/');
-      // Set a small timeout to allow the page to load before scrolling
-      setTimeout(() => {
+    // If it's a hash link (section on the same page)
+    if (href.startsWith('#')) {
+      const sectionId = href.substring(1);
+
+      if (!isHomePage) {
+        // If we're not on the homepage, navigate to homepage first
+        router.push('/');
+        // Set a small timeout to allow the page to load before scrolling
+        setTimeout(() => {
+          const element = document.getElementById(sectionId);
+          if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+          }
+        }, 100);
+      } else {
         const element = document.getElementById(sectionId);
         if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
+          element.scrollIntoView({ behavior: "smooth" });
         }
-      }, 100);
-    } else {
-      // If we're already on the homepage, just scroll to the section
-      const element = document.getElementById(sectionId);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
       }
+    } else {
+      // For regular page navigation
+      router.push(href);
     }
-    
+
     // Close mobile menu if it's open
     if (isMobileMenuOpen) {
       setIsMobileMenuOpen(false);
@@ -90,56 +101,68 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          <a href="/" className="flex items-center" onClick={(e) => {
-            if (!isHomePage) {
-              e.preventDefault();
-              navigate('/');
-            }
-          }}>
+          <Link
+            href="/"
+            className="flex items-center"
+            onClick={(e) => {
+              if (!isHomePage) {
+                e.preventDefault();
+                router.push("/");
+              }
+            }}
+          >
             <img
-              src={isScrolled || !isHeroSection || forceScrolledStyle ? logoBlack : logoWhite}
+              src={
+                isScrolled || !isHeroSection || forceScrolledStyle
+                  ? logoBlack
+                  : logoWhite
+              }
               alt="Logo"
               className="h-8 w-auto"
             />
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center">
             <div
               className={`rounded-full p-1.5 flex items-center mr-2 ${
-                isScrolled || forceScrolledStyle ? "bg-neutral-100" : "bg-[#2A2A2A]"
+                isScrolled || forceScrolledStyle
+                  ? "bg-neutral-100"
+                  : "bg-[#2A2A2A]"
               }`}
             >
               {navLinks
                 .filter((link) => !link.isButton)
                 .map((link) => (
-                  <a
-                    key={link.href}
+                  <Link
+                    key={link.label}
                     href={link.href}
-                    onClick={(e) => handleNavigation(e, link.href)}
-                    className={`relative px-4 py-2 text-[15px] rounded-full transition-colors group ${
+                    className={`relative px-4 py-2 text-sm font-medium ${
                       isScrolled || forceScrolledStyle
-                        ? "text-neutral-600 hover:text-neutral-900"
-                        : "text-white/90 hover:text-white"
-                    }`}
+                        ? "text-neutral-900 hover:text-brand-primary"
+                        : "text-white hover:text-neutral-200"
+                    } ${activeSection === link.href.substring(1) ? "active" : ""}`}
+                    onClick={(e) => handleNavigation(e, link.href)}
                   >
                     {link.label}
                     <div
                       className={`absolute bottom-0.5 left-4 right-4 h-0.5 transform origin-left transition-transform duration-300 ${
-                        isScrolled || forceScrolledStyle ? "bg-brand-primary" : "bg-white"
+                        isScrolled || forceScrolledStyle
+                          ? "bg-brand-primary"
+                          : "bg-white"
                       } ${
                         activeSection === link.href.substring(1)
                           ? "scale-x-100"
                           : "scale-x-0 group-hover:scale-x-100"
                       }`}
                     />
-                  </a>
+                  </Link>
                 ))}
             </div>
             {navLinks
               .filter((link) => link.isButton)
               .map((link) => (
-                <a
+                <Link
                   key={link.href}
                   href={link.href}
                   onClick={(e) => handleNavigation(e, link.href)}
@@ -157,7 +180,7 @@ const Navbar = () => {
                 >
                   {link.label}
                   <span className="ml-1">↗</span>
-                </a>
+                </Link>
               ))}
           </div>
 
@@ -212,7 +235,7 @@ const Navbar = () => {
                 {navLinks
                   .filter((link) => !link.isButton)
                   .map((link) => (
-                    <a
+                    <Link
                       key={link.href}
                       href={link.href}
                       className={`block px-4 py-3 rounded-xl text-lg font-medium transition-all duration-200 ${
@@ -228,7 +251,7 @@ const Navbar = () => {
                           <span className="absolute -left-2 top-1/2 -translate-y-1/2 w-1 h-1 rounded-full bg-white" />
                         )}
                       </span>
-                    </a>
+                    </Link>
                   ))}
               </div>
               {/* Contact button at bottom */}
@@ -236,7 +259,7 @@ const Navbar = () => {
                 {navLinks
                   .filter((link) => link.isButton)
                   .map((link) => (
-                    <a
+                    <Link
                       key={link.href}
                       href={link.href}
                       className={`block w-full py-4 px-6 text-center text-lg font-medium rounded-xl transition-all duration-200 ${
@@ -248,7 +271,7 @@ const Navbar = () => {
                     >
                       {link.label}
                       <span className="ml-1">↗</span>
-                    </a>
+                    </Link>
                   ))}
               </div>
             </div>

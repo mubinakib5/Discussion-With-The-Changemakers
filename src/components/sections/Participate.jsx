@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import { participateData, socialLinks } from "../../data";
 import Modal from "../common/Modal";

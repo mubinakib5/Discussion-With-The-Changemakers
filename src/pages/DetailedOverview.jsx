@@ -1,10 +1,18 @@
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
 import Contact from "../components/sections/Contact";
 import SEO from "../components/common/SEO";
 import StructuredData from "../components/common/StructuredData";
 
 const DetailedOverview = () => {
+  const [currentUrl, setCurrentUrl] = useState("https://discussionwiththechangemakers.com/detailed-overview");
+  
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setCurrentUrl(window.location.href);
+    }
+  }, []);
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -53,7 +61,7 @@ const DetailedOverview = () => {
             logo: "/images/dwc-icon-192.svg"
           },
           description: "A comprehensive overview of Discussion with the Changemakers Chapter 02, including event specifics, marketing strategies, and sustainability plans.",
-          url: window.location.href
+          url: currentUrl
         }}
       />
       <section className="py-20 bg-neutral-white">

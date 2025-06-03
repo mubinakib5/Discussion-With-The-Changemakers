@@ -1,10 +1,14 @@
+"use client";
+
 import { motion, useInView } from "framer-motion";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import chapterImage from "../../assets/Chapter.png";
-import dcWhiteLogo from "../../assets/DC White.png";
-import heroImage from "../../assets/Hero.png";
 import { socialLinks } from "../../data";
 import Modal from "../common/Modal";
+
+// In Next.js, we need to use the public folder for images
+const chapterImage = "/images/Chapter.png";
+const dcWhiteLogo = "/images/DC White.png";
+const heroImage = "/images/Hero.png";
 
 const Hero = () => {
   const [timeLeft, setTimeLeft] = useState({

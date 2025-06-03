@@ -1,11 +1,40 @@
 "use client";
 
+import { motion } from "framer-motion";
 import { useState } from "react";
+import { opportunityBenefits } from "../../data/index.js";
 import { participateData, socialLinks } from "../../data";
 import Modal from "../common/Modal";
 
 const Participate = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: {
+      opacity: 0,
+      y: 20,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: [0.22, 1, 0.36, 1],
+      },
+    },
+  };
+
+  // opportunityBenefits array is now imported from data/index.js
 
   return (
     <>
@@ -92,8 +121,45 @@ const Participate = () => {
               </ul>
             </div>
           </div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-10%" }}
+            transition={{
+              duration: 0.6,
+              ease: [0.22, 1, 0.36, 1],
+            }}
+            className="text-center mt-20 mb-12"
+          >
+            <h3 className="text-2xl md:text-3xl font-bold text-neutral-black mb-4">
+              Key Benefits of Participation
+            </h3>
+            <div className="w-16 h-1 bg-brand-primary mx-auto"></div>
+          </motion.div>
 
-          <div className="text-center">
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-10%" }}
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+          >
+            {opportunityBenefits.map((benefit, index) => (
+              <motion.div
+                key={index}
+                variants={itemVariants}
+                whileHover={{ scale: 1.03 }}
+                className="bg-brand-primary text-white rounded-lg p-6 flex flex-col items-center text-center shadow-sm hover:shadow-md transition-all duration-300"
+              >
+                <div className="w-12 h-12 text-white mb-4">{benefit.icon}</div>
+                <h3 className="text-lg font-semibold mb-2">{benefit.title}</h3>
+                {benefit.description && (
+                  <p className="text-white/80 text-sm">{benefit.description}</p>
+                )}
+              </motion.div>
+            ))}
+          </motion.div>
+          <div className="text-center mt-20">
             <button
               onClick={() => setIsModalOpen(true)}
               className="bg-brand-primary hover:bg-brand-light text-neutral-white font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300 transform hover:scale-105"

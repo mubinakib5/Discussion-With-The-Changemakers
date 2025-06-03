@@ -5,7 +5,6 @@ import Timeline from '../components/sections/Timeline';
 import Participate from '../components/sections/Participate';
 import Sponsors from '../components/sections/Sponsors';
 import Team from '../components/sections/Team';
-import PrizesAndFacilities from '../components/sections/PrizesAndFacilities';
 import Gallery from '../components/sections/Gallery';
 import News from '../components/sections/News';
 import FAQ from '../components/sections/FAQ';
@@ -28,7 +27,6 @@ export default function HomePage() {
           <Participate />
           <Sponsors />
           <Team />
-          <PrizesAndFacilities />
           <Gallery />
           <News />
           <FAQ />

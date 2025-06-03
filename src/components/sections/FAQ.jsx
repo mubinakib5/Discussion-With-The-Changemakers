@@ -87,16 +87,13 @@ const FAQ = () => {
                       }`}
                     >
                       <motion.button
-                        className="w-full px-4 sm:px-6 py-4 sm:py-5 text-left flex items-center justify-between focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary/20 touch-manipulation"
+                        className={`w-full px-4 sm:px-6 py-4 sm:py-5 text-left flex items-center justify-between focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary/20 touch-manipulation hover:bg-brand-secondary group ${openIndex === itemKey ? 'bg-neutral-white' : 'bg-brand-primary'}`}
                         onClick={() => toggleQuestion(itemKey)}
-                        whileHover={{
-                          backgroundColor: "rgba(0, 0, 0, 0.02)",
-                        }}
                         transition={{ duration: 0.2 }}
                         layout="position"
                         aria-expanded={openIndex === itemKey}
                       >
-                        <span className="text-base sm:text-lg font-medium text-neutral-black flex-1 pr-4">
+                        <span className={`text-base sm:text-lg font-medium flex-1 pr-4 group-hover:text-neutral-white ${openIndex === itemKey ? 'text-neutral-black' : 'text-neutral-white'}`}>
                           {faq.question}
                         </span>
                         <motion.div
@@ -108,7 +105,7 @@ const FAQ = () => {
                             duration: 0.3,
                             ease: [0.32, 0.72, 0, 1],
                           }}
-                          className="w-5 h-5 sm:w-6 sm:h-6 text-brand-primary flex-shrink-0"
+                          className={`w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0 group-hover:text-neutral-white ${openIndex === itemKey ? 'text-brand-primary' : 'text-neutral-white'}`}
                         >
                           <svg
                             className="w-full h-full"

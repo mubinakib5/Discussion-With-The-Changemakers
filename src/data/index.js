@@ -24,6 +24,8 @@ const Presentation = "/images/Presentation.jpeg";
 const Raihan = "/images/Raihan.jpeg";
 const Team = "/images/Team.jpeg";
 const Workshop = "/images/Workshop.jpeg";
+const News3 = "/images/News3.png";
+const News4 = "/images/News4.jpg";
 // Navigation
 export const navLinks = [
   { href: "#about", label: "About" },
@@ -31,7 +33,6 @@ export const navLinks = [
   { href: "#participate", label: "Participate" },
   { href: "#sponsors", label: "Sponsors" },
   { href: "#team", label: "Team" },
-  { href: "#participants", label: "Participants" },
   { href: "#contact", label: "Contact", isButton: true },
 ];
 
@@ -326,6 +327,322 @@ export const newsArticles = [
     category: "News",
     link: "https://www.observerbd.com/news/439443",
   },
+  {
+    title: "চট্টগ্রাম নগরের পরিবর্তনে ‘ডিসকাশন উইথ দ্য চেঞ্জ মেকারস’",
+    date: "September 16, 2023",
+    author: "একুশে পত্রিকা",
+    excerpt:
+      "সমাজ সেবামূলক সংগঠন ‘থার্ড স্মাইল’ এর উদ্যোগে চট্টগ্রামের সবচেয়ে বড় সামাজিক উন্নয়নমূলক প্রতিযোগিতা",
+    image: News3,
+    readTime: "2 mins read",
+    category: "News",
+    link: "https://www.ekusheypatrika.com/archives/199454",
+  },
+  {
+    title: "চট্টগ্রাম সংবাদ",
+    date: "September 30, 2023",
+    author: "Bijoy TV",
+    excerpt:
+      "Coverage of Discussion with the Changemakers Chapter 1 on Bijoy TV",
+    image: News4,
+    readTime: "2 mins views",
+    category: "News",
+    link: "https://www.youtube.com/live/r8Xl0kubtug",
+  },
+];
+
+// Opportunity Benefits Section
+export const opportunityBenefits = [
+  {
+    title: "Opportunity to Drive Meaningful Change",
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="w-full h-full"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+        />
+      </svg>
+    ),
+  },
+  {
+    title: "Skill Development and Professional Growth",
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="w-full h-full"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
+        />
+      </svg>
+    ),
+  },
+  {
+    title: "Networking and Collaboration Opportunities",
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="w-full h-full"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"
+        />
+      </svg>
+    ),
+  },
+  {
+    title: "Recognition and Competitive Advantage",
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="w-full h-full"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
+        />
+      </svg>
+    ),
+  },
+  {
+    title: "Empowerment and Inspiration",
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="w-full h-full"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M13 10V3L4 14h7v7l9-11h-7z"
+        />
+      </svg>
+    ),
+  },
+  {
+    title: "Professional Event Experience",
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="w-full h-full"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+        />
+      </svg>
+    ),
+  },
+  {
+    title: "Contribution to Sustainable Communities",
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="w-full h-full"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+        />
+      </svg>
+    ),
+  },
+];
+
+// Ambassador Facilities
+export const ambassadorFacilities = [
+  {
+    title: "Official Certificate of Appreciation",
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="w-full h-full"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+        />
+      </svg>
+    ),
+  },
+  {
+    title: "Best Ambassador Award",
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="w-full h-full"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
+        />
+      </svg>
+    ),
+  },
+  {
+    title: "Letter of Recommendation (On Request)",
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="w-full h-full"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+        />
+      </svg>
+    ),
+  },
+  {
+    title: "Free Entry + Priority Seating at the Event",
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="w-full h-full"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z"
+        />
+      </svg>
+    ),
+  },
+  {
+    title: "Exclusive Networking Opportunity",
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="w-full h-full"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+        />
+      </svg>
+    ),
+  },
+  {
+    title: "Merchandise/Goodie Bag",
+    description: "(Event-themed badge, T-shirt, notebook, etc.)",
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="w-full h-full"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
+        />
+      </svg>
+    ),
+  },
+  {
+    title: "Featured Recognition on Social Media",
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="w-full h-full"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"
+        />
+      </svg>
+    ),
+  },
+  {
+    title: "Volunteer/Leadership Experience",
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="w-full h-full"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+        />
+      </svg>
+    ),
+  },
 ];
 
 // FAQ Section
@@ -336,17 +653,17 @@ export const faqData = [
       {
         question: "What is the Discussion with the Changemakers (DWC)?",
         answer:
-          "Discussion with the Changemakers (DWC) is a youth-driven platform dedicated to solving real-world problems through innovation, dialogue, and collaboration.\n\nIt bridges the gap between young people and city leaders, empowering the next generation by connecting their ideas with policymakers to drive actionable change.\n\nDWC engages youth from over 30 universities, city officials, and the public to create sustainable solutions for urban challenges.",
+          "Discussion with the Changemakers (DWC) is a platform that creates a bridge between YOUTH and National AUTHORITIES for change. Here, we are building a bridge between the authorities of Bangladesh and youth changemakers, where young people can come up with solutions to significant problems in our country or plan the development of our nation through their innovations.\n\nDWC is a youth-driven initiative that fosters collaboration between young people, city leaders, and the public to address pressing urban challenges. By providing a platform for collaboration with city leaders, DWC not only empowers youth but also ensures that their innovative ideas contribute to a more sustainable and inclusive future. Through its structured approach and strategic partnerships, DWC is helping to shape the next generation of leaders and problem-solvers, making it a vital initiative in the landscape of urban development and youth engagement.",
       },
       {
         question: "What are the objectives of DWC?",
         answer:
-          "The primary objectives of DWC are:\n\n• Empowering Youth: Connecting young people's innovative ideas with policy leaders and city officials to foster leadership and impact.\n• Fostering Dialogue: Creating opportunities for meaningful collaboration between youth and decision-makers.\n• Driving Social Change: Developing actionable solutions to real-world problems, with a focus on sustainable community development.",
+          "The primary objectives of DWC are:\n• Connecting young people's innovative ideas with policy leaders and city officials to foster leadership and impact.\n• Creating opportunities for meaningful collaboration between youth and decision-makers.\n• Developing actionable solutions to real-world problems, with a focus on sustainable community development.",
       },
       {
         question: "Who are the partners involved in organizing DWC?",
         answer:
-          "DWC is organized in partnership with:\n\n• Organizing Partner: Third Smile is responsible for overall coordination and management.\n• Event Partner: The Decor, managing event logistics.\n• Digital Partner: Decor's Digital, handling digital promotion and coverage.\n\nThese partners collaborate to ensure the successful execution of DWC events, aligning with the mission to shape a better future through youth engagement.",
+          "DWC is organized in partnership with:\n• Organizing Partner: Third Smile is responsible for overall coordination and management.\n• Event Partner: The Decor, managing event logistics.\n• Digital Partner: Decor's Digital, handling digital promotion and coverage.\n\nThese partners collaborate to ensure the successful execution of DWC events, aligning with the mission to shape a better future through youth engagement.",
       },
     ],
   },
@@ -356,17 +673,17 @@ export const faqData = [
       {
         question: "What is the structure and program of DWC events?",
         answer:
-          "DWC events are structured in multiple stages:\n\n• Problem Identification: Teams identify key issues affecting their city or community.\n• Roadmap Development: Participants create detailed plans to address these issues.\n• Plan Execution: Solutions are tested through fieldwork, surveys, and trial runs to ensure effectiveness.\n\nThe program includes group rounds, elimination stages, and a final showcase where teams present their solutions to a panel of judges, including city officials.",
+          "DWC events are structured in multiple stages to ensure comprehensive problem-solving:\n• Teams identify key issues affecting their city or community.\n• Participants create detailed plans to address these issues.\n• Solutions are tested through fieldwork, surveys, and trial runs to ensure their effectiveness.\n\nThe program includes group rounds, elimination stages, and a final showcase where teams present their solutions to a panel of judges, including city officials. This structured approach ensures that solutions are both innovative and practical.",
       },
       {
         question: "Who is the target audience for DWC?",
         answer:
-          "DWC engages a diverse audience:\n\n• Youth: Students from over 30 universities.\n• City Leaders: Including CDA Chairman, City Mayor, Ward Councilors, and Members of Parliament (MPs).\n• General Public: Events are broadly promoted through media for maximum outreach and impact.",
+          "DWC engages a diverse audience, including:\n• Students from over 30 universities forming teams to develop solutions.\n• City leaders include key figures such as the CDA Chairman, City Mayor, Ward Councilors, and Members of Parliament (MPs).\n• Events are designed to reach a broad audience through extensive media exposure, ensuring community-wide impact.",
       },
       {
         question: "How can universities and youth participate in DWC?",
         answer:
-          "Participation steps:\n\n• Forming Teams: Students register in teams focused on solving city issues.\n• Case Studies: Teams research and develop real-world solutions.\n• Competition Rounds: Participants progress through elimination rounds.\n• Final Showcase: Finalists present their projects to city officials.\n\nDetails are available on the DWC website or via official contacts.",
+          "Universities and youth can participate by:\n• Students from universities register to form teams focused on addressing city issues.\n• Teams conduct research and develop solutions based on real-world challenges.\n• Participants go through elimination rounds, culminating in a final presentation to a panel of judges.\n• Finalists present their projects to city officials for potential implementation.\n\nInterested participants should check the DWC website or contact the organizers for registration details, as specific processes may vary.",
       },
     ],
   },
@@ -374,45 +691,15 @@ export const faqData = [
     section: "Sponsorship and Funding",
     items: [
       {
-        question: "What are the sponsorship opportunities and benefits?",
-        answer:
-          "Sponsorship levels:\n\n• Title Sponsor: Maximum visibility and engagement.\n• Gold Sponsor: Significant branding and exposure.\n• Co-Sponsor/Partner: Flexible contribution options.\n\nBenefits include:\n• Brand Visibility: Featured in event materials, website, and promotions.\n• Media Exposure: Press coverage, social media, and live broadcasts.\n• Event Access: Direct interaction with youth and policymakers.",
-      },
-      {
-        question: "How is DWC marketed and promoted?",
-        answer:
-          "DWC’s marketing strategy:\n\n• Pre-Event: Ambassador programs, university outreach, paid ads.\n• On-Event: Live coverage, media presence, branded zones.\n• Post-Event: Highlight reels, winner announcements, impact reports.\n\nThis multi-stage strategy maximizes reach across youth, city officials, and the public.",
-      },
-      {
-        question: "What are the benefits of CSR for sponsors?",
-        answer:
-          "Sponsoring DWC supports:\n\n• Education: Youth development through leadership-building opportunities.\n• Youth Empowerment: Giving voice and platform to young changemakers.\n• Sustainable Communities: Supporting implementable urban solutions.\n\nSponsorship also enhances brand goodwill and visibility in socially impactful initiatives.",
-      },
-      {
         question:
-          "What are the specifics of Discussion with the Changemakers Chapter 02?",
+          "What are the specifics of Discussion with the Changemakers Chapter?",
         answer:
-          "Chapter 02 focuses on empowering Chattogram's youth and strengthening collaboration with local leadership.\n\nIt builds on the success of the previous program launched in partnership with the City Corporation to tackle major city problems through youth-driven solutions.",
-      },
-      {
-        question: "When and where is Chapter 02 taking place?",
-        answer:
-          "Chapter 02 is scheduled for July 1–17, 2025.\n\nThe main event will be held on July 17 at Hotel Agrabad in Chattogram.",
-      },
-      {
-        question: "What are the focus and activities of Chapter 02?",
-        answer:
-          "Key activities include:\n\n• Team Selection\n• Case Study Research\n• Elimination Rounds\n• Final Presentations to a panel of city officials including the Mayor, CDA Chairman, MPs, and Ward Councilors",
-      },
-      {
-        question: "What are the outcomes and prizes for Chapter 02?",
-        answer:
-          "From around 30 teams, 5 finalists will present their ideas.\n\nTop 3–5 solutions may be selected for real implementation.\n\nThe winning team will receive a prize of BDT 100,000 (dependent on sponsor availability).",
+          "Chapter 02 of DWC focuses on empowering Chattogram's youth and deepening the dialogue between young people and city leaders.\n\nBuilding on the success of the previous year's program, which was launched as \"a bridge between the youth and city rulers\" in collaboration with the City Corporation, Chapter 02 aims to identify and solve major city problems through youth-led projects.",
       },
       {
         question: "How does DWC ensure practical and actionable outcomes?",
         answer:
-          "DWC ensures implementation by:\n\n• Conducting fieldwork and surveys to validate ideas.\n• Running group rounds and trial implementations.\n• Collaborating with city officials to ensure feasibility.\n\nThis process ensures that solutions are both innovative and grounded in real-world applicability.",
+          "DWC ensures that solutions are practical and actionable through:\n• Fieldwork and Surveys: Teams gather real-world data to inform their solutions.\n• Group Rounds and Trial Implementations: Solutions are tested in practical settings to ensure feasibility.\n• Collaboration with City Officials: Judges and collaborators from city leadership ensure that selected solutions align with implementation possibilities.\n\nThis rigorous process guarantees that youth-developed solutions are both innovative and viable for real-world application.",
       },
     ],
   },
@@ -422,16 +709,7 @@ export const faqData = [
       {
         question: "Why should one choose DWC?",
         answer:
-          "Discussion with the Changemakers (DWC) is not just a program—it’s a movement that empowers youth, fosters innovation, and delivers real impact. Here's why it's the right choice:\n\n" +
-          "• Empowering the Next Generation: DWC offers youth a powerful platform to voice ideas and solve real-world challenges, fostering leadership and civic responsibility.\n" +
-          "• Bridging the Gap: It connects young changemakers directly with city leaders, ensuring their perspectives shape real policy decisions.\n" +
-          "• Innovation Through Teamwork: Participants collaborate in diverse teams to tackle complex urban problems, promoting creativity and cooperation.\n" +
-          "• From Ideas to Implementation: Winning solutions are more than proposals—city officials help turn them into action.\n" +
-          "• Inclusive and Far-Reaching: With students from 30+ universities and strong media exposure, DWC brings together a wide range of voices.\n" +
-          "• Focus on Sustainability: Solutions developed focus on long-term, practical change for urban environments.\n" +
-          "• Skills That Last a Lifetime: Youth gain experience in research, pitching, leadership, and networking.\n" +
-          "• Community-Driven Impact: DWC projects improve life in cities like Chattogram, contributing to sustainable, responsive development.\n\n" +
-          "In essence, DWC combines the energy of youth with the expertise of leadership to build a better future. Whether you're a student, sponsor, policymaker, or citizen—DWC is your platform for purposeful change.",
+          "DWC empowers youth to drive change through a dynamic platform connecting them with city leaders. It fosters innovation, collaboration, and actionable solutions to urban challenges.\n• Enables young people to share ideas, shape policies, and build leadership skills.\n• Facilitates direct dialogue between youth and decision-makers for impactful outcomes.\n• Encourages creative problem-solving through teamwork and competition.\n• Ensures winning solutions are implemented, creating lasting community impact.\n• Engages diverse participants from 30+ universities, amplifying varied perspectives.\n• Focuses on practical, long-term solutions for urban challenges.\n• Enhances research, problem-solving, and networking skills for future leaders.\n• Improves city life through sustainable, youth-driven solutions.",
       },
     ],
   },

@@ -1,13 +1,15 @@
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
-import Contact from "../components/sections/Contact";
+import { useEffect, useState } from "react";
 import SEO from "../components/common/SEO";
 import StructuredData from "../components/common/StructuredData";
+import Contact from "../components/sections/Contact";
 
 const DetailedOverview = () => {
-  const [currentUrl, setCurrentUrl] = useState("https://discussionwiththechangemakers.com/detailed-overview");
-  
+  const [currentUrl, setCurrentUrl] = useState(
+    "https://discussionwiththechangemakers.com/detailed-overview"
+  );
+
   useEffect(() => {
     if (typeof window !== "undefined") {
       setCurrentUrl(window.location.href);
@@ -40,28 +42,30 @@ const DetailedOverview = () => {
 
   return (
     <>
-      <SEO 
+      <SEO
         title="Detailed Overview"
         description="A comprehensive overview of Discussion with the Changemakers Chapter 02, including event specifics, marketing strategies, and sustainability plans."
         keywords="DWC Chapter 02, event details, marketing strategy, sustainability, youth empowerment, Chattogram, urban development"
         ogType="article"
       />
-      <StructuredData 
+      <StructuredData
         type="article"
         data={{
-          headline: "Detailed Overview of Discussion with the Changemakers Chapter 02",
+          headline:
+            "Detailed Overview of Discussion with the Changemakers Chapter 02",
           image: "/images/dwc-event.jpg",
           datePublished: "2025-06-02",
           dateModified: "2025-06-02",
           author: {
-            name: "Decor's Digital"
+            name: "Decor's Digital",
           },
           publisher: {
             name: "Decor's Digital",
-            logo: "/images/dwc-icon-192.svg"
+            logo: "/images/dwc-icon-192.svg",
           },
-          description: "A comprehensive overview of Discussion with the Changemakers Chapter 02, including event specifics, marketing strategies, and sustainability plans.",
-          url: currentUrl
+          description:
+            "A comprehensive overview of Discussion with the Changemakers Chapter 02, including event specifics, marketing strategies, and sustainability plans.",
+          url: currentUrl,
         }}
       />
       <section className="py-20 bg-neutral-white">
@@ -104,7 +108,23 @@ const DetailedOverview = () => {
                 elaborates on the specifics of Chapter 02, addresses how DWC's
                 past promotional efforts were limited, outlines the
                 transformative changes for a "changeable look," and explores how
-                the initiative aims to sustain itself in the future.
+                the initiative aims to sustain itself in the future. <br />
+                Discussion with the Changemakers (DWC) is a platform that
+                creates a bridge between YOUTH and National AUTHORITIES for
+                change. Here, we are building a bridge between the authorities
+                of Bangladesh and youth changemakers, where young people can
+                come up with solutions to significant problems in our country or
+                plan the development of our nation through their innovations.
+                DWC is a youth-driven initiative that fosters collaboration
+                between young people, city leaders, and the public to address
+                pressing urban challenges. By providing a platform for
+                collaboration with city leaders, DWC not only empowers youth but
+                also ensures that their innovative ideas contribute to a more
+                sustainable and inclusive future. Through its structured
+                approach and strategic partnerships, DWC is helping to shape the
+                next generation of leaders and problem-solvers, making it a
+                vital initiative in the landscape of urban development and youth
+                engagement.
               </p>
             </motion.div>
 

@@ -151,7 +151,7 @@ const Participate = () => {
             className="text-center mt-20 mb-12"
           >
             <h3 className="text-2xl md:text-3xl font-bold text-neutral-black mb-4">
-              Why One Should Participate?
+              Prize Pool
             </h3>
             <div className="w-16 h-1 bg-brand-primary mx-auto"></div>
           </motion.div>
@@ -171,7 +171,7 @@ const Participate = () => {
                 className="bg-brand-primary text-white rounded-lg p-8 flex flex-col items-center text-center shadow-lg hover:shadow-xl transition-all duration-300 max-w-lg mx-auto"
               >
                 <div className="w-16 h-16 text-white mb-6">{benefit.icon}</div>
-                <h3 className="text-2xl font-bold mb-3">{benefit.title}</h3>
+                <h3 className="text-2xl font-medium mb-3">{benefit.title}</h3>
                 {benefit.description && (
                   <p className="text-white/90 text-lg">{benefit.description}</p>
                 )}

@@ -280,7 +280,7 @@ export const teamMembers = [
     // bio: "Leading innovation in community development with 10+ years experience",
     image: Nabila,
     social: {
-      linkedin: "https://www.linkedin.com/in/mahmud-rahman-965187214/",
+      linkedin: "https://www.linkedin.com/in/nabila-tabassum-1058392a1/",
     },
   },
   {

@@ -26,6 +26,8 @@ const Team = "/images/Team.jpeg";
 const Workshop = "/images/Workshop.jpeg";
 const News3 = "/images/News3.png";
 const News4 = "/images/News4.jpg";
+const Mosiur = "/images/Mosiur.jpeg";
+const Nabila = "/images/Nabila.jpeg";
 // Navigation
 export const navLinks = [
   { href: "#about", label: "About" },
@@ -270,6 +272,24 @@ export const teamMembers = [
     image: Mahmudur,
     social: {
       linkedin: "https://www.linkedin.com/in/mahmud-rahman-965187214/",
+    },
+  },
+  {
+    name: "Nabila Tabassum",
+    role: "Communication Changesetter",
+    // bio: "Leading innovation in community development with 10+ years experience",
+    image: Nabila,
+    social: {
+      linkedin: "https://www.linkedin.com/in/mahmud-rahman-965187214/",
+    },
+  },
+  {
+    name: "Mosiur Rahaman",
+    role: "Operational Changesetter",
+    // bio: "Leading innovation in community development with 10+ years experience",
+    image: Mosiur,
+    social: {
+      linkedin: "https://linkedin.com/in/mosiur-rahaman-1b933a300",
     },
   },
 ];

@@ -231,7 +231,7 @@ export const teamMembers = [
   },
   {
     name: "Adittya Basak",
-    role: "Creative Changesetter",
+    role: "Project Changesetter",
     // bio: "Leading innovation in community development with 10+ years experience",
     image: Adittya,
     social: {
@@ -276,7 +276,7 @@ export const teamMembers = [
   },
   {
     name: "Nabila Tabassum",
-    role: "Communication Changesetter",
+    role: "Creative Changesetter",
     // bio: "Leading innovation in community development with 10+ years experience",
     image: Nabila,
     social: {

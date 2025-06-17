@@ -3,13 +3,16 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: [],
-    unoptimized: process.env.NODE_ENV === 'development',
+    domains: [
+      "res.cloudinary.com",
+      // add other domains if needed
+    ],
+    unoptimized: process.env.NODE_ENV === "development",
   },
   // This is needed for React 19 compatibility
   experimental: {
     serverComponentsExternalPackages: [],
-    esmExternals: 'loose',
+    esmExternals: "loose",
   },
 
   // Ensure CSS modules work properly

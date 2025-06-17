@@ -12,18 +12,18 @@ const Modal = ({ isOpen, onClose, children }) => {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         onClick={onClose}
-        className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+        className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-0"
       >
         <motion.div
           initial={{ scale: 0.95, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           exit={{ scale: 0.95, opacity: 0 }}
           onClick={(e) => e.stopPropagation()}
-          className="bg-neutral-white rounded-xl shadow-xl p-6 max-w-md w-full relative"
+          className="bg-neutral-white rounded-none shadow-xl w-screen h-screen max-h-screen p-8 overflow-y-auto relative"
         >
           <button
             onClick={onClose}
-            className="absolute top-4 right-4 text-neutral-gray hover:text-neutral-black transition-colors"
+            className="absolute top-6 right-8 text-neutral-gray hover:text-neutral-black transition-colors z-10"
           >
             <svg
               className="w-6 h-6"

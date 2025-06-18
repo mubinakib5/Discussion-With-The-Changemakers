@@ -2,8 +2,8 @@
 
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { ambassadorFacilities } from "../../data/index.js";
 import { socialLinks, teamMembers } from "../../data";
+import { ambassadorFacilities } from "../../data/index.js";
 import Modal from "../common/Modal";
 
 const Team = () => {
@@ -173,9 +173,9 @@ const Team = () => {
             className="col-span-1 sm:col-span-2 lg:col-span-3 text-center py-16 mt-12"
           >
             <h3 className="text-2xl md:text-4xl font-bold text-brand-primary mb-4">
-              Our Campus Ambassador Program Has Been Launched!
+              Our Campus Ambassador Program Has Been Closed!
             </h3>
-            <motion.a
+            {/* <motion.a
               href="https://forms.gle/fCY6JUTeyYYzcrQm7"
               target="_blank"
               rel="noopener noreferrer"
@@ -191,7 +191,7 @@ const Team = () => {
               className="inline-block bg-brand-primary hover:bg-brand-light text-neutral-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg text-base sm:text-lg transition-colors"
             >
               Apply Now
-            </motion.a>
+            </motion.a> */}
           </motion.div>
 
           <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>

@@ -1,8 +1,8 @@
-// File: /Users/mubin_akib/Library/CloudStorage/OneDrive-MSFT/Decor's Digital/DWC/Website/src/app/admin/registrations/page.jsx
-import * as entry from '../../../../../src/app/admin/registrations/page.js'
+// File: /Users/mubin_akib/Library/CloudStorage/OneDrive-MSFT/Decor's Digital/DWC/Website/src/app/page.js
+import * as entry from '../../../src/app/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
-type TEntry = typeof import('../../../../../src/app/admin/registrations/page.js')
+type TEntry = typeof import('../../../src/app/page.js')
 
 // Check that the entry is a valid entry
 checkFields<Diff<{

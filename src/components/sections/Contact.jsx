@@ -260,7 +260,7 @@ const Contact = () => {
         </svg>{" "}
         by{" "}
         <a
-          href="https://www.facebook.com/profile.php?id=100091279212121"
+          href="https://www.facebook.com/decorsdigital"
           target="_blank"
           rel="noopener noreferrer"
           className="text-brand-primary hover:underline"

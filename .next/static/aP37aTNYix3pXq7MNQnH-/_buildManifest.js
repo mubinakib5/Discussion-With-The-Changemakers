@@ -1,0 +1,1 @@
+self.__BUILD_MANIFEST={__rewrites:{afterFiles:[],beforeFiles:[],fallback:[]},"/_error":["static/chunks/pages/_error-7ba65e1336b92748.js"],"/admin-dashboard-2024-dwc":["static/chunks/pages/admin-dashboard-2024-dwc-1bc07570738af7ef.js"],sortedPages:["/_app","/_error","/admin-dashboard-2024-dwc"]},self.__BUILD_MANIFEST_CB&&self.__BUILD_MANIFEST_CB();

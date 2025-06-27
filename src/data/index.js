@@ -39,7 +39,7 @@ export const navLinks = [
 ];
 
 // Hero Section
-export const eventDate = new Date("2025-07-31T00:00:00");
+export const eventDate = new Date("2025-08-01T00:00:00");
 export const heroData = {
   image: heroImage,
   title: "Discussion With The Changemakers",
@@ -104,7 +104,7 @@ export const aboutData = {
 // Timeline Section
 export const timelineEvents = [
   {
-    date: "June 20, 2025",
+    date: "July 1, 2025",
     title: "Registration Opens",
     description: "Submit your application to join the movement",
   },
@@ -119,7 +119,7 @@ export const timelineEvents = [
     description: "Work with mentors to develop actionable solutions",
   },
   {
-    date: "July 31, 2025",
+    date: "August 1, 2025",
     title: "DWC Grand Summit",
     description: "Present your solutions and implementation plans",
   },
@@ -328,6 +328,220 @@ export const galleryImages = [
   },
 ];
 
+// Chapter 1 Gallery Section
+export const chapter1Images = [
+  {
+    src: "/images/DWC_Chapter_1/File 1.jpg",
+    alt: "DWC Chapter 1 - Event Opening",
+    caption: "The grand opening of Discussion with the Changemakers Chapter 1",
+  },
+  {
+    src: "/images/DWC_Chapter_1/File 2.jpg",
+    alt: "DWC Chapter 1 - Participants",
+    caption: "Enthusiastic participants ready to make a difference",
+  },
+  {
+    src: "/images/DWC_Chapter_1/File 3.jpg",
+    alt: "DWC Chapter 1 - Workshop Session",
+    caption: "Interactive workshop sessions fostering innovation",
+  },
+  {
+    src: "/images/DWC_Chapter_1/File 4.jpg",
+    alt: "DWC Chapter 1 - Team Collaboration",
+    caption: "Teams working together on community solutions",
+  },
+  {
+    src: "/images/DWC_Chapter_1/File 5.jpg",
+    alt: "DWC Chapter 1 - Expert Panel",
+    caption: "Industry experts sharing valuable insights",
+  },
+  {
+    src: "/images/DWC_Chapter_1/File 6.jpg",
+    alt: "DWC Chapter 1 - Networking",
+    caption: "Building meaningful connections among participants",
+  },
+  {
+    src: "/images/DWC_Chapter_1/File 7.jpg",
+    alt: "DWC Chapter 1 - Presentation",
+    caption: "Youth leaders presenting innovative solutions",
+  },
+  {
+    src: "/images/DWC_Chapter_1/File 8.jpg",
+    alt: "DWC Chapter 1 - Discussion",
+    caption: "Engaging discussions on urban challenges",
+  },
+  {
+    src: "/images/DWC_Chapter_1/File 9.jpg",
+    alt: "DWC Chapter 1 - Mentorship",
+    caption: "Mentorship sessions guiding young changemakers",
+  },
+  {
+    src: "/images/DWC_Chapter_1/File 10.jpg",
+    alt: "DWC Chapter 1 - Award Ceremony",
+    caption: "Celebrating outstanding achievements and contributions",
+  },
+  {
+    src: "/images/DWC_Chapter_1/File 11.jpg",
+    alt: "DWC Chapter 1 - Community Impact",
+    caption: "Showcasing the impact of youth-led initiatives",
+  },
+  {
+    src: "/images/DWC_Chapter_1/File 12.jpg",
+    alt: "DWC Chapter 1 - Innovation Hub",
+    caption: "Innovation hub where ideas come to life",
+  },
+  {
+    src: "/images/DWC_Chapter_1/File 13.jpg",
+    alt: "DWC Chapter 1 - Leadership Development",
+    caption: "Developing leadership skills for tomorrow's leaders",
+  },
+  {
+    src: "/images/DWC_Chapter_1/File 14.jpg",
+    alt: "DWC Chapter 1 - Collaborative Spirit",
+    caption: "The collaborative spirit that drives change",
+  },
+  {
+    src: "/images/DWC_Chapter_1/File 15.jpg",
+    alt: "DWC Chapter 1 - Success Stories",
+    caption: "Success stories from Chapter 1 participants",
+  },
+  {
+    src: "/images/DWC_Chapter_1/File 16.jpg",
+    alt: "DWC Chapter 1 - Future Vision",
+    caption: "Envisioning a better future for Chattogram",
+  },
+  {
+    src: "/images/DWC_Chapter_1/File 17.jpg",
+    alt: "DWC Chapter 1 - Empowerment",
+    caption: "Empowering youth to become changemakers",
+  },
+  {
+    src: "/images/DWC_Chapter_1/File 18.jpg",
+    alt: "DWC Chapter 1 - Knowledge Sharing",
+    caption: "Knowledge sharing sessions with experts",
+  },
+  {
+    src: "/images/DWC_Chapter_1/File 19.jpg",
+    alt: "DWC Chapter 1 - Problem Solving",
+    caption: "Creative problem-solving workshops",
+  },
+  {
+    src: "/images/DWC_Chapter_1/File 20.jpg",
+    alt: "DWC Chapter 1 - Community Engagement",
+    caption: "Engaging with the local community",
+  },
+  {
+    src: "/images/DWC_Chapter_1/File 21.jpg",
+    alt: "DWC Chapter 1 - Strategic Planning",
+    caption: "Strategic planning for sustainable solutions",
+  },
+  {
+    src: "/images/DWC_Chapter_1/File 22.jpg",
+    alt: "DWC Chapter 1 - Innovation Showcase",
+    caption: "Showcasing innovative solutions to urban challenges",
+  },
+  {
+    src: "/images/DWC_Chapter_1/File 23.jpg",
+    alt: "DWC Chapter 1 - Team Dynamics",
+    caption: "Building strong team dynamics and collaboration",
+  },
+  {
+    src: "/images/DWC_Chapter_1/File 24.jpg",
+    alt: "DWC Chapter 1 - Expert Guidance",
+    caption: "Expert guidance shaping future leaders",
+  },
+  {
+    src: "/images/DWC_Chapter_1/File 25.jpg",
+    alt: "DWC Chapter 1 - Community Solutions",
+    caption: "Developing solutions for community challenges",
+  },
+  {
+    src: "/images/DWC_Chapter_1/File 26.jpg",
+    alt: "DWC Chapter 1 - Youth Empowerment",
+    caption: "Empowering the next generation of leaders",
+  },
+  {
+    src: "/images/DWC_Chapter_1/File 27.jpg",
+    alt: "DWC Chapter 1 - Collaborative Learning",
+    caption: "Learning through collaboration and teamwork",
+  },
+  {
+    src: "/images/DWC_Chapter_1/File 28.jpg",
+    alt: "DWC Chapter 1 - Innovation Workshop",
+    caption: "Innovation workshops driving creative solutions",
+  },
+  {
+    src: "/images/DWC_Chapter_1/File 29.jpg",
+    alt: "DWC Chapter 1 - Leadership Forum",
+    caption: "Leadership forum inspiring young changemakers",
+  },
+  {
+    src: "/images/DWC_Chapter_1/File 30.jpg",
+    alt: "DWC Chapter 1 - Community Impact",
+    caption: "Measuring the impact of youth initiatives",
+  },
+  {
+    src: "/images/DWC_Chapter_1/File 31.jpg",
+    alt: "DWC Chapter 1 - Future Leaders",
+    caption: "Nurturing future leaders for Chattogram",
+  },
+  {
+    src: "/images/DWC_Chapter_1/File 32.jpg",
+    alt: "DWC Chapter 1 - Sustainable Development",
+    caption: "Promoting sustainable development goals",
+  },
+  {
+    src: "/images/DWC_Chapter_1/File 33.jpg",
+    alt: "DWC Chapter 1 - Urban Innovation",
+    caption: "Urban innovation through youth engagement",
+  },
+  {
+    src: "/images/DWC_Chapter_1/File 34.jpg",
+    alt: "DWC Chapter 1 - Community Building",
+    caption: "Building stronger communities together",
+  },
+  {
+    src: "/images/DWC_Chapter_1/File 35.jpg",
+    alt: "DWC Chapter 1 - Success Celebration",
+    caption: "Celebrating the success of Chapter 1",
+  },
+  {
+    src: "/images/DWC_Chapter_1/File 36.jpg",
+    alt: "DWC Chapter 1 - Legacy Building",
+    caption: "Building a legacy of positive change",
+  },
+  {
+    src: "/images/DWC_Chapter_1/File 37.jpg",
+    alt: "DWC Chapter 1 - Innovation Hub",
+    caption: "Innovation hub fostering creative solutions",
+  },
+  {
+    src: "/images/DWC_Chapter_1/File 38.jpg",
+    alt: "DWC Chapter 1 - Youth Leadership",
+    caption: "Youth leadership in action",
+  },
+  {
+    src: "/images/DWC_Chapter_1/File 39.jpg",
+    alt: "DWC Chapter 1 - Community Engagement",
+    caption: "Deep community engagement and participation",
+  },
+  {
+    src: "/images/DWC_Chapter_1/File 40.jpg",
+    alt: "DWC Chapter 1 - Collaborative Solutions",
+    caption: "Collaborative solutions for urban challenges",
+  },
+  {
+    src: "/images/DWC_Chapter_1/File 41.jpg",
+    alt: "DWC Chapter 1 - Future Vision",
+    caption: "Envisioning a sustainable future for all",
+  },
+  {
+    src: "/images/DWC_Chapter_1/File 42.jpg",
+    alt: "DWC Chapter 1 - Changemakers Legacy",
+    caption: "The legacy of changemakers continues",
+  },
+];
+
 // News Section
 export const newsArticles = [
   {
@@ -353,11 +567,11 @@ export const newsArticles = [
     link: "https://www.observerbd.com/news/439443",
   },
   {
-    title: "চট্টগ্রাম নগরের পরিবর্তনে ‘ডিসকাশন উইথ দ্য চেঞ্জ মেকারস’",
+    title: "চট্টগ্রাম নগরের পরিবর্তনে 'ডিসকাশন উইথ দ্য চেঞ্জ মেকারস'",
     date: "September 16, 2023",
     author: "একুশে পত্রিকা",
     excerpt:
-      "সমাজ সেবামূলক সংগঠন ‘থার্ড স্মাইল’ এর উদ্যোগে চট্টগ্রামের সবচেয়ে বড় সামাজিক উন্নয়নমূলক প্রতিযোগিতা",
+      "সমাজ সেবামূলক সংগঠন 'থার্ড স্মাইল' এর উদ্যোগে চট্টগ্রামের সবচেয়ে বড় সামাজিক উন্নয়নমূলক প্রতিযোগিতা",
     image: News3,
     readTime: "2 mins read",
     category: "News",

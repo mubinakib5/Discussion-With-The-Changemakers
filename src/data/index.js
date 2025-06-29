@@ -353,8 +353,9 @@ export const chapter1Images = [
   },
   {
     src: "/images/DWC_Chapter_1/2nd Runners Up.jpeg",
-    alt: "2nd Runner Up: Chittagong e 4ta jaygay student cafe",
-    caption: "2nd Runner Up: Chittagong e 4ta jaygay student cafe",
+    alt: "2nd Runner Up: Four Student Cafe for Healthier Snacks in Four Different Locations of Chittagong",
+    caption:
+      "2nd Runner Up: Four Student Cafe for Healthier Snacks in Four Different Locations of Chittagong",
   },
   {
     src: "/images/DWC_Chapter_1/Main Photo.jpeg",

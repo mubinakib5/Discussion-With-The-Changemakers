@@ -62,15 +62,14 @@ const Team = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-10%" }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="space-y-8"
         >
-          {/* Team cards temporarily hidden */}
-          {teamMembers.map((member, index) => (
+          {/* First team member - full width at top */}
+          {teamMembers.length > 0 && (
             <motion.div
-              key={index}
               variants={itemVariants}
               whileHover={{ scale: 1.02 }}
-              className="bg-brand-primary rounded-lg overflow-hidden group"
+              className="bg-brand-primary rounded-lg overflow-hidden group max-w-2xl mx-auto"
             >
               <motion.div
                 className="aspect-w-1 aspect-h-1 relative overflow-hidden"
@@ -79,8 +78,8 @@ const Team = () => {
               >
                 <div className="h-full">
                   <img
-                    src={member.image}
-                    alt={member.name}
+                    src={teamMembers[0].image}
+                    alt={teamMembers[0].name}
                     className="object-cover object-top w-full h-48 sm:h-56 md:h-64"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-brand-primary to-transparent opacity-60"></div>
@@ -97,12 +96,14 @@ const Team = () => {
                   <div className="flex justify-between items-start">
                     <div>
                       <h3 className="text-xl font-bold text-neutral-white mb-1">
-                        {member.name}
+                        {teamMembers[0].name}
                       </h3>
-                      <p className="text-neutral-white/60">{member.role}</p>
+                      <p className="text-neutral-white/60">
+                        {teamMembers[0].role}
+                      </p>
                     </div>
                     <a
-                      href={member.social.linkedin}
+                      href={teamMembers[0].social.linkedin}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-neutral-white/60 hover:text-brand-light transition-colors"
@@ -116,11 +117,77 @@ const Team = () => {
                       </svg>
                     </a>
                   </div>
-                  <p className="text-neutral-white/80">{member.bio}</p>
+                  <p className="text-neutral-white/80">{teamMembers[0].bio}</p>
                 </div>
               </motion.div>
             </motion.div>
-          ))}
+          )}
+
+          {/* Remaining team members - 3 per row */}
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-10%" }}
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+          >
+            {teamMembers.slice(1).map((member, index) => (
+              <motion.div
+                key={index + 1}
+                variants={itemVariants}
+                whileHover={{ scale: 1.02 }}
+                className="bg-brand-primary rounded-lg overflow-hidden group"
+              >
+                <motion.div
+                  className="aspect-w-1 aspect-h-1 relative overflow-hidden"
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.4 }}
+                >
+                  <div className="h-full">
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      className="object-cover object-top w-full h-48 sm:h-56 md:h-64"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-brand-primary to-transparent opacity-60"></div>
+                  </div>
+                </motion.div>
+
+                <motion.div
+                  className="p-4 pt-5"
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ delay: 0.2 }}
+                >
+                  <div className="flex flex-col space-y-3">
+                    <div className="flex justify-between items-start">
+                      <div>
+                        <h3 className="text-xl font-bold text-neutral-white mb-1">
+                          {member.name}
+                        </h3>
+                        <p className="text-neutral-white/60">{member.role}</p>
+                      </div>
+                      <a
+                        href={member.social.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-neutral-white/60 hover:text-brand-light transition-colors"
+                      >
+                        <svg
+                          className="w-6 h-6"
+                          fill="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                        </svg>
+                      </a>
+                    </div>
+                    <p className="text-neutral-white/80">{member.bio}</p>
+                  </div>
+                </motion.div>
+              </motion.div>
+            ))}
+          </motion.div>
         </motion.div>
         <div className="max-w-7xl mt-24 px-4 sm:px-6 lg:px-8">
           <motion.div

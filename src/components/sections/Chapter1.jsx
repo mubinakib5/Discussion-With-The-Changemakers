@@ -2,7 +2,7 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
-import { chapter1Images } from "../../data";
+import { chapter1Content, chapter1Images } from "../../data";
 
 const Chapter1 = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -46,50 +46,93 @@ const Chapter1 = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-neutral-black mb-4">
-            Chapter 1: Our Legacy
+            {chapter1Content.title}
           </h2>
           <p className="text-neutral-gray mb-8 max-w-3xl mx-auto">
-            Relive the incredible moments from our inaugural event where young
-            changemakers came together to address urban challenges and create
-            lasting impact in Chattogram.
+            {chapter1Content.description}
           </p>
           <div className="w-20 h-1 bg-brand-primary mx-auto"></div>
         </motion.div>
 
+        {/* Chapter 1 Content */}
         <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-10%" }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-16"
+          transition={{
+            duration: 0.6,
+            ease: [0.22, 1, 0.36, 1],
+          }}
+          className="mb-16"
         >
-          {chapter1Images.map((image, index) => (
-            <motion.div
-              key={index}
-              variants={itemVariants}
-              whileHover={{ scale: 1.02 }}
-              className="relative group cursor-pointer overflow-hidden rounded-lg shadow-lg"
-              onClick={() => setSelectedImage(image)}
-            >
-              <motion.img
-                src={image.src}
-                alt={image.alt}
-                whileHover={{ scale: 1.1 }}
-                transition={{ duration: 0.4 }}
-                className="w-full h-48 object-cover"
-              />
-              <motion.div
-                initial={{ opacity: 0 }}
-                whileHover={{ opacity: 0.9 }}
-                transition={{ duration: 0.2 }}
-                className="absolute inset-0 bg-gradient-to-t from-brand-primary to-transparent flex items-end p-4"
-              >
-                <p className="text-neutral-white text-sm font-medium leading-tight">
-                  {image.caption}
+          <div className="bg-neutral-white rounded-lg p-8 shadow-lg">
+            <div className="prose prose-lg max-w-none text-neutral-gray">
+              {chapter1Content.content.split("\n\n").map((paragraph, index) => (
+                <p key={index} className="mb-4 leading-relaxed">
+                  {paragraph}
                 </p>
+              ))}
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Winners Gallery */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-10%" }}
+          transition={{
+            duration: 0.6,
+            ease: [0.22, 1, 0.36, 1],
+          }}
+          className="mb-16"
+        >
+          <div className="text-center mb-8">
+            <h3 className="text-2xl md:text-3xl font-bold text-neutral-black mb-4">
+              Chapter 1 Winners
+            </h3>
+            <p className="text-neutral-gray max-w-2xl mx-auto">
+              Meet the innovative teams that emerged victorious in our inaugural
+              competition, showcasing groundbreaking solutions to urban
+              challenges.
+            </p>
+          </div>
+
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-10%" }}
+            className="grid grid-cols-1 md:grid-cols-2 gap-8"
+          >
+            {chapter1Images.map((image, index) => (
+              <motion.div
+                key={index}
+                variants={itemVariants}
+                whileHover={{ scale: 1.02 }}
+                className="relative group cursor-pointer overflow-hidden rounded-lg shadow-lg"
+                onClick={() => setSelectedImage(image)}
+              >
+                <motion.img
+                  src={image.src}
+                  alt={image.alt}
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.4 }}
+                  className="w-full h-64 object-cover"
+                />
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileHover={{ opacity: 0.9 }}
+                  transition={{ duration: 0.2 }}
+                  className="absolute inset-0 bg-gradient-to-t from-brand-primary to-transparent flex items-end p-4"
+                >
+                  <p className="text-neutral-white text-sm font-medium leading-tight">
+                    {image.caption}
+                  </p>
+                </motion.div>
               </motion.div>
-            </motion.div>
-          ))}
+            ))}
+          </motion.div>
         </motion.div>
 
         {/* Video Section */}

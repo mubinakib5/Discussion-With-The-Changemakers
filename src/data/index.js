@@ -28,6 +28,7 @@ const News3 = "/images/News3.png";
 const News4 = "/images/News4.jpg";
 const Mosiur = "/images/Mosiur.jpeg";
 const Nabila = "/images/Nabila.jpeg";
+const Mahtab = "/images/Mahatab.jpeg";
 // Navigation
 export const navLinks = [
   { href: "#about", label: "About" },
@@ -221,21 +222,21 @@ export const teamMembers = [
     },
   },
   {
-    name: "Fahmida Afroz Isma",
-    role: "Deputy Changesetter",
-    // bio: "Leading innovation in community development with 10+ years experience",
-    image: Isma,
-    social: {
-      linkedin: "https://www.linkedin.com/in/isma-fahmida-5648b4275/",
-    },
-  },
-  {
     name: "Adittya Basak",
     role: "Project Changesetter",
     // bio: "Leading innovation in community development with 10+ years experience",
     image: Adittya,
     social: {
       linkedin: "https://www.linkedin.com/in/adittyabasak/",
+    },
+  },
+  {
+    name: "Fahmida Afroz Isma",
+    role: "Deputy Changesetter",
+    // bio: "Leading innovation in community development with 10+ years experience",
+    image: Isma,
+    social: {
+      linkedin: "https://www.linkedin.com/in/isma-fahmida-5648b4275/",
     },
   },
   {
@@ -248,6 +249,15 @@ export const teamMembers = [
     },
   },
   {
+    name: "Abdullah Al Mubin",
+    role: "Technical Changesetter",
+    // bio: "Leading innovation in community development with 10+ years experience",
+    image: Mubin,
+    social: {
+      linkedin: "https://www.linkedin.com/in/abdullah-al-mubin-akib/",
+    },
+  },
+  {
     name: "Tahrim Ibnath",
     role: "Executive Changesetter",
     // bio: "Leading innovation in community development with 10+ years experience",
@@ -257,21 +267,21 @@ export const teamMembers = [
     },
   },
   {
-    name: "Abdullah Al Mubin",
-    role: "Digital Changesetter",
-    // bio: "Leading innovation in community development with 10+ years experience",
-    image: Mubin,
-    social: {
-      linkedin: "https://www.linkedin.com/in/abdullah-al-mubin-akib/",
-    },
-  },
-  {
     name: "Mohammad Mahmudur Rahman",
     role: "Visual Changesetter",
     // bio: "Leading innovation in community development with 10+ years experience",
     image: Mahmudur,
     social: {
       linkedin: "https://www.linkedin.com/in/mahmud-rahman-965187214/",
+    },
+  },
+  {
+    name: "Mahtab Ahamed",
+    role: "Strategic Changesetter",
+    // bio: "Leading innovation in community development with 10+ years experience",
+    image: Mahtab,
+    social: {
+      linkedin: "https://www.linkedin.com/in/mahtab-ahamed-447039228/",
     },
   },
   {
@@ -331,216 +341,45 @@ export const galleryImages = [
 // Chapter 1 Gallery Section
 export const chapter1Images = [
   {
-    src: "/images/DWC_Chapter_1/File 1.jpg",
-    alt: "DWC Chapter 1 - Event Opening",
-    caption: "The grand opening of Discussion with the Changemakers Chapter 1",
+    src: "/images/DWC_Chapter_1/Champion.jpeg",
+    alt: "Chapter 1 Champion: Plastic Reduction Alternative (Chittagong University)",
+    caption:
+      "Chapter 1 Champion: Plastic Reduction Alternative (Chittagong University)",
   },
   {
-    src: "/images/DWC_Chapter_1/File 2.jpg",
-    alt: "DWC Chapter 1 - Participants",
-    caption: "Enthusiastic participants ready to make a difference",
+    src: "/images/DWC_Chapter_1/1st Runners Up.jpeg",
+    alt: "1st Runner Up: Rain Water Harvesting",
+    caption: "1st Runner Up: Rain Water Harvesting",
   },
   {
-    src: "/images/DWC_Chapter_1/File 3.jpg",
-    alt: "DWC Chapter 1 - Workshop Session",
-    caption: "Interactive workshop sessions fostering innovation",
+    src: "/images/DWC_Chapter_1/2nd Runners Up.jpeg",
+    alt: "2nd Runner Up: Chittagong e 4ta jaygay student cafe",
+    caption: "2nd Runner Up: Chittagong e 4ta jaygay student cafe",
   },
   {
-    src: "/images/DWC_Chapter_1/File 4.jpg",
-    alt: "DWC Chapter 1 - Team Collaboration",
-    caption: "Teams working together on community solutions",
-  },
-  {
-    src: "/images/DWC_Chapter_1/File 5.jpg",
-    alt: "DWC Chapter 1 - Expert Panel",
-    caption: "Industry experts sharing valuable insights",
-  },
-  {
-    src: "/images/DWC_Chapter_1/File 6.jpg",
-    alt: "DWC Chapter 1 - Networking",
-    caption: "Building meaningful connections among participants",
-  },
-  {
-    src: "/images/DWC_Chapter_1/File 7.jpg",
-    alt: "DWC Chapter 1 - Presentation",
-    caption: "Youth leaders presenting innovative solutions",
-  },
-  {
-    src: "/images/DWC_Chapter_1/File 8.jpg",
-    alt: "DWC Chapter 1 - Discussion",
-    caption: "Engaging discussions on urban challenges",
-  },
-  {
-    src: "/images/DWC_Chapter_1/File 9.jpg",
-    alt: "DWC Chapter 1 - Mentorship",
-    caption: "Mentorship sessions guiding young changemakers",
-  },
-  {
-    src: "/images/DWC_Chapter_1/File 10.jpg",
-    alt: "DWC Chapter 1 - Award Ceremony",
-    caption: "Celebrating outstanding achievements and contributions",
-  },
-  {
-    src: "/images/DWC_Chapter_1/File 11.jpg",
-    alt: "DWC Chapter 1 - Community Impact",
-    caption: "Showcasing the impact of youth-led initiatives",
-  },
-  {
-    src: "/images/DWC_Chapter_1/File 12.jpg",
-    alt: "DWC Chapter 1 - Innovation Hub",
-    caption: "Innovation hub where ideas come to life",
-  },
-  {
-    src: "/images/DWC_Chapter_1/File 13.jpg",
-    alt: "DWC Chapter 1 - Leadership Development",
-    caption: "Developing leadership skills for tomorrow's leaders",
-  },
-  {
-    src: "/images/DWC_Chapter_1/File 14.jpg",
-    alt: "DWC Chapter 1 - Collaborative Spirit",
-    caption: "The collaborative spirit that drives change",
-  },
-  {
-    src: "/images/DWC_Chapter_1/File 15.jpg",
-    alt: "DWC Chapter 1 - Success Stories",
-    caption: "Success stories from Chapter 1 participants",
-  },
-  {
-    src: "/images/DWC_Chapter_1/File 16.jpg",
-    alt: "DWC Chapter 1 - Future Vision",
-    caption: "Envisioning a better future for Chattogram",
-  },
-  {
-    src: "/images/DWC_Chapter_1/File 17.jpg",
-    alt: "DWC Chapter 1 - Empowerment",
-    caption: "Empowering youth to become changemakers",
-  },
-  {
-    src: "/images/DWC_Chapter_1/File 18.jpg",
-    alt: "DWC Chapter 1 - Knowledge Sharing",
-    caption: "Knowledge sharing sessions with experts",
-  },
-  {
-    src: "/images/DWC_Chapter_1/File 19.jpg",
-    alt: "DWC Chapter 1 - Problem Solving",
-    caption: "Creative problem-solving workshops",
-  },
-  {
-    src: "/images/DWC_Chapter_1/File 20.jpg",
-    alt: "DWC Chapter 1 - Community Engagement",
-    caption: "Engaging with the local community",
-  },
-  {
-    src: "/images/DWC_Chapter_1/File 21.jpg",
-    alt: "DWC Chapter 1 - Strategic Planning",
-    caption: "Strategic planning for sustainable solutions",
-  },
-  {
-    src: "/images/DWC_Chapter_1/File 22.jpg",
-    alt: "DWC Chapter 1 - Innovation Showcase",
-    caption: "Showcasing innovative solutions to urban challenges",
-  },
-  {
-    src: "/images/DWC_Chapter_1/File 23.jpg",
-    alt: "DWC Chapter 1 - Team Dynamics",
-    caption: "Building strong team dynamics and collaboration",
-  },
-  {
-    src: "/images/DWC_Chapter_1/File 24.jpg",
-    alt: "DWC Chapter 1 - Expert Guidance",
-    caption: "Expert guidance shaping future leaders",
-  },
-  {
-    src: "/images/DWC_Chapter_1/File 25.jpg",
-    alt: "DWC Chapter 1 - Community Solutions",
-    caption: "Developing solutions for community challenges",
-  },
-  {
-    src: "/images/DWC_Chapter_1/File 26.jpg",
-    alt: "DWC Chapter 1 - Youth Empowerment",
-    caption: "Empowering the next generation of leaders",
-  },
-  {
-    src: "/images/DWC_Chapter_1/File 27.jpg",
-    alt: "DWC Chapter 1 - Collaborative Learning",
-    caption: "Learning through collaboration and teamwork",
-  },
-  {
-    src: "/images/DWC_Chapter_1/File 28.jpg",
-    alt: "DWC Chapter 1 - Innovation Workshop",
-    caption: "Innovation workshops driving creative solutions",
-  },
-  {
-    src: "/images/DWC_Chapter_1/File 29.jpg",
-    alt: "DWC Chapter 1 - Leadership Forum",
-    caption: "Leadership forum inspiring young changemakers",
-  },
-  {
-    src: "/images/DWC_Chapter_1/File 30.jpg",
-    alt: "DWC Chapter 1 - Community Impact",
-    caption: "Measuring the impact of youth initiatives",
-  },
-  {
-    src: "/images/DWC_Chapter_1/File 31.jpg",
-    alt: "DWC Chapter 1 - Future Leaders",
-    caption: "Nurturing future leaders for Chattogram",
-  },
-  {
-    src: "/images/DWC_Chapter_1/File 32.jpg",
-    alt: "DWC Chapter 1 - Sustainable Development",
-    caption: "Promoting sustainable development goals",
-  },
-  {
-    src: "/images/DWC_Chapter_1/File 33.jpg",
-    alt: "DWC Chapter 1 - Urban Innovation",
-    caption: "Urban innovation through youth engagement",
-  },
-  {
-    src: "/images/DWC_Chapter_1/File 34.jpg",
-    alt: "DWC Chapter 1 - Community Building",
-    caption: "Building stronger communities together",
-  },
-  {
-    src: "/images/DWC_Chapter_1/File 35.jpg",
-    alt: "DWC Chapter 1 - Success Celebration",
-    caption: "Celebrating the success of Chapter 1",
-  },
-  {
-    src: "/images/DWC_Chapter_1/File 36.jpg",
-    alt: "DWC Chapter 1 - Legacy Building",
-    caption: "Building a legacy of positive change",
-  },
-  {
-    src: "/images/DWC_Chapter_1/File 37.jpg",
-    alt: "DWC Chapter 1 - Innovation Hub",
-    caption: "Innovation hub fostering creative solutions",
-  },
-  {
-    src: "/images/DWC_Chapter_1/File 38.jpg",
-    alt: "DWC Chapter 1 - Youth Leadership",
-    caption: "Youth leadership in action",
-  },
-  {
-    src: "/images/DWC_Chapter_1/File 39.jpg",
-    alt: "DWC Chapter 1 - Community Engagement",
-    caption: "Deep community engagement and participation",
-  },
-  {
-    src: "/images/DWC_Chapter_1/File 40.jpg",
-    alt: "DWC Chapter 1 - Collaborative Solutions",
-    caption: "Collaborative solutions for urban challenges",
-  },
-  {
-    src: "/images/DWC_Chapter_1/File 41.jpg",
-    alt: "DWC Chapter 1 - Future Vision",
-    caption: "Envisioning a sustainable future for all",
-  },
-  {
-    src: "/images/DWC_Chapter_1/File 42.jpg",
-    alt: "DWC Chapter 1 - Changemakers Legacy",
-    caption: "The legacy of changemakers continues",
+    src: "/images/DWC_Chapter_1/Main Photo.jpeg",
+    alt: "Discussion with the Changemakers Chapter 1 Main Event",
+    caption: "Discussion with the Changemakers Chapter 1 Main Event",
   },
 ];
+
+// Chapter 1 Content
+export const chapter1Content = {
+  title: "Chapter 1: Our Legacy",
+  description:
+    "Relive the incredible moments from our inaugural event where young changemakers came together to address urban challenges and create lasting impact in Chattogram.",
+  content: `To address various urban challenges, Discussion with the Changemakers organized a competition inviting innovative solutions. Students from schools, colleges, and universities actively participated in the event. Out of the seven teams that reached the finals, five teams emerged as winners.
+
+The team from the University of Chittagong (Team A) secured the first place, while Chittagong University of Engineering and Technology (CUET) claimed the second, and Chittagong University Juniors took the third position. The competition was held at Hotel Agrabad, focusing on social development and civic engagement.
+
+The event's chief guest was Sulaiman Alam Sheth, Managing Director of Sheth Properties. Other distinguished guests included Dr. Mohammad Zia Uddin, Associate Professor at the International Islamic University Chittagong (IIUC), and Yasir Silmi, Head of the Journalism and Mass Communication Department at BGC Trust University.
+
+The winning team received a cash prize of BDT 50,000, while the second and third place winners were awarded BDT 20,000 and BDT 10,000, respectively. In addition to the monetary prizes, the top teams will gain free corporate space at the Hi-Tech Park, along with other development opportunities.
+
+Special recognition awards were given to International Islamic University Chittagong (IIUC) and Chittagong Muslim High School, each receiving BDT 5,000. The latter was honored under the Rising Star category.
+
+The invited guests expressed their strong commitment to supporting the implementation of the proposed ideas and initiatives.`,
+};
 
 // News Section
 export const newsArticles = [

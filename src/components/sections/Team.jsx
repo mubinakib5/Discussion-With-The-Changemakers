@@ -247,22 +247,22 @@ const Team = () => {
                 Our Campus Ambassador Program Has Been Closed!
               </h3>
               {/* <motion.a
-                href="https://forms.gle/fCY6JUTeyYYzcrQm7"
-                target="_blank"
-                rel="noopener noreferrer"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 0.6,
-                  delay: 0.7,
-                  ease: [0.22, 1, 0.36, 1],
-                }}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="inline-block bg-brand-primary hover:bg-brand-light text-neutral-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg text-base sm:text-lg transition-colors"
-              >
-                Apply Now
-              </motion.a> */}
+              href="https://forms.gle/fCY6JUTeyYYzcrQm7"
+              target="_blank"
+              rel="noopener noreferrer"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.6,
+                delay: 0.7,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="inline-block bg-brand-primary hover:bg-brand-light text-neutral-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg text-base sm:text-lg transition-colors"
+            >
+              Apply Now
+            </motion.a> */}
             </motion.div>
 
             <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>

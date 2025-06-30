@@ -5,10 +5,12 @@ import { useState } from "react";
 import { participateData } from "../../data";
 import { opportunityBenefits } from "../../data/index.js";
 import Modal from "../common/Modal";
+import RulebookModal from "../common/RulebookModal";
 import TeamRegistrationForm from "../common/TeamRegistrationForm";
 
 const Participate = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isRulebookModalOpen, setIsRulebookModalOpen] = useState(false);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -36,6 +38,15 @@ const Participate = () => {
   };
 
   // opportunityBenefits array is now imported from data/index.js
+
+  const handleRegisterClick = () => {
+    setIsRulebookModalOpen(true);
+  };
+
+  const handleProceedToRegister = () => {
+    setIsRulebookModalOpen(false);
+    setIsModalOpen(true);
+  };
 
   return (
     <>
@@ -162,7 +173,7 @@ const Participate = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-10%" }}
-            className="flex justify-center"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
           >
             {opportunityBenefits.map((benefit, index) => (
               <motion.div
@@ -181,7 +192,7 @@ const Participate = () => {
           </motion.div>
           <div className="text-center mt-20">
             <button
-              onClick={() => setIsModalOpen(true)}
+              onClick={handleRegisterClick}
               className="bg-brand-primary hover:bg-brand-light text-neutral-white font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300 transform hover:scale-105"
             >
               Register Now
@@ -190,6 +201,14 @@ const Participate = () => {
         </div>
       </section>
 
+      {/* Rulebook Modal */}
+      <RulebookModal
+        isOpen={isRulebookModalOpen}
+        onClose={() => setIsRulebookModalOpen(false)}
+        onProceed={handleProceedToRegister}
+      />
+
+      {/* Registration Form Modal */}
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
         <TeamRegistrationForm onClose={() => setIsModalOpen(false)} />
       </Modal>

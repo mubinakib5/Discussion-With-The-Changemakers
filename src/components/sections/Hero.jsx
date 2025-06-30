@@ -3,6 +3,7 @@
 import { motion, useInView } from "framer-motion";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Modal from "../common/Modal";
+import RulebookModal from "../common/RulebookModal";
 import TeamRegistrationForm from "../common/TeamRegistrationForm";
 
 // In Next.js, we need to use the public folder for images
@@ -21,6 +22,7 @@ const Hero = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isComingSoonModalOpen, setIsComingSoonModalOpen] = useState(false);
   const [isRegistrationOpen, setIsRegistrationOpen] = useState(false);
+  const [isRulebookModalOpen, setIsRulebookModalOpen] = useState(false);
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true });
   const bannerRef = useRef(null);
@@ -78,11 +80,17 @@ const Hero = () => {
 
   const handleRegistrationClick = () => {
     if (isRegistrationOpen) {
-      setIsModalOpen(true);
+      // Show rulebook modal first
+      setIsRulebookModalOpen(true);
     } else {
       // Show coming soon message
       setIsComingSoonModalOpen(true);
     }
+  };
+
+  const handleProceedToRegister = () => {
+    setIsRulebookModalOpen(false);
+    setIsModalOpen(true);
   };
 
   const TimeBlock = useCallback(
@@ -238,6 +246,14 @@ const Hero = () => {
         </div>
       </section>
 
+      {/* Rulebook Modal */}
+      <RulebookModal
+        isOpen={isRulebookModalOpen}
+        onClose={() => setIsRulebookModalOpen(false)}
+        onProceed={handleProceedToRegister}
+      />
+
+      {/* Registration Form Modal */}
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
         <TeamRegistrationForm onClose={() => setIsModalOpen(false)} />
       </Modal>

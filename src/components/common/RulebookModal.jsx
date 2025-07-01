@@ -5,7 +5,7 @@ const RulebookModal = ({ isOpen, onClose, onProceed }) => {
 
   const handleDownload = () => {
     window.open(
-      "https://drive.google.com/file/d/1xbNVW4X0arUArgTSY3DeceMA-_6Gt6IT/view?usp=sharing",
+      "https://drive.google.com/file/d/17NmnQIHjhsPJMdDilbY_ll_ho8M8nfFu/view?usp=sharing",
       "_blank"
     );
   };

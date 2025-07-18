@@ -378,7 +378,8 @@ const TeamRegistrationForm = ({ onClose }) => {
             <p className="text-sm text-blue-800 font-medium">
               You need to send money to{" "}
               <span className="font-bold">+8801869613804</span> for Bkash, Nagad
-              and <span className="font-bold">+8801869618048</span> for Rocket
+              and <br />
+              <span className="font-bold">+8801869613804</span> for Rocket
               (Personal) <span className="font-bold">BDT. 300</span> for
               completing registration.
             </p>

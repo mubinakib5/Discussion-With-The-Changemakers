@@ -40,7 +40,7 @@ export const navLinks = [
 ];
 
 // Hero Section
-export const eventDate = new Date("2025-08-01T00:00:00");
+export const eventDate = new Date("2025-08-20T00:00:00");
 export const heroData = {
   image: heroImage,
   title: "Discussion With The Changemakers",
@@ -110,17 +110,17 @@ export const timelineEvents = [
     description: "Submit your application to join the movement",
   },
   {
-    date: "July 2025",
+    date: "August 2025",
     title: "Round 1: Ideation",
     description: "Engage in workshops and identify key challenges",
   },
   {
-    date: "July 2025",
+    date: "August 2025",
     title: "Round 2: Development",
     description: "Work with mentors to develop actionable solutions",
   },
   {
-    date: "August 1, 2025",
+    date: "August 20, 2025",
     title: "DWC Grand Summit",
     description: "Present your solutions and implementation plans",
   },

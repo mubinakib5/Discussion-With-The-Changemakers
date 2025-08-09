@@ -268,11 +268,11 @@ const Team = () => {
             <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
               <div className="text-center">
                 <h3 className="text-2xl font-bold text-neutral-black mb-4">
-                  Registration Coming Soon!
+                  Registration Closed
                 </h3>
                 <p className="text-neutral-gray mb-8">
-                  Registration Link Will Be Opened Soon. Stay Tuned With Us For
-                  Further Updates
+                  Thank you for your interest! Registration for this event has
+                  now closed.
                 </p>
                 <div className="flex justify-center space-x-6">
                   <a

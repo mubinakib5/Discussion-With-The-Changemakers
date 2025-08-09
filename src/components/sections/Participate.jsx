@@ -5,12 +5,10 @@ import { useState } from "react";
 import { participateData } from "../../data";
 import { opportunityBenefits } from "../../data/index.js";
 import Modal from "../common/Modal";
-import RulebookModal from "../common/RulebookModal";
-import TeamRegistrationForm from "../common/TeamRegistrationForm";
+import RegistrationClosed from "../common/RegistrationClosed";
 
 const Participate = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isRulebookModalOpen, setIsRulebookModalOpen] = useState(false);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -40,11 +38,6 @@ const Participate = () => {
   // opportunityBenefits array is now imported from data/index.js
 
   const handleRegisterClick = () => {
-    setIsRulebookModalOpen(true);
-  };
-
-  const handleProceedToRegister = () => {
-    setIsRulebookModalOpen(false);
     setIsModalOpen(true);
   };
 
@@ -193,24 +186,18 @@ const Participate = () => {
           <div className="text-center mt-20">
             <button
               onClick={handleRegisterClick}
-              className="bg-brand-primary hover:bg-brand-light text-neutral-white font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300 transform hover:scale-105"
+              className="bg-gray-500 cursor-not-allowed text-neutral-white font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300"
+              disabled
             >
-              Register Now
+              Registration Closed
             </button>
           </div>
         </div>
       </section>
 
-      {/* Rulebook Modal */}
-      <RulebookModal
-        isOpen={isRulebookModalOpen}
-        onClose={() => setIsRulebookModalOpen(false)}
-        onProceed={handleProceedToRegister}
-      />
-
       {/* Registration Form Modal */}
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
-        <TeamRegistrationForm onClose={() => setIsModalOpen(false)} />
+        <RegistrationClosed onClose={() => setIsModalOpen(false)} />
       </Modal>
     </>
   );

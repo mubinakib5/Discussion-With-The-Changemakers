@@ -2,7 +2,7 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
-import { chapter1Content, chapter1Images } from "../../data";
+import { chapter1Content } from "../../data";
 
 const Chapter1 = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -77,7 +77,7 @@ const Chapter1 = () => {
         </motion.div>
 
         {/* Winners Gallery */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-10%" }}
@@ -133,10 +133,10 @@ const Chapter1 = () => {
               </motion.div>
             ))}
           </motion.div>
-        </motion.div>
+        </motion.div> */}
 
         {/* Video Section */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-10%" }}
@@ -168,7 +168,7 @@ const Chapter1 = () => {
               ></iframe>
             </div>
           </div>
-        </motion.div>
+        </motion.div> */}
 
         <AnimatePresence>
           {selectedImage && (

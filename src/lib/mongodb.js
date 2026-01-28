@@ -1,12 +1,12 @@
 import { MongoClient } from "mongodb";
 
 if (!process.env.MONGODB_URI) {
-  throw new Error(
-    "Please define the MONGODB_URI environment variable inside .env.local"
+  console.warn(
+    "Please define the MONGODB_URI environment variable inside .env.local. Using fallback for build."
   );
 }
 
-const uri = process.env.MONGODB_URI;
+const uri = process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/test";
 const options = {};
 
 let client;

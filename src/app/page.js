@@ -3,9 +3,7 @@ import About from "../components/sections/About";
 import Chapter1 from "../components/sections/Chapter1";
 import Contact from "../components/sections/Contact";
 import FAQ from "../components/sections/FAQ";
-import Gallery from "../components/sections/Gallery";
 import Hero from "../components/sections/Hero";
-import News from "../components/sections/News";
 import Participate from "../components/sections/Participate";
 import Sponsors from "../components/sections/Sponsors";
 import Team from "../components/sections/Team";
@@ -30,8 +28,8 @@ export default function HomePage() {
           <Participate />
           <Sponsors />
           <Team />
-          <Gallery />
-          <News />
+          {/* <Gallery /> */}
+          {/* <News /> */}
           <FAQ />
           <Chapter1 />
           <Contact />

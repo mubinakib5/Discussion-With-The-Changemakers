@@ -12,7 +12,6 @@ const Ayman = "/images/Ayman.jpeg";
 const logoBlack = "/images/DC Black.png";
 const logoWhite = "/images/DC White.png";
 const heroImage = "/images/Hero.png";
-const Ibnath = "/images/Ibnath.jpeg";
 const Isma = "/images/Isma.jpeg";
 const Mahmudur = "/images/Mahmudur.jpeg";
 const Mubin = "/images/Mubin.jpg";
@@ -21,14 +20,20 @@ const News1 = "/images/News1.png";
 const News2 = "/images/News2.png";
 const Panel = "/images/Panel.jpeg";
 const Presentation = "/images/Presentation.jpeg";
-const Raihan = "/images/Raihan.jpeg";
 const Team = "/images/Team.jpeg";
 const Workshop = "/images/Workshop.jpeg";
 const News3 = "/images/News3.png";
-const News4 = "/images/News4.jpg";
 const Mosiur = "/images/Mosiur.jpeg";
 const Nabila = "/images/Nabila.jpeg";
 const Mahtab = "/images/Mahatab.jpeg";
+const Changesetter1 = "/images/Changesetter-01.png";
+const Changesetter2 = "/images/Changesetter-02.png";
+const Changesetter3 = "/images/Changesetter-03.png";
+const Changesetter4 = "/images/Changesetter-04.png";
+const Changesetter5 = "/images/Changesetter-05.png";
+const Changesetter6 = "/images/Changesetter-06.png";
+const Changesetter7 = "/images/Changesetter-07.png";
+const Changesetter8 = "/images/Changesetter-08.png";
 // Navigation
 export const navLinks = [
   { href: "#about", label: "About" },
@@ -223,7 +228,7 @@ export const teamMembers = [
   },
   {
     name: "Adittya Basak",
-    role: "Project Changesetter",
+    role: "Changesetter",
     // bio: "Leading innovation in community development with 10+ years experience",
     image: Adittya,
     social: {
@@ -232,7 +237,7 @@ export const teamMembers = [
   },
   {
     name: "Fahmida Afroz Isma",
-    role: "Deputy Changesetter",
+    role: "Changesetter",
     // bio: "Leading innovation in community development with 10+ years experience",
     image: Isma,
     social: {
@@ -240,17 +245,8 @@ export const teamMembers = [
     },
   },
   {
-    name: "Obaidul Islam Raihan",
-    role: "Communication Changesetter",
-    // bio: "Leading innovation in community development with 10+ years experience",
-    image: Raihan,
-    social: {
-      linkedin: "https://www.linkedin.com/in/obaidulislam1/",
-    },
-  },
-  {
     name: "Abdullah Al Mubin",
-    role: "Technical Changesetter",
+    role: "Changesetter",
     // bio: "Leading innovation in community development with 10+ years experience",
     image: Mubin,
     social: {
@@ -258,17 +254,8 @@ export const teamMembers = [
     },
   },
   {
-    name: "Tahrim Ibnath",
-    role: "Executive Changesetter",
-    // bio: "Leading innovation in community development with 10+ years experience",
-    image: Ibnath,
-    social: {
-      linkedin: "https://www.linkedin.com/in/tahrim-ibnath-b23ab8347/",
-    },
-  },
-  {
     name: "Mohammad Mahmudur Rahman",
-    role: "Visual Changesetter",
+    role: "Changesetter",
     // bio: "Leading innovation in community development with 10+ years experience",
     image: Mahmudur,
     social: {
@@ -277,7 +264,7 @@ export const teamMembers = [
   },
   {
     name: "Mahtab Ahamed",
-    role: "Strategic Changesetter",
+    role: "Changesetter",
     // bio: "Leading innovation in community development with 10+ years experience",
     image: Mahtab,
     social: {
@@ -286,7 +273,7 @@ export const teamMembers = [
   },
   {
     name: "Nabila Tabassum",
-    role: "Creative Changesetter",
+    role: "Changesetter",
     // bio: "Leading innovation in community development with 10+ years experience",
     image: Nabila,
     social: {
@@ -295,11 +282,87 @@ export const teamMembers = [
   },
   {
     name: "Mosiur Rahaman",
-    role: "Operational Changesetter",
+    role: "Changesetter",
     // bio: "Leading innovation in community development with 10+ years experience",
     image: Mosiur,
     social: {
       linkedin: "https://linkedin.com/in/mosiur-rahaman-1b933a300",
+    },
+  },
+  {
+    name: "Saifuzzaman Chowdhury Rafi",
+    role: "Changesetter",
+    image: Changesetter1,
+    imagePosition: "center 40%",
+    imageScale: 1.22,
+    social: {
+      linkedin: "https://www.linkedin.com/in/saifuzzaman-chowdhury-rafi-?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
+    },
+  },
+  {
+    name: "Md Johir Babor",
+    role: "Changesetter",
+    image: Changesetter2,
+    imagePosition: "center 24%",
+    imageScale: 1.08,
+    social: {
+      linkedin: "https://www.linkedin.com/in/md-johir-babor-57160b253?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
+    },
+  },
+  {
+    name: "Muntakim Anan Chowdhury",
+    role: "Changesetter",
+    image: Changesetter3,
+    social: {
+      linkedin: "https://www.linkedin.com/in/muntakim-anan-chowdhury-b527981a5?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
+    },
+  },
+  {
+    name: "Farhan Shahariar",
+    role: "Changesetter",
+    image: Changesetter4,
+    imagePosition: "18% 46%",
+    imageScale: 1.28,
+    social: {
+      linkedin: "https://www.linkedin.com/in/farhan-shahariar-476289198?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    },
+  },
+  {
+    name: "Arjita Sen Chowdhury",
+    role: "Changesetter",
+    image: Changesetter5,
+    imagePosition: "center 26%",
+    imageScale: 1.06,
+    social: {
+      linkedin: "https://www.linkedin.com/in/arjita-sen-chowdhury-3b219b357?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+    },
+  },
+  {
+    name: "Md Momenul Hoque",
+    role: "Changesetter",
+    image: Changesetter6,
+    imagePosition: "center 24%",
+    imageScale: 1.08,
+    social: {
+      linkedin: "https://www.linkedin.com/in/md-momenul-hoque?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
+    },
+  },
+  {
+    name: "Erfan Mahmud",
+    role: "Changesetter",
+    image: Changesetter7,
+    social: {
+      linkedin: "https://www.linkedin.com/in/erfan-mahmud-450569283?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+    },
+  },
+  {
+    name: "Awalad Faisal",
+    role: "Changesetter",
+    image: Changesetter8,
+    imagePosition: "62% 52%",
+    imageScale: 1.35,
+    social: {
+      linkedin: "https://www.linkedin.com/in/awaladfaisal?utm_source=share_via&utm_content=profile&utm_medium=member_android",
     },
   },
 ];
@@ -338,50 +401,6 @@ export const galleryImages = [
   },
 ];
 
-// Chapter 1 Gallery Section
-export const chapter1Images = [
-  {
-    src: "/images/DWC_Chapter_1/Champion.jpeg",
-    alt: "Chapter 1 Champion: Plastic Reduction Alternative (Chittagong University)",
-    caption:
-      "Chapter 1 Champion: Plastic Reduction Alternative (Chittagong University)",
-  },
-  {
-    src: "/images/DWC_Chapter_1/1st Runners Up.jpeg",
-    alt: "1st Runner Up: Rain Water Harvesting",
-    caption: "1st Runner Up: Rain Water Harvesting",
-  },
-  {
-    src: "/images/DWC_Chapter_1/2nd Runners Up.jpeg",
-    alt: "2nd Runner Up: Four Student Cafe for Healthier Snacks in Four Different Locations of Chittagong",
-    caption:
-      "2nd Runner Up: Four Student Cafe for Healthier Snacks in Four Different Locations of Chittagong",
-  },
-  {
-    src: "/images/DWC_Chapter_1/Main Photo.jpeg",
-    alt: "Discussion with the Changemakers Chapter 1 Main Event",
-    caption: "Discussion with the Changemakers Chapter 1 Main Event",
-  },
-];
-
-// Chapter 1 Content
-export const chapter1Content = {
-  title: "Chapter 1: Our Legacy",
-  description:
-    "Relive the incredible moments from our inaugural event where young changemakers came together to address urban challenges and create lasting impact in Chattogram.",
-  content: `To address various urban challenges, Discussion with the Changemakers organized a competition inviting innovative solutions. Students from schools, colleges, and universities actively participated in the event. Out of the seven teams that reached the finals, five teams emerged as winners.
-
-The team from the University of Chittagong (Team A) secured the first place, while Chittagong University of Engineering and Technology (CUET) claimed the second, and Chittagong University Juniors took the third position. The competition was held at Hotel Agrabad, focusing on social development and civic engagement.
-
-The event's chief guest was Sulaiman Alam Sheth, Managing Director of Sheth Properties. Other distinguished guests included Dr. Mohammad Zia Uddin, Associate Professor at the International Islamic University Chittagong (IIUC), and Yasir Silmi, Head of the Journalism and Mass Communication Department at BGC Trust University.
-
-The winning team received a cash prize of BDT 50,000, while the second and third place winners were awarded BDT 20,000 and BDT 10,000, respectively. In addition to the monetary prizes, the top teams will gain free corporate space at the Hi-Tech Park, along with other development opportunities.
-
-Special recognition awards were given to International Islamic University Chittagong (IIUC) and Chittagong Muslim High School, each receiving BDT 5,000. The latter was honored under the Rising Star category.
-
-The invited guests expressed their strong commitment to supporting the implementation of the proposed ideas and initiatives.`,
-};
-
 // News Section
 export const newsArticles = [
   {
@@ -416,17 +435,6 @@ export const newsArticles = [
     readTime: "2 mins read",
     category: "News",
     link: "https://www.ekusheypatrika.com/archives/199454",
-  },
-  {
-    title: "চট্টগ্রাম সংবাদ",
-    date: "September 30, 2023",
-    author: "Bijoy TV",
-    excerpt:
-      "Coverage of Discussion with the Changemakers Chapter 1 on Bijoy TV",
-    image: News4,
-    readTime: "2 mins views",
-    category: "News",
-    link: "https://www.youtube.com/live/r8Xl0kubtug",
   },
 ];
 

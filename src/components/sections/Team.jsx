@@ -9,6 +9,11 @@ import Modal from "../common/Modal";
 const Team = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedAmbassador, setSelectedAmbassador] = useState(null);
+  const getImageStyle = (member) => ({
+    objectPosition: member.imagePosition || "center top",
+    transform: member.imageScale ? `scale(${member.imageScale})` : undefined,
+    transformOrigin: member.imagePosition || "center top",
+  });
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -82,7 +87,8 @@ const Team = () => {
                     <img
                       src={teamMembers[0].image}
                       alt={teamMembers[0].name}
-                      className="object-cover object-top w-full h-48 sm:h-56 md:h-64"
+                      className="object-cover w-full h-48 sm:h-56 md:h-64"
+                      style={getImageStyle(teamMembers[0])}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-brand-primary to-transparent opacity-60"></div>
                   </div>
@@ -151,7 +157,8 @@ const Team = () => {
                       <img
                         src={member.image}
                         alt={member.name}
-                        className="object-cover object-top w-full h-48 sm:h-56 md:h-64"
+                        className="object-cover w-full h-48 sm:h-56 md:h-64"
+                        style={getImageStyle(member)}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-brand-primary to-transparent opacity-60"></div>
                     </div>

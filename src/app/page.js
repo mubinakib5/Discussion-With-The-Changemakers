@@ -1,6 +1,5 @@
 import { Suspense } from "react";
 import About from "../components/sections/About";
-import Chapter1 from "../components/sections/Chapter1";
 import Contact from "../components/sections/Contact";
 import FAQ from "../components/sections/FAQ";
 import Hero from "../components/sections/Hero";
@@ -31,7 +30,6 @@ export default function HomePage() {
           {/* <Gallery /> */}
           {/* <News /> */}
           <FAQ />
-          <Chapter1 />
           <Contact />
         </Suspense>
       </main>

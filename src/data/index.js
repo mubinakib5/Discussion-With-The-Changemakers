@@ -222,6 +222,7 @@ export const teamMembers = [
     role: "Changesetter",
     // bio: "Leading innovation in community development with 10+ years experience",
     image: Ayman,
+    imagePosition: "75% center",
     social: {
       linkedin: "https://www.linkedin.com/in/ayman-siddiquee/",
     },

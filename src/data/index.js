@@ -8,7 +8,7 @@ export const socialLinks = {
 // Define image paths from public folder
 const Adittya = "/images/Adittya.jpeg";
 const Award = "/images/Award.jpeg";
-const Ayman = "/images/Ayman.jpeg";
+const Ayman = "/images/Ayman-2026.jpg";
 const logoBlack = "/images/DC Black.png";
 const logoWhite = "/images/DC White.png";
 const heroImage = "/images/Hero.png";
@@ -45,7 +45,7 @@ export const navLinks = [
 ];
 
 // Hero Section
-export const eventDate = new Date("2025-08-20T00:00:00");
+export const eventDate = new Date("2026-09-30T00:00:00");
 export const heroData = {
   image: heroImage,
   title: "Discussion With The Changemakers",
@@ -110,22 +110,22 @@ export const aboutData = {
 // Timeline Section
 export const timelineEvents = [
   {
-    date: "July 1, 2025",
+    date: "September 7, 2026",
     title: "Registration Opens",
     description: "Submit your application to join the movement",
   },
   {
-    date: "August 2025",
+    date: "September 14, 2026",
     title: "Round 1: Ideation",
     description: "Engage in workshops and identify key challenges",
   },
   {
-    date: "August 2025",
+    date: "September 21, 2026",
     title: "Round 2: Development",
     description: "Work with mentors to develop actionable solutions",
   },
   {
-    date: "August 20, 2025",
+    date: "September 30, 2026",
     title: "DWC Grand Summit",
     description: "Present your solutions and implementation plans",
   },
@@ -227,21 +227,59 @@ export const teamMembers = [
     },
   },
   {
-    name: "Adittya Basak",
-    role: "Changesetter",
-    // bio: "Leading innovation in community development with 10+ years experience",
-    image: Adittya,
-    social: {
-      linkedin: "https://www.linkedin.com/in/adittyabasak/",
-    },
-  },
-  {
     name: "Fahmida Afroz Isma",
     role: "Changesetter",
     // bio: "Leading innovation in community development with 10+ years experience",
     image: Isma,
     social: {
       linkedin: "https://www.linkedin.com/in/isma-fahmida-5648b4275/",
+    },
+  },
+  {
+    name: "Saifuzzaman Chowdhury Rafi",
+    role: "Changesetter",
+    image: Changesetter1,
+    imagePosition: "center 40%",
+    imageScale: 1.22,
+    social: {
+      linkedin: "https://www.linkedin.com/in/saifuzzaman-chowdhury-rafi-?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
+    },
+  },
+  {
+    name: "Farhan Shahariar",
+    role: "Changesetter",
+    image: Changesetter4,
+    imagePosition: "18% 46%",
+    imageScale: 1.28,
+    social: {
+      linkedin: "https://www.linkedin.com/in/farhan-shahariar-476289198?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    },
+  },
+  {
+    name: "Md Johir Babor",
+    role: "Changesetter",
+    image: Changesetter2,
+    imagePosition: "center 24%",
+    imageScale: 1.08,
+    social: {
+      linkedin: "https://www.linkedin.com/in/md-johir-babor-57160b253?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
+    },
+  },
+  {
+    name: "Muntakim Anan Chowdhury",
+    role: "Changesetter",
+    image: Changesetter3,
+    social: {
+      linkedin: "https://www.linkedin.com/in/muntakim-anan-chowdhury-b527981a5?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
+    },
+  },
+  {
+    name: "Adittya Basak",
+    role: "Changesetter",
+    // bio: "Leading innovation in community development with 10+ years experience",
+    image: Adittya,
+    social: {
+      linkedin: "https://www.linkedin.com/in/adittyabasak/",
     },
   },
   {
@@ -260,6 +298,16 @@ export const teamMembers = [
     image: Mahmudur,
     social: {
       linkedin: "https://www.linkedin.com/in/mahmud-rahman-965187214/",
+    },
+  },
+  {
+    name: "Arjita Sen Chowdhury",
+    role: "Changesetter",
+    image: Changesetter5,
+    imagePosition: "center 26%",
+    imageScale: 1.06,
+    social: {
+      linkedin: "https://www.linkedin.com/in/arjita-sen-chowdhury-3b219b357?utm_source=share_via&utm_content=profile&utm_medium=member_android",
     },
   },
   {
@@ -287,54 +335,6 @@ export const teamMembers = [
     image: Mosiur,
     social: {
       linkedin: "https://linkedin.com/in/mosiur-rahaman-1b933a300",
-    },
-  },
-  {
-    name: "Saifuzzaman Chowdhury Rafi",
-    role: "Changesetter",
-    image: Changesetter1,
-    imagePosition: "center 40%",
-    imageScale: 1.22,
-    social: {
-      linkedin: "https://www.linkedin.com/in/saifuzzaman-chowdhury-rafi-?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
-    },
-  },
-  {
-    name: "Md Johir Babor",
-    role: "Changesetter",
-    image: Changesetter2,
-    imagePosition: "center 24%",
-    imageScale: 1.08,
-    social: {
-      linkedin: "https://www.linkedin.com/in/md-johir-babor-57160b253?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
-    },
-  },
-  {
-    name: "Muntakim Anan Chowdhury",
-    role: "Changesetter",
-    image: Changesetter3,
-    social: {
-      linkedin: "https://www.linkedin.com/in/muntakim-anan-chowdhury-b527981a5?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
-    },
-  },
-  {
-    name: "Farhan Shahariar",
-    role: "Changesetter",
-    image: Changesetter4,
-    imagePosition: "18% 46%",
-    imageScale: 1.28,
-    social: {
-      linkedin: "https://www.linkedin.com/in/farhan-shahariar-476289198?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    },
-  },
-  {
-    name: "Arjita Sen Chowdhury",
-    role: "Changesetter",
-    image: Changesetter5,
-    imagePosition: "center 26%",
-    imageScale: 1.06,
-    social: {
-      linkedin: "https://www.linkedin.com/in/arjita-sen-chowdhury-3b219b357?utm_source=share_via&utm_content=profile&utm_medium=member_android",
     },
   },
   {

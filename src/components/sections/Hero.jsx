@@ -26,7 +26,7 @@ const Hero = () => {
   const isBannerVisible = useInView(bannerRef, { margin: "-100px" });
 
   // Set your event date here
-  const eventDate = useMemo(() => new Date("2025-07-31T00:00:00"), []);
+  const eventDate = useMemo(() => new Date("2026-09-30T00:00:00"), []);
 
   useEffect(() => {
     const timer = setInterval(() => {

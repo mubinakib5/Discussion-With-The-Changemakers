@@ -34,7 +34,7 @@ export default function WhyParticipate() {
                     Introduction
                   </h2>
                   <p className="text-justify">
-                    "Discussion with the Changemakers" (DWC) is a youth-driven platform that empowers young people to address real-world urban challenges through innovation, dialogue, and collaboration with city leaders. Specifically designed to harness the potential of Chattogram's youth, DWC Chapter 02, scheduled for July 1-17, 2025, at Hotel Agrabad, offers a transformative opportunity for students to grow, lead, and make a lasting impact.
+                    "Discussion with the Changemakers" (DWC) is a youth-driven platform that empowers young people to address real-world urban challenges through innovation, dialogue, and collaboration with city leaders. Specifically designed to harness the potential of Chattogram's youth, DWC Chapter 02, scheduled for September 07-30, 2026, at Hotel Agrabad, offers a transformative opportunity for students to grow, lead, and make a lasting impact.
                   </p>
                 </div>
 

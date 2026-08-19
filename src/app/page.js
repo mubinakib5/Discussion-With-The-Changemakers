@@ -40,8 +40,8 @@ export default function HomePage() {
             "@context": "https://schema.org",
             "@type": "Event",
             name: "Discussion with the Changemakers Chapter 02",
-            startDate: "2025-07-01",
-            endDate: "2025-07-17",
+            startDate: "2026-09-07",
+            endDate: "2026-09-30",
             location: {
               "@type": "Place",
               name: "Hotel Agrabad",

@@ -8,7 +8,7 @@ export const socialLinks = {
 // Define image paths from public folder
 const Adittya = "/images/Adittya.jpeg";
 const Award = "/images/Award.jpeg";
-const Ayman = "/images/Ayman-2026.jpg";
+const Ayman = "/images/Ayman-Siddique-2026.jpg";
 const logoBlack = "/images/DC Black.png";
 const logoWhite = "/images/DC White.png";
 const heroImage = "/images/Hero.png";
